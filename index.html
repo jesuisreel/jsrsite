@@ -312,12 +312,13 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
      card(oc,'oc',dOC)+card(mt,'meta',dMT)+'</div>';
-  const skip=new Set([10,11,14,16,17]);
-   const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Оставлось дней/.test(x));
+   const skip=new Set([10,11,14,16,17]);
+  const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Оставлось дней/.test(x));
   const dsc=extra.find(([n])=>n===19);
-   const dsc=extra.find(([n])=>n===19);
   if(dsc){dsc[1]='https://discord.gg/jKHrNbabzv'}
-    if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+(x.startsWith('<a ')?x:cell(x))+'</td></tr>').join('')+'</table></div>';
+  const story=extra.find(([n])=>n===21);
+  if(story){story[1]='https://northernparliament.github.io/AL/'}
+  if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+(x.startsWith('<a ')?x:cell(x))+'</td></tr>').join('')+'</table></div>';
   const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
    items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
