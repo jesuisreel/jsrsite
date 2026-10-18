@@ -372,8 +372,8 @@ function show(i,keep){
   const s=SHEETS[i],c=CFG[s.name]||[s.name,'•','doc','',{f:'misc'}],o=c[4]||{f:'misc'},v=VIEW;
   document.querySelectorAll('#nav button').forEach((b,k)=>b.classList.toggle('on',k==i));
   $('crumb').textContent=c[0];if(!keep)history.replaceState(null,'','#'+i);
-  const t=c[2],fx=['grid','sheet','dict','embed'].includes(t);
-v.className=fx?'fx':'';v.style.padding=(t=='embed')?'0':((t=='grid'||t=='sheet'||t=='raw')?'16px':(t=='dict'?'22px 24px 6px':'30px')); //бугагаггагага во всю ширину очка
+  const t=c[2],fx=['grid','sheet','dict'].includes(t);
+v.className=fx?'fx':'';v.style.padding=(t=='grid'||t=='sheet'||t=='raw')?'16px':(t=='dict'?'22px 24px 6px':'30px'); //бугагаггагага во всю ширину очка
   if(!s.rows.length)v.innerHTML='<div class="empty">Нет данных.</div>';
   else if(t=='home')home(s,v);else if(t=='grid')renderGrid(s,v,o);else if(t=='sheet')sheet(s,v,o);else if(t=='raw')raw(s,v); //от сюда до мне страшно кусок гавнокода
   //бля мне страшно 
