@@ -226,9 +226,11 @@ function cell(t){
   t=fmt(t);
   if(!t)return'';
   if(IMG.test(t))return'<img loading="lazy" src="'+encodeURI(t)+'">';
-  let html = esc(t).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  html = html.replace(/(^|[^"'>])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');  
+  let html = esc(t);
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  html = html.replace(/(^|[^"'>])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
   return html;
+}
 }
 function trim(rows){
   let w=0;rows.forEach(r=>r.forEach((c,i)=>{if(String(c).trim())w=Math.max(w,i+1)}));
