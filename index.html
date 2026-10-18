@@ -125,6 +125,19 @@ td.sl .slot{height:100%}
 .ecard.shop .en{background:#143329;color:var(--ac);border-radius:8px;padding:5px 6px}
 .ecard.shop .en i{font-style:normal;color:var(--tx)}
 .ecard .slot{min-height:96px}
+.egrid.eq{gap:0;align-items:stretch;margin:0 0 -1px;border:1px solid var(--line);border-radius:0;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 127px,var(--line) 127px,var(--line) 128px)}
+.egrid.eq .ecard{border:0;border-right:1px solid var(--line);border-radius:0;background:#0f241d;padding:0 0 8px;gap:4px;grid-row:1;justify-content:flex-start}
+.egrid.eq .ecard .slot{min-height:110px;border-radius:0}
+.egrid.eq .ecard .en{font-size:13px;font-weight:500;padding:4px 6px 0}
+.egrid.eq .ecard .ed{font-size:12px;padding:6px 6px 0;margin-top:auto}
+.egrid.eq .ecard .etag{margin:4px 0 0 6px}
+.eqax{display:grid;grid-template-columns:140px 1fr;grid-template-rows:auto auto;gap:8px 14px;margin:6px 0 10px;color:var(--ac);font-weight:800;font-size:11px;letter-spacing:.05em}
+.eqc{grid-row:1;grid-column:1;font-size:16px;line-height:1.2;text-align:center;align-self:center}
+.eqax{grid-template-columns:170px 1fr;gap:6px 14px;align-items:start}
+.eqr{grid-row:1;grid-column:2;display:flex;flex-direction:column;align-items:flex-start;gap:6px}.eqr .slot{width:320px;min-height:90px;flex:none}
+.eqd{grid-row:2;grid-column:1;display:flex;flex-direction:column;align-items:center;gap:6px}.eqd .slot{width:90px;min-height:170px}.eqd b,.eqr b{text-align:center}
+.eqr .slot.ok,.eqd .slot.ok{min-height:0}.eqr .slot img,.eqd .slot img{max-width:100%;max-height:none;width:100%;height:auto}
+.eqd{grid-row:2;grid-column:1;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}.eqd .slot{width:60px}
 .shsec{display:flex;align-items:center;gap:14px;margin:18px 0 10px;padding:8px 14px;background:linear-gradient(90deg,#17382d,transparent);border-left:3px solid var(--ac);border-radius:6px}
 .shsec h3{font-size:22px;flex:none;letter-spacing:-.01em}
 .shsec .slot{width:96px;min-height:56px;flex:none}
@@ -300,7 +313,7 @@ function buildEquipNav(rows){
   const defs=[['ddганы',/^Пушки эсминцев/],['clганы',/^Пушки лёгких/],['caганы',/^Пушки тяжел/],['cbганы',/^Пушки больших/],['bbганы',/^Пушки линкоров/],
    ['торпеды(авангард)',/^Торпеды авангарда/],['торпеды(подлодки)',/^Торпеды для подлодок/],['истребители',/^"?Истребители/],['ракетныефайтеры',/^Ракетные файтеры/],
    ['бомбардировщики',/^Бомбардировщики/],['параллельныеторперы',/^Параллельные/],['веерныеторперы',/^Веерные/],['зенитки',/^Зенитки \(ПВО/],['asw',/^Ауксы \(ASW/],['ауксы',/^Ауксы \(выживаемость/],['аугменты',/^Аугменты/]];
-  const m={};defs.forEach(([k,re])=>{for(let i=4;i<rows.length;i++){if(re.test(String(rows[i][2]||'').trim())){m[k]=i+1;break}}});
+  const m={};defs.forEach(([k,re])=>{for(let i=4;i<rows.length;i++){if(re.test(String(rows[i][2]||'').trim())||re.test(String(rows[i][3]||'').trim())){m[k]=i+1;break}}});
   return m}
 function equipChips(rows){const out=[];for(const r of [5,6]){(rows[r]||[]).forEach((t,c)=>{if(c>=14&&String(t).trim()){const k=navNorm(t);if(NAVEQ[k])out.push([String(t).replace(/-\n/g,'').replace(/\s+/g,' ').trim(),NAVEQ[k]])}})}return out}
 function barrNav(rows){const idx=[];rows.forEach((r,i)=>{if(String(r[1]||'').startsWith('Эсминцы |'))idx.push(i)});
@@ -378,7 +391,7 @@ function eqChip(rows,b){for(let q=b.a;q<=b.b;q++)for(const c of b.cols)if(c>=14&
 function cardsH(cards,cls,f){
   const used=new Set();cards.forEach(cd=>{while(used.has(cd.idx))cd.idx++;used.add(cd.idx)});
   const N=Math.max(...cards.map(cd=>cd.idx))+1;
-  return '<div class="egrid" data-r="'+(cards[0].row+1)+'" style="grid-template-columns:repeat('+N+',128px)">'+cards.map(cd=>{
+  return '<div class="egrid'+(cls==='eq'?' eq':'')+'" data-r="'+(cards[0].row+1)+'" style="grid-template-columns:repeat('+N+',128px)">'+cards.map(cd=>{
     const sl=cd.key?slotH(f,cd.key,{h:cls==='shop'?96:110}):'';
     const nm=cd.names.length?'<div class="en">'+cd.names.map(nl2).join('<br>')+(cd.qty?' <i>×'+esc(cd.qty)+'</i>':'')+'</div>':'';
     const ds=cd.desc.length?'<div class="ed">'+cd.desc.map(nl2).join('<br>')+'</div>':'';
@@ -474,7 +487,7 @@ function renderHybrid(s,v,o){
     for(let q=0;q<rows.length;q++){if(rows[q].filter(c=>String(c).trim()).length>=6&&rows[q].some(c=>/Эсминцы/.test(c))){hr=q;break}}
     if(hr>=0){hend=hr;for(let q=hr+1;q<rows.length;q++){if(rows[q].some(c=>String(c).trim()==='LCK')){hend=q;break}}}}
   const open='<table><colgroup>'+'<col style="width:64px">'.repeat(W)+'</colgroup><tbody>';
-  let h=chips+'<div class="sheet g cv">',inT=false,doneT=false;
+  let h=chips+'<div class="sheet g cv">'+(o.f==='equip'?'<div class="eqax"><div class="eqc">ДЛЯ ПОНИМАНИЯ РАСПОЛОЖЕНИЯ</div><div class="eqr">'+slotH('equip','arrow_right',{h:90})+'<b>УМЕНЬШЕНИЕ УНИВЕРСАЛЬНОСТИ</b></div><div class="eqd">'+slotH('equip','arrow_down',{h:170})+'<b>УМЕНЬШЕНИЕ ЭФФЕКТИВНОСТИ</b></div></div>':''),inT=false,doneT=false;
   const tab=x=>{if(!inT){h+=open;inT=true}h+=x};
   const out=x=>{if(inT){h+='</tbody></table>';inT=false}h+=x};
   for(let k=0;k<it.length;k++){const x=it[k];
@@ -485,7 +498,7 @@ function renderHybrid(s,v,o){
       if(o.f==='equip'&&G.has(k+1))continue;
       tab('<tr class="sp"><td colspan="'+W+'" style="height:'+Math.min(x.L,3)*7+'px"></td></tr>');continue}
     if(o.f==='equip'&&eqChip(rows,x)){
-      const ts=[];for(let q=x.a;q<=x.b;q++)x.cols.forEach(c=>{const t=TT(rows,q,c);if(t&&!(c>=14&&NAVEQ[navNorm(t)]))ts.push(t.replace(/\s+/g,' '))});
+      const ts=[];for(let q=x.a;q<=x.b;q++)x.cols.forEach(c=>{const t=TT(rows,q,c);if(t&&c<14)ts.push(t.replace(/\s+/g,' '))});
       out('<div class="shsec" data-r="'+(x.a+1)+'"><h3>'+esc(ts.join(' · '))+'</h3></div>');continue}
     if(o.f==='shop'&&x.kind==='sec'){
       let t='';for(let c=0;c<W&&!t;c++)t=TT(rows,x.a,c);
