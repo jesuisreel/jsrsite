@@ -315,7 +315,7 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
-  const lbl=String(cl[0]||'Текущие события').trim().replace(/:$/,'');
+  const lbl=String(cl[0]||'Актуальный ивент').trim().replace(/:$/,'');
   const card=(t,k,d)=>'<div class="evc"><div class="evh"><b>'+esc(t)+'</b>'+(d?'<span>Осталось дней: '+esc(d)+'</span>':'')+'</div>'+slotH('cover',k,{band:1,h:200})+'</div>';
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
@@ -357,7 +357,7 @@ function dict(s,v){
   const chips=navs.map(t=>{const sc=secs.find(x=>nn(x.title)===nn(t));return[t,sc?sc.r:1]});
   let h=chipsH(chips)+'<div class="scr"><div class="doc dict"><h1>Словарь</h1><p>Название предмета в игре → как его называют игроки. Нажмите на раздел сверху, чтобы перейти.</p>';
   secs.forEach(sc=>{h+='<h2 data-r="'+sc.r+'"><span>'+esc(sc.title)+'</span><a data-go="1">↑ наверх</a></h2><div class="dt"><table>'+
-    '<tr class="h"><td>В игре (EN)</td><td>Как называют</td><td>Заметка</td></tr>'+
+    '<tr class="h"><td>В игре (EN)</td><td>Заметки</td><td>Как называют</</td></tr>'+
     sc.rows.map(x=>'<tr data-r="'+x.r+'"><td>'+cell(x.a)+'</td><td>'+cell(x.c.replace(/\n/g,'\n'))+'</td><td>'+cell(x.d)+'</td></tr>').join('')+'</table></div>'});
   v.innerHTML=h+'</div></div>'}
 
