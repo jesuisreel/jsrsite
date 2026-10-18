@@ -223,6 +223,9 @@ const keyOf=t=>String(t).replace(/[\\/:*?"<>|]+/g,'').replace(/\s+/g,' ').trim()
 const colL=n=>{let s='';n++;while(n){s=String.fromCharCode(65+(n-1)%26)+s;n=Math.floor((n-1)/26)}return s};
 function fmt(t){t=String(t).trim();if(/^-?\d+\.\d{3,}$/.test(t))return String(+(+t).toFixed(2));return t}
 function cell(t){t=fmt(t);if(!t)return'';
+  // [img:папка/имя] -> рамка под картинку images/папка/имя.png
+  var im=/^\[img:([^\/\]]+)\/(.+)\]$/.exec(t);
+  if(im)return slotH(im[1],im[2],{h:80});
   if(IMG.test(t))return'<img loading="lazy" src="'+encodeURI(t)+'">';
   // Сначала превращаем markdown-ссылки в HTML (экранируя текст)
   t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
