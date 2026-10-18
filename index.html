@@ -115,9 +115,65 @@ td.sl .slot{height:100%}
 .evc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
 .evh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px}.evh b{font-size:15px}.evh span{font-size:12px;color:var(--ac)}
 @media(max-width:900px){.evg{grid-template-columns:1fr}}
+.sheet.cv{padding:10px 12px}
+.egrid{display:grid;gap:10px;margin:6px 0 14px;align-items:start;width:max-content}
+.ecard{background:#0f241d;border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:6px;min-width:0;width:128px;grid-row:1}
+.ecard .en{font-size:12px;font-weight:700;text-align:center;line-height:1.3;overflow-wrap:anywhere}
+.ecard .ed{font-size:11.5px;color:#c9dcd2;text-align:center;line-height:1.4;overflow-wrap:anywhere}
+.ecard .pr{text-align:center;font-weight:800;color:var(--ac);font-size:13px}
+.ecard .etag{align-self:flex-start;font-size:10px;font-weight:700;color:var(--ac);border:1px solid var(--ac2);border-radius:6px;padding:1px 6px}
+.ecard.shop .en{background:#143329;color:var(--ac);border-radius:8px;padding:5px 6px}
+.ecard.shop .en i{font-style:normal;color:var(--tx)}
+.ecard .slot{min-height:96px}
+.shsec{display:flex;align-items:center;gap:14px;margin:18px 0 10px;padding:8px 14px;background:linear-gradient(90deg,#17382d,transparent);border-left:3px solid var(--ac);border-radius:6px}
+.shsec h3{font-size:22px;flex:none;letter-spacing:-.01em}
+.shsec .slot{width:96px;min-height:56px;flex:none}
+.bandw{margin:10px 0}
+.gst{margin:10px 0;overflow:auto}
+.gst table{border-collapse:separate;border-spacing:3px;width:100%;min-width:900px;table-layout:fixed}
+.gst th,.gst td{padding:10px 8px;text-align:center;font-size:13px;line-height:1.4;color:#fff;border-radius:8px;vertical-align:middle;white-space:pre-wrap}
+.gst th{font-size:17px;font-weight:700}
+.gst th .slot{min-height:44px;width:64px;margin:0 auto 4px}
+.gst .gl{width:120px;background:#0f241d;color:var(--tx);text-align:right;font-size:20px}
+.gst .gl .slot{width:38px;min-height:36px;display:inline-flex;vertical-align:middle;margin-right:8px}
+.gst .gl .slot.ok{display:inline-block}
+.gst .gm{background:#7fe3c0;color:#06241a;font-size:22px;font-weight:800}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(320px,1fr));gap:14px 18px;max-width:1100px;margin:0 auto}
+.ptitle{grid-column:1/-1;font-size:34px;letter-spacing:-.02em;margin:6px 0}
+.pser{grid-column:1/-1;margin:6px 0}
+.pcard{display:flex;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-height:150px}
+.pface{width:130px;flex:none;display:flex}
+.pface .slot{border-radius:0;min-height:150px;height:100%}
+.pface .slot.ok img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.pbody{flex:1;min-width:0;display:flex;flex-direction:column}
+.phd{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#143329}
+.phd b{flex:1;font-size:16px;color:var(--ac)}
+.phd .slot{width:40px;min-height:30px;flex:none;padding:0}
+.phd .slot .sl-l small{display:none}
+.phd .pn{font-weight:800;min-width:16px;text-align:right}
+.pds{padding:12px;font-size:13px;line-height:1.5;color:#c9dcd2}
 .g.flat table{table-layout:auto;width:100%}
 .g.flat td.f{overflow-wrap:normal}
 .g.flat td{min-width:60px}
+.sheet tr.pin td{position:sticky;top:0;z-index:4;background:#143329!important;box-shadow:0 1px 0 var(--ac2)}
+.gw{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:6px 0 18px}
+.gw h1{font-size:60px;font-weight:400;line-height:1.05;margin:0 0 16px;letter-spacing:-.01em}
+.gw p{font-size:24px;line-height:1.3;margin:0 0 16px;white-space:pre-wrap;color:var(--tx)}
+.gw table{border-collapse:collapse;width:100%;table-layout:fixed;margin:8px 0;border-top:1px solid var(--ac2);border-bottom:1px solid var(--ac2)}
+.gw td{vertical-align:middle;padding:0;border-left:1px solid var(--ac2);border-right:1px solid var(--ac2)}
+.gw td.lb{border-left:0;font-size:24px;padding:8px 6px;width:15%}
+.gw td.hd{text-align:center;font-size:20px;padding:6px 4px 4px;vertical-align:top}
+.gw td.nt{border:0;border-bottom:1px solid var(--ac2);font-size:20px;padding:6px 10px;white-space:pre-wrap;line-height:1.4}
+.gw tr.hr td{border-bottom:1px solid var(--ac2);height:70px}
+.gw .gc{display:flex;align-items:center;gap:8px;min-height:140px;padding:4px}
+.gw .gc .gi{flex:1 1 45%;min-width:60px}
+.gw .gc .gt{flex:1 1 55%;font-size:44px;line-height:1.1;white-space:pre-wrap}
+.gw .gc .gt.sm{font-size:30px}
+.gw .slot{border-color:rgba(168,230,193,.3);background:rgba(168,230,193,.04);color:var(--mut);min-height:40px}
+.gw .slot.ok{border:0;background:none}
+.gw .slot.ok img{margin:0 auto;max-height:130px}
+.gw .hd .slot{min-height:30px}
+.gr{margin-top:6px}
 </style></head><body>
 <aside><div class="brand"><i>JSR</i><div><b>JE SUIS REEL</b><small>AZUR LANE DATABASE</small></div></div>
 <div class="lbl">БАЗА ЗНАНИЙ</div><nav id="nav"></nav>
@@ -141,13 +197,13 @@ const CFG={
 'Словарь':['Словарь','⌕','dict','Термины и определения.',{f:'dict'}],
 'Эквип':['Эквип','◇','grid','Экипировка: таблица.',{f:'equip',span:true,hdr:99,mode:'below',min:3,bandMin:30,firstRow:9,nav:'equip'}],
 'ОС':['Операция Сирена','◎','doc','Гайды по Операции Сирена.',{f:'os'}],
-'Прототипы':['Прототипы','◈','grid','Прототипы кораблей.',{f:'proto',span:true,mode:'above',cols:[1,3],bandMin:30}],
-'Что скупать/фармить':['Что скупать / фармить','+','grid','Приоритеты покупок и фарма.',{f:'shop',span:true,hdr:3,mode:'between',bandMin:99,extra:{from:150,to:165,cols:[7,23]}}],
+'Прототипы':['Прототипы','◈','grid','Прототипы кораблей.',{f:'proto',span:false,mode:'none'}],
+'Что скупать/фармить':['Что скупать / фармить','+','grid','Приоритеты покупок и фарма.',{f:'shop',span:true,hdr:3,mode:'none',bandMin:99}],
 'Хороший ли корабль?':['Хороший ли корабль?','?','grid','Как оценить корабль.',{f:'goodship',span:true,hdr:99,mode:'none',bandMin:6}],
-'Барражи':['Барражи','≋','sheet','Таблица барражей.',{f:'barrages',nav:'barr'}],
+'Барражи':['Барражи','≋','sheet','Таблица барражей.',{f:'barrages',nav:'barr',pin:1}],
 'Гостганы и саммоны':['Гостганы и саммоны','✢','sheet','Гостганы и саммоны.',{f:'ghost',slot:{col:1,name:0,from:1}}],
 'Мяуфицеры':['Мяуфицеры','☻','doc','Мяуфицеры и их навыки.',{f:'cats'}],
-'Кроссфлоты':['Кроссфлоты (beta)','⇄','sheet','Кроссфлоты.',{f:'cross',slot:{col:0,name:1,from:3}}],
+'Кроссфлоты':['Кроссфлоты (beta)','⇄','sheet','Кроссфлоты.',{f:'cross',pin:1,slot:{col:0,name:1,from:3}}],
 'Тесты':['Архив тестов','▤','embed','Архив тестов (Google Sheets).',{
   f:'tests',
   url:'https://docs.google.com/spreadsheets/d/1z9q5Cmk3SnpwnqsOW-GUc7W9JIz86rUS_lnlvChwxRQ/edit?gid=1061765372',
@@ -302,7 +358,160 @@ function classes(s,v,o){
     h+='<tr data-r="'+(i+1)+'"><td class="sl">'+slotH(o.f,keyOf(code),{h:56})+'</td><td><b>'+esc(code)+'</b></td><td>'+cell(r[2]||'')+'</td><td>'+cell(r[3]||'')+'</td><td>'+cell(r[5]||'')+(String(r[4]||'').trim()?'<div style="color:var(--mut);margin-top:4px;font-size:12px">'+cell(r[4])+'</div>':'')+'</td></tr>'});
   v.innerHTML=h+'</table></div></div>'}
 
-function renderGrid(s,v,o){
+// ===== Карточные раскладки: Эквип / Что скупать / Прототипы / Хороший ли корабль =====
+const skey=(txt,row,c)=>{txt=String(txt).replace(/\s+/g,' ').trim();return txt.length>60?'r'+(row+1)+'_'+colL(c):keyOf(txt)};
+const gpos=c=>Math.floor((c+1)/3);
+const TT=(rows,q,c)=>String((rows[q]||[])[c]||'').trim();
+const nl2=t=>esc(t).replace(/\n/g,'<br>');
+function eqChip(rows,b){for(let q=b.a;q<=b.b;q++)for(const c of b.cols)if(c>=14&&NAVEQ[navNorm(TT(rows,q,c))])return true;return false}
+
+function cardsH(cards,cls,f){
+  const used=new Set();cards.forEach(cd=>{while(used.has(cd.idx))cd.idx++;used.add(cd.idx)});
+  const N=Math.max(...cards.map(cd=>cd.idx))+1;
+  return '<div class="egrid" data-r="'+(cards[0].row+1)+'" style="grid-template-columns:repeat('+N+',128px)">'+cards.map(cd=>{
+    const sl=cd.key?slotH(f,cd.key,{h:cls==='shop'?96:110}):'';
+    const nm=cd.names.length?'<div class="en">'+cd.names.map(nl2).join('<br>')+(cd.qty?' <i>×'+esc(cd.qty)+'</i>':'')+'</div>':'';
+    const ds=cd.desc.length?'<div class="ed">'+cd.desc.map(nl2).join('<br>')+'</div>':'';
+    const pr=cd.price?'<div class="pr">'+nl2(cd.price)+'</div>':'';
+    const body=cls==='shop'?nm+sl+pr+ds:sl+(cd.tag?'<span class="etag">ПМК</span>':'')+nm+ds;
+    return '<div class="ecard '+cls+'" style="grid-column:'+(cd.idx+1)+'" data-r="'+(cd.row+1)+'">'+body+'</div>'}).join('')+'</div>'}
+
+// Эквип: картинка сверху, ниже название, затем описание
+function equipGroups(rows,P,o){const it=P.items,G=new Map();
+  const title=(b,k)=>eqChip(rows,b)||(b.cols.length===1&&b.a===b.b&&it[k+1]&&it[k+1].t==='g'&&it[k+1].L>=2&&it[k+1].L<=3);
+  for(let k=0;k<it.length;k++){const b=it[k];
+    if(b.t!=='b'||b.a<(o.firstRow||0)-1||title(b,k))continue;
+    const blocks=[b];let kk=k;
+    while(it[kk+1]&&it[kk+1].t==='g'&&it[kk+1].L===1&&it[kk+2]&&it[kk+2].t==='b'&&!title(it[kk+2],kk+2)){blocks.push(it[kk+2]);kk+=2}
+    const cs=[...new Set(blocks.flatMap(x=>x.cols))].sort((a,c)=>a-c);
+    const cards=cs.map(c=>{const names=[],desc=[];let row=-1;
+      blocks.forEach((bl,bi)=>{const cells=[];for(let q=bl.a;q<=bl.b;q++){const t=TT(rows,q,c);if(t){cells.push(t);if(row<0)row=q}}
+        if(!cells.length)return;
+        if(blocks.length>1){(bi===0?names:desc).push(...cells)}
+        else if(cells.length>1){names.push(...cells.slice(0,-1));desc.push(cells[cells.length-1])}
+        else names.push(cells[0])});
+      const tag=names.some(n=>/^ПМК$/i.test(n)),nm=names.filter(n=>!/^ПМК$/i.test(n));
+      const first=nm[0]||desc[0]||'';
+      return{idx:gpos(c),row,names:nm,desc,tag,key:first?skey(first,row,c):''}}).filter(cd=>cd.row>=0);
+    if(cards.length)G.set(k,{kk,html:cardsH(cards,'eq',o.f)});
+    k=kk}
+  return G}
+
+// Что скупать: название, картинка, цена, описание
+function shopGroups(rows,P,o){const it=P.items,G=new Map();
+  for(let k=0;k+2<it.length;k++){const b=it[k],g=it[k+1],d=it[k+2];
+    if(b.t!=='b'||g.t!=='g'||d.t!=='b'||b.a!==b.b||g.L<2||g.L>6||d.b-d.a>3)continue;
+    if(!(b.cols.length>=2||d.b>d.a))continue;
+    const nameCols=b.cols.filter(c=>!isNum(TT(rows,b.a,c)));
+    if(!nameCols.length)continue;
+    let ok=false;for(let q=d.a;q<=d.b;q++)if(nameCols.some(c=>TT(rows,q,c)))ok=true;
+    if(!ok)continue;
+    const qty={};nameCols.forEach(c=>{if(isNum(TT(rows,b.a,c+1))&&!nameCols.includes(c+1))qty[c]=TT(rows,b.a,c+1)});
+    const skip=new Set(Object.keys(qty).map(c=>+c+1));
+    const cs=new Set(b.cols);for(let q=d.a;q<=d.b;q++)rows[q].forEach((t,c)=>{if(String(t).trim())cs.add(c)});
+    const cards=[...cs].filter(c=>!skip.has(c)).sort((a,c)=>a-c).map(c=>{
+      const nmT=TT(rows,b.a,c);let price='';const desc=[];
+      for(let q=d.a;q<=d.b;q++){const t=TT(rows,q,c);if(!t)continue;
+        if(d.b>d.a?q===d.a:isNum(t))price+=(price?' ':'')+t;else desc.push(t)}
+      return{idx:gpos(c),row:b.a,names:nmT?[nmT]:[],desc,price,qty:qty[c]||'',key:nmT&&!isNum(nmT)?skey(nmT,b.a,c):''}}).filter(cd=>cd.names.length||cd.desc.length||cd.price);
+    if(cards.length){G.set(k,{kk:k+2,html:cardsH(cards,'shop',o.f)});k+=2}}
+  return G}
+
+function blockH(it,rows,o){let h='';
+  for(let q=it.a;q<=it.b;q++){const row=rows[q];
+    const ne=row.filter(c=>String(c).trim());const nums=ne.filter(isNum).length;
+    const hdRow=it.kind==='tbl'&&ne.length>1&&nums===0&&q<it.b&&rows[q+1].some(c=>isNum(c));
+    h+='<tr data-r="'+(q+1)+'">';
+    it.segs.forEach(sg=>{
+      const txt=sg.own?String(row[sg.c]||'').trim():'';
+      const cs=sg.span>1?' colspan="'+sg.span+'"':'';
+      if(!txt){h+='<td'+cs+'></td>';return}
+      let cls;
+      if(it.kind==='sec')cls='sec';
+      else if(it.kind==='par')cls='par'+(o.hdr>50&&sg.c===0&&(q===0||(txt.length<=60&&!/\n/.test(txt)&&it.a===it.b))?' big':'');
+      else{cls='f';if(isNum(txt))cls+=' num';else if(it.kind==='cards'&&q===it.a&&ne.length>1&&it.b>it.a)cls+=' nm';
+        if(it.kind==='tbl')cls+=' tbl';if(hdRow)cls+=' th'}
+      let inner;
+      if(o.nav==='equip'&&sg.c>=14&&NAVEQ[navNorm(txt)])inner='<a class="nl" data-go="'+NAVEQ[navNorm(txt)]+'">'+esc(txt.replace(/-\n/g,'').replace(/\n/g,' '))+'</a>';
+      else inner=cell(txt);
+      if(it.kind==='par')inner='<div class="pw">'+inner+'</div>';
+      h+='<td class="'+cls+'"'+cs+'>'+inner+'</td>'});
+    h+='</tr>'}
+  return h}
+
+// Хороший ли корабль: цветная таблица статов с иконками
+function goodTable(rows,hr,hend,o){
+  const hc=[];rows[hr].forEach((t,c)=>{if(String(t).trim())hc.push(c)});
+  let lc=-1;for(let q=hr+1;q<=hend;q++)for(let c=0;c<hc[0];c++)if(TT(rows,q,c)&&lc<0)lc=c;
+  if(lc<0)lc=0;
+  const COL=['#c0463a','#8057b0','#a97fdc','#b4502f','#b8862b','#c4a888','#4a93b8'];
+  let h='<div class="gst" data-r="'+(hr+1)+'"><table><thead><tr><th class="gl"></th>'+hc.map((c,i)=>'<th style="background:'+COL[i%7]+'">'+slotH(o.f,'class_'+keyOf(TT(rows,hr,c).split('\n')[0]),{h:44})+'<div>'+nl2(TT(rows,hr,c))+'</div></th>').join('')+'</tr></thead><tbody>';
+  for(let q=hr+1;q<=hend;q++){const lab=TT(rows,q,lc);if(!lab)continue;
+    const vals=hc.map(c=>TT(rows,q,c));const only=vals.filter(Boolean).length;
+    h+='<tr data-r="'+(q+1)+'"><td class="gl">'+slotH(o.f,'stat_'+keyOf(lab),{h:36})+'<b>'+esc(lab)+'</b></td>';
+    if(only===1&&vals[0])h+='<td colspan="'+hc.length+'" class="gm">'+nl2(vals[0])+'</td>';
+    else h+=vals.map((t,i)=>'<td style="background:'+COL[i%7]+'">'+nl2(t)+'</td>').join('');
+    h+='</tr>'}
+  return h+'</tbody></table></div>'}
+
+function renderHybrid(s,v,o){
+  const rows=trim(s.rows);let chips='';
+  if(o.nav==='equip'){NAVEQ=buildEquipNav(rows);chips=chipsH(equipChips(rows))}
+  const P=planGrid(rows,o),W=P.W,it=P.items;
+  const G=o.f==='shop'?shopGroups(rows,P,o):(o.f==='equip'?equipGroups(rows,P,o):new Map());
+  let hr=-1,hend=-1;
+  if(o.f==='goodship'){
+    for(let q=0;q<rows.length;q++){if(rows[q].filter(c=>String(c).trim()).length>=6&&rows[q].some(c=>/Эсминцы/.test(c))){hr=q;break}}
+    if(hr>=0){hend=hr;for(let q=hr+1;q<rows.length;q++){if(rows[q].some(c=>String(c).trim()==='LCK')){hend=q;break}}}}
+  const open='<table><colgroup>'+'<col style="width:64px">'.repeat(W)+'</colgroup><tbody>';
+  let h=chips+'<div class="sheet g cv">',inT=false,doneT=false;
+  const tab=x=>{if(!inT){h+=open;inT=true}h+=x};
+  const out=x=>{if(inT){h+='</tbody></table>';inT=false}h+=x};
+  for(let k=0;k<it.length;k++){const x=it[k];
+    if(hr>=0&&x.b>=hr&&x.a<=hend){if(!doneT){doneT=true;out(goodTable(rows,hr,hend,o))}continue}
+    if(G.has(k)){const g=G.get(k);out(g.html);k=g.kk;continue}
+    if(x.t==='g'){
+      if(x.band){out('<div class="bandw" data-r="'+(x.a+1)+'">'+slotH(o.f,x.band.key,{band:1})+'</div>');continue}
+      if(o.f==='equip'&&G.has(k+1))continue;
+      tab('<tr class="sp"><td colspan="'+W+'" style="height:'+Math.min(x.L,3)*7+'px"></td></tr>');continue}
+    if(o.f==='equip'&&eqChip(rows,x)){
+      const ts=[];for(let q=x.a;q<=x.b;q++)x.cols.forEach(c=>{const t=TT(rows,q,c);if(t&&!(c>=14&&NAVEQ[navNorm(t)]))ts.push(t.replace(/\s+/g,' '))});
+      out('<div class="shsec" data-r="'+(x.a+1)+'"><h3>'+esc(ts.join(' · '))+'</h3></div>');continue}
+    if(o.f==='shop'&&x.kind==='sec'){
+      let t='';for(let c=0;c<W&&!t;c++)t=TT(rows,x.a,c);
+      out('<div class="shsec" data-r="'+(x.a+1)+'">'+slotH(o.f,keyOf(t)+'_icon',{h:56})+'<h3>'+esc(t)+'</h3>'+slotH(o.f,keyOf(t)+'_banner',{h:56})+'</div>');continue}
+    tab(blockH(x,rows,o))}
+  if(inT)h+='</tbody></table>';
+  v.innerHTML=h+'</div>'}
+
+// Прототипы: слева портрет, справа шапка (имя, нация, тип, номер) и описание
+function renderProto(s,v,o){
+  const rows=s.rows.map(r=>r.some(c=>String(c).trim()==='ИмяКорабля')?[]:r);
+  const pc=(nm,num,ds,q)=>{const key=keyOf(nm.split('\n')[0]);
+    return '<div class="pcard" data-r="'+(q+1)+'"><div class="pface">'+slotH(o.f,key,{h:150})+'</div><div class="pbody"><div class="phd"><b>'+esc(nm)+'</b>'+slotH(o.f,key+'_nation',{h:30})+slotH(o.f,key+'_type',{h:30})+(num?'<span class="pn">'+esc(num)+'</span>':'')+'</div><div class="pds">'+nl2(ds)+'</div></div></div>'};
+  let h='<div class="sheet cv"><div class="pgrid">',ser=1,gap=99,titled=false,started=false;
+  const banner=q=>{h+='<div class="pser" data-r="'+(q+1)+'">'+slotH(o.f,'series_'+(ser++),{band:1})+'</div>'};
+  for(let q=0;q<rows.length;q++){const r=rows[q];
+    const ne=r.filter(c=>String(c).trim());
+    if(!ne.length){gap++;continue}
+    if(ne.length===1&&TT(rows,q,0)&&!titled){h+='<h1 class="ptitle" data-r="'+(q+1)+'">'+esc(TT(rows,q,0))+'</h1>';titled=true;gap=0;continue}
+    const cl=(qq,f)=>{const a=[];(rows[qq]||[]).forEach((t,c)=>{t=String(t).trim();if(t&&f(t))a.push([c,t])});return a};
+    const isN=t=>isNum(t)||t==='-';
+    const side=(arr,lim)=>{const o2=[null,null];if(arr.length>=2){o2[0]=arr[0][1];o2[1]=arr[1][1]}else if(arr.length===1){o2[arr[0][0]>=lim?1:0]=arr[0][1]}return o2};
+    const nmA=side(cl(q,t=>!isN(t)),9),dsA=side(cl(q+1,()=>true),9),nuA=side(cl(q,isN),12);
+    const L={n:nmA[0],u:nuA[0],d:dsA[0]},R={n:nmA[1],u:nuA[1],d:dsA[1]};
+    const lo=L.n&&L.d,ro=R.n&&R.d;
+    if(lo||ro){
+      if(!started||gap>=5){banner(q);started=true}
+      h+=lo?pc(L.n,L.u,L.d,q):'<div></div>';
+      h+=ro?pc(R.n,R.u,R.d,q):'<div></div>';
+      q++;gap=0;continue}
+    gap=0}
+  v.innerHTML=h+'</div></div>'}
+
+function renderGrid(s,v,o){if(o.f==='proto')renderProto(s,v,o);else renderHybrid(s,v,o)}
+
+function renderGridOld(s,v,o){
   const rows=trim(s.rows);let chips='';
   if(o.nav==='equip'){NAVEQ=buildEquipNav(rows);chips=chipsH(equipChips(rows))}
   const P=planGrid(rows,o),W=P.W;
@@ -350,7 +559,7 @@ function sheet(s,v,o){
   const bar=s.name==='Барражи';
   rows.forEach((row,r)=>{
     const isNav=nav&&nav.idx.includes(r);
-    h+='<tr data-r="'+(r+1)+'"'+((r==0||(row.filter(c=>String(c).trim()).length==1&&r<3)&&!isNav)?' class="hd"':'')+'>';
+    h+='<tr data-r="'+(r+1)+'"'+((r==0||(row.filter(c=>String(c).trim()).length==1&&r<3)&&!isNav)?' class="hd'+(o.pin&&r==0?' pin':'')+'"':'')+'>';
     for(let c=0;c<w;c++){let inner=cell(row[c]||''),sl='';
       if(isNav&&c==1)inner=nav.map.map(([t,rr])=>'<a class="nl" data-go="'+rr+'">'+esc(t)+'</a>').join('');
       if(bar&&r>1&&!isNav&&String(row[1]||'').trim()){const n=keyOf(row[1]);
@@ -360,6 +569,39 @@ function sheet(s,v,o){
       h+='<td'+(sl?' class="sl"':'')+'>'+inner+sl+'</td>'}
     h+='</tr>'});
   v.innerHTML=h+'</tbody></table></div>'}
+
+// ===== «Хороший ли корабль?»: белый блок как в оригинале + остальная сетка ниже =====
+function goodship(s,v,o){
+  const rows=trim(s.rows);
+  const find=re=>rows.findIndex(r=>re.test(String(r[0]||'').trim()));
+  const iA=find(/^Атакующие/),iB=find(/^Статы выжив/),iC=find(/^Статы пво/);
+  const iH=rows.findIndex(r=>r.some(c=>String(c).trim()==='Линкоры'));
+  if(iA<0||iB<0||iC<0||iH<0){renderGrid(s,v,o);return}
+  const iT=find(/^Я не собираюсь/),iU=find(/^Теперь разберем/);
+  const NOTE=32;
+  const heads=[];rows[iH].forEach((t,c)=>{t=String(t).trim();if(t&&c<NOTE)heads.push({c,t})});
+  let h='<div class="gw">';
+  let first=true;
+  for(let r=0;r<iH;r++){const t=String(rows[r][0]||'').trim();if(!t)continue;
+    if(first){h+='<h1 data-r="'+(r+1)+'">'+esc(t)+'</h1>';first=false}else h+='<p data-r="'+(r+1)+'">'+esc(t)+'</p>'}
+  h+='<table><colgroup><col style="width:15%">'+heads.map(()=>'<col>').join('')+'<col style="width:34%"></colgroup>';
+  h+='<tr class="hr" data-r="'+(iH+1)+'"><td class="lb"></td>'+heads.map(x=>'<td class="hd">'+esc(x.t.split('\n')[0])+slotH('goodship','class_'+keyOf(x.t.split('\n')[0]),{h:30})+'</td>').join('')+'<td style="border:0"></td></tr>';
+  const note=(a,b)=>{const out=[];for(let r=a;r<b;r++){const t=(rows[r]||[]).filter((c,i)=>i>=NOTE&&String(c).trim()).map(c=>String(c)).join('').trim();if(t)out.push(t)}return out.join('\n')};
+  [[iA,iB],[iB,iC],[iC,iC+3]].forEach(([a,b])=>{
+    const lab=String(rows[a][0]||'').trim();
+    h+='<tr data-r="'+(a+1)+'"><td class="lb">'+esc(lab)+'</td>';
+    heads.forEach(x=>{let txt='';const cs=[];rows[a].forEach((t,c)=>{if(c>0&&c<NOTE&&String(t).trim())cs.push(c)});
+      const hi=heads.indexOf(x);const nxt=heads[hi+1]?heads[hi+1].c:NOTE;
+      const c=cs.find(c=>c>=x.c&&c<nxt);txt=c!==undefined?String(rows[a][c]).trim():'';
+      h+='<td><div class="gc"><div class="gi">'+slotH('goodship','stat_'+keyOf(lab)+'_'+keyOf(x.t.split('\n')[0]),{h:90})+'</div><div class="gt'+(txt.length>5?' sm':'')+'">'+esc(txt)+'</div></div></td>'});
+    h+='<td class="nt">'+esc(note(a,b))+'</td></tr>'});
+  h+='</table>';
+  if(iT>=0)h+='<p data-r="'+(iT+1)+'">'+esc(String(rows[iT][0]).trim())+'</p>';
+  h+='</div>';
+  const rest=rows.slice(iU>=0?iU:(iT>=0?iT+1:iC+3));
+  const tmp=document.createElement('div');
+  renderGrid({name:s.name,rows:rest},tmp,o);
+  v.innerHTML='<div class="scr">'+h+'<div class="gr">'+tmp.innerHTML+'</div></div>'}
 
 function raw(s,v){
   let h='<div class="raw"><table>';
@@ -375,7 +617,7 @@ function show(i,keep){
   const t=c[2],fx=['grid','sheet','dict'].includes(t);
 v.className=fx?'fx':'';v.style.padding=(t=='grid'||t=='sheet'||t=='raw')?'16px':(t=='dict'?'22px 24px 6px':'30px'); //бугагаггагага во всю ширину очка
   if(!s.rows.length)v.innerHTML='<div class="empty">Нет данных.</div>';
-  else if(t=='home')home(s,v);else if(t=='grid')renderGrid(s,v,o);else if(t=='sheet')sheet(s,v,o);else if(t=='raw')raw(s,v); //от сюда до мне страшно кусок гавнокода
+  else if(t=='home')home(s,v);else if(t=='grid'){if(o.f==='goodship')goodship(s,v,o);else renderGrid(s,v,o)}else if(t=='sheet')sheet(s,v,o);else if(t=='raw')raw(s,v); //от сюда до мне страшно кусок гавнокода
   //бля мне страшно 
   else if(t=='dict')dict(s,v);else if(t=='classes')classes(s,v,o);else doc(s,v,o);
   hydrate(v);CUR=i;
@@ -424,7 +666,8 @@ function slotsOf(i){
   const s=SHEETS[i],c=CFG[s.name];if(!c||!s.rows.length)return[];const o=c[4],t=c[2],out=[];
   const add=(f,k,ctx,x)=>out.push(['images/'+f+'/'+k+'.'+(x||'png'),ctx||'']);
   if(t==='grid'){const rows=trim(s.rows);if(o.nav==='equip')NAVEQ=buildEquipNav(rows);
-    planGrid(rows,o).items.forEach(it=>{if(it.t!=='g')return;
+    const tmp=document.createElement('div');renderGrid(s,tmp,o);tmp.querySelectorAll('.slot').forEach(e=>{const r=e.closest('[data-r]');add(e.dataset.f,e.dataset.k,r?'строка '+r.dataset.r:'')});
+    [].forEach(it=>{if(it.t!=='g')return;
       if(it.band)add(o.f,it.band.key,'строка '+(it.a+1)+', после: «'+it.band.ctx+'» (широкая картинка)');
       it.slots.forEach(x=>add(o.f,x.key,'строка '+(it.a+1)+': '+x.ctx))})}
   else if(t==='doc'){const rows=trim(s.rows);if(o.f==='fleet')rows.forEach((r,k)=>{const nm=String(r[0]||'').trim();if(nm&&nm.length<=40&&r.slice(1).filter(c=>String(c).trim()).length>=1&&r.filter(c=>String(c).trim()).length>1)add('fleet',keyOf(nm.split('\n')[0]),'корабль, строка '+(k+1))});for(let r=0;r<rows.length;r++){if(isBlankRow(rows[r])){let j=r;while(j<rows.length&&isBlankRow(rows[j]))j++;
