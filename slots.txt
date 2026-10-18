@@ -1,0 +1,1188 @@
+СПИСОК МЕСТ ПОД КАРТИНКИ
+Положите файл по указанному пути (рядом с index.html). Расширения: png, jpg, webp или gif — подойдёт любое.
+Название файла = текст из ячейки без символов \ / : * ? " < > |
+Карточка/слот, для которого файла нет, остаётся пунктирной рамкой.
+
+=== Обложка (3) ===
+images/cover/event.png    // картинка актуального ивента
+images/cover/oc.png    // картинка ОС
+images/cover/meta.png    // картинка Meta
+
+=== Патчноут и датамайн (3) ===
+images/patch/r7.png    // строка 7, после: «"Мы будем терпеть тысячи лет" или "Когда реран UR?"» (широкая картинка)
+images/patch/r33.png    // строка 33, после: «Maintenance Notice – 10/15, 12 A.M (UTC-7)» (широкая картинка)
+images/patch/r88.png    // строка 88, после: «Слава Богу МАРКО ПОЛО🙏❤️СЛАВА МАРКО ПОЛО🙏❤️АНГЕЛА ХРАНИТЕЛЯ МАРКО ПО» (широкая картинка)
+
+=== Флотостроение (69) ===
+images/fleet/Leander.png    // корабль, строка 15
+images/fleet/Phoenix.png    // корабль, строка 16
+images/fleet/Portland.png    // корабль, строка 17
+images/fleet/Belfast.png    // корабль, строка 18
+images/fleet/Noshiro.png    // корабль, строка 19
+images/fleet/Roon µ.png    // корабль, строка 20
+images/fleet/Anchorage.png    // корабль, строка 21
+images/fleet/Agir.png    // корабль, строка 22
+images/fleet/AzumaBrestGuamKronshtadt.png    // корабль, строка 23
+images/fleet/Napoli.png    // корабль, строка 24
+images/fleet/Shiranui.png    // корабль, строка 26
+images/fleet/Ariake.png    // корабль, строка 27
+images/fleet/Z23Laffey.png    // корабль, строка 28
+images/fleet/Ayanami.png    // корабль, строка 29
+images/fleet/Kawakaze.png    // корабль, строка 30
+images/fleet/Kazagumo.png    // корабль, строка 31
+images/fleet/An ShanChang ChunTai YuanFu Shun.png    // корабль, строка 32
+images/fleet/Yuudachi.png    // корабль, строка 33
+images/fleet/Mogador.png    // корабль, строка 34
+images/fleet/Shimakaze.png    // корабль, строка 35
+images/fleet/Z52.png    // корабль, строка 36
+images/fleet/Harbin.png    // корабль, строка 37
+images/fleet/Bayard.png    // корабль, строка 38
+images/fleet/San Diego.png    // корабль, строка 39
+images/fleet/Plymouth.png    // корабль, строка 40
+images/fleet/Shropshire.png    // корабль, строка 41
+images/fleet/London.png    // корабль, строка 42
+images/fleet/Takao.png    // корабль, строка 43
+images/fleet/Ibuki.png    // корабль, строка 44
+images/fleet/Unzen.png    // корабль, строка 45
+images/fleet/Hindenburg.png    // корабль, строка 46
+images/fleet/KasumiNoshiroJintsuu.png    // корабль, строка 50
+images/fleet/Eldridge.png    // корабль, строка 51
+images/fleet/Bristol.png    // корабль, строка 52
+images/fleet/Aurora.png    // корабль, строка 53
+images/fleet/Avrora.png    // корабль, строка 54
+images/fleet/Kashino.png    // корабль, строка 55
+images/fleet/Helena.png    // корабль, строка 56
+images/fleet/Helena META.png    // корабль, строка 57
+images/fleet/Unicorn.png    // корабль, строка 61
+images/fleet/Shouhou.png    // корабль, строка 62
+images/fleet/Perseus.png    // корабль, строка 63
+images/fleet/Aquila.png    // корабль, строка 64
+images/fleet/Volga.png    // корабль, строка 65
+images/fleet/Ryuuhou.png    // корабль, строка 66
+images/fleet/Painlevé.png    // корабль, строка 67
+images/fleet/Zuihou.png    // корабль, строка 68
+images/fleet/Klaudia Valentz.png    // корабль, строка 69
+images/fleet/Daisen.png    // корабль, строка 70
+images/fleet/Ark Royal.png    // корабль, строка 72
+images/fleet/Centaur.png    // корабль, строка 73
+images/fleet/Formidable.png    // корабль, строка 74
+images/fleet/August von Parseval.png    // корабль, строка 75
+images/fleet/Chkalov.png    // корабль, строка 76
+images/fleet/Implacable.png    // корабль, строка 77
+images/fleet/Admiral Nakhimov.png    // корабль, строка 78
+images/fleet/Дамагеры авики.png    // корабль, строка 80
+images/fleet/Enterprise.png    // корабль, строка 82
+images/fleet/Saratoga.png    // корабль, строка 83
+images/fleet/Independence.png    // корабль, строка 84
+images/fleet/ShinanoHakuryuuAmagi II.png    // корабль, строка 85
+images/fleet/Yorktown II.png    // корабль, строка 86
+images/fleet/Fritz Rumey.png    // корабль, строка 87
+images/fleet/r2.png    // строка 2, после: «(корабли приведены для лучшей ассоциации и наглядности, исключительно » (широкая картинка)
+
+=== Классы кораблей (18) ===
+images/classes/DD.png    // строка 1: DD
+images/classes/DDG.png    // строка 2: DDG
+images/classes/CL.png    // строка 3: CL
+images/classes/CA.png    // строка 4: CA
+images/classes/CB.png    // строка 5: CB
+images/classes/BB.png    // строка 6: BB
+images/classes/BC.png    // строка 7: BC
+images/classes/BBV.png    // строка 8: BBV
+images/classes/CV.png    // строка 9: CV
+images/classes/CVL.png    // строка 10: CVL
+images/classes/SS.png    // строка 11: SS
+images/classes/SSV.png    // строка 12: SSV
+images/classes/IXv.png    // строка 13: IXv
+images/classes/IXm.png    // строка 14: IXm
+images/classes/IXs.png    // строка 15: IXs
+images/classes/AR.png    // строка 16: AR
+images/classes/AE.png    // строка 17: AE
+images/classes/BM.png    // строка 18: BM
+
+=== Эквип (165) ===
+images/equip/Twin 100mm (Type 98) Kai.png    // строка 14: ПМК
+images/equip/Twin 138.6mm (Mle 1934).png    // строка 14: ПМК
+images/equip/Twin 127mm (Type 5 Prototype).png    // строка 14: ПМК
+images/equip/Prototype Twin 130mm Model 1936 Main Gun Mount.png    // строка 14: ПМК
+images/equip/Twin 127mm (Type D).png    // строка 14: ПМК
+images/equip/Универсальная пушка. Маленький урон по хэви..png    // строка 22: Универсальная пушка. Маленький урон по хэви.
+images/equip/r21_G.png    // строка 22: Универсальная пушка. Маленький урон по хэви.
+images/equip/Неплохая пушка для гк эсминцев (но похуже других).png    // строка 22: Универсальная пушка. Маленький урон по хэви.
+images/equip/Дешман вариант для гк эсминцев с хорошим АоА.png    // строка 30: Дешман вариант для гк эсминцев с хорошим АоА
+images/equip/Хорошая дешёвая универсальная пушка для эсминцев.png    // строка 30: Дешман вариант для гк эсминцев с хорошим АоА
+images/equip/Бюджетный вариант для гк эсминцев.png    // строка 30: Дешман вариант для гк эсминцев с хорошим АоА
+images/equip/r38.png    // строка 38, после: «Достаточно сильная пушка для гк эсминцев против лайта» (широкая картинка)
+images/equip/r131.png    // строка 131, после: «Single 76mm (3"/50 caliber gun)» (широкая картинка)
+images/equip/Пушки лёгких крейсеров.png    // строка 213: Пушки лёгких крейсеров
+images/equip/Prototype Quadruple 152mm Main Gun Mount.png    // строка 219: Prototype Quadruple 152mm Main Gun Mount
+images/equip/Twin 150mm (TbtsK C42T Prototype).png    // строка 219: Prototype Quadruple 152mm Main Gun Mount
+images/equip/Triple 180mm (Improved B-1-P Pattern 1932).png    // строка 219: Prototype Quadruple 152mm Main Gun Mount
+images/equip/Triple 152mm (BL 6 Mk XXV Prototype).png    // строка 229: Triple 152mm (BL 6" Mk XXV Prototype)
+images/equip/Twin 152mm (QF 6 Mk XXVI).png    // строка 229: Triple 152mm (BL 6" Mk XXV Prototype)
+images/equip/Triple 152mm (MK-5).png    // строка 229: Triple 152mm (BL 6" Mk XXV Prototype)
+images/equip/r237_C.png    // строка 238: Только на корабли с хорошим гк и слабым AoA, по урону почти как пушки 
+images/equip/Неплохая фугасная пушка, но нужна не очень часто.png    // строка 238: Только на корабли с хорошим гк и слабым AoA, по урону почти как пушки 
+images/equip/r246.png    // строка 246, после: «Хорошая пушка для лёгких крейсеров пока не появились пушки выше» (широкая картинка)
+images/equip/Triple 220mm (SM-40 Prototype).png    // строка 334: Triple 220mm (SM-40 Prototype)
+images/equip/Prototype Triple 203mm55 Main Gun Mount.png    // строка 334: Triple 220mm (SM-40 Prototype)
+images/equip/Triple 234mm (BL 9.2 Mk XII Prototype).png    // строка 334: Triple 220mm (SM-40 Prototype)
+images/equip/Twin 203mm SKC (Improved).png    // строка 344: Twin 203mm SKC (Improved)
+images/equip/Twin 203mm (Mle 1931).png    // строка 344: Twin 203mm SKC (Improved)
+images/equip/Triple 203mm (Mle 1934 Prototype).png    // строка 344: Twin 203mm SKC (Improved)
+images/equip/Twin 234mm (BL 9.2 Mk XII Prototype).png    // строка 344: Twin 203mm SKC (Improved)
+images/equip/Недорогая пушка для тяжелых крейсеров.png    // строка 352: Недорогая пушка для тяжелых крейсеров
+images/equip/Нормальная пушка для тяжелых крейсеров на бронебойках.png    // строка 352: Недорогая пушка для тяжелых крейсеров
+images/equip/Дешёвая пушка если нет ничего лучше.png    // строка 352: Недорогая пушка для тяжелых крейсеров
+images/equip/r351_N.png    // строка 352: Недорогая пушка для тяжелых крейсеров
+images/equip/r361.png    // строка 361, после: «(ВООБЩЕ НЕ СТОЯТ ТОГО, ЧТО ЗА НИХ ПРОСЯТ)» (широкая картинка)
+images/equip/Лучшая пушка для больших крейсеров.png    // строка 451: Лучшая пушка для больших крейсеров
+images/equip/Triple 305mm (B-50).png    // строка 460: Triple 305mm (B-50)
+images/equip/Prototype Triple 283mm54 Main Gun Mount.png    // строка 460: Triple 305mm (B-50)
+images/equip/Triple 310mm (Type 0 Prototype).png    // строка 460: Triple 305mm (B-50)
+images/equip/r468.png    // строка 468, после: «Дешёвая пушка для больших крейсеров» (широкая картинка)
+images/equip/r556_C.png    // строка 557: Лучшая пушка для линкоров против хэви и очень хороша против медиума
+images/equip/r556_E.png    // строка 557: Лучшая пушка для линкоров против хэви и очень хороша против медиума
+images/equip/r556_I.png    // строка 557: Лучшая пушка для линкоров против хэви и очень хороша против медиума
+images/equip/Лучшая пушка против медиума, хороша против лайта.png    // строка 557: Лучшая пушка для линкоров против хэви и очень хороша против медиума
+images/equip/Топ 2 против лайта.png    // строка 557: Лучшая пушка для линкоров против хэви и очень хороша против медиума
+images/equip/Triple 406mm (MK-1).png    // строка 568: Triple 406mm (MK-1)
+images/equip/Triple 406mm (1645 Mk 6).png    // строка 568: Triple 406mm (MK-1)
+images/equip/Twin 406mm (SK C34 Prototype).png    // строка 568: Triple 406mm (MK-1)
+images/equip/Triple 460mm (Type 94).png    // строка 568: Triple 406mm (MK-1)
+images/equip/r574_C.png    // строка 575: Чуть лучше по медиуму чем французская пушка выше, но при этом больше р
+images/equip/Неплохая дешёвая фугасная пушка для барражеров.png    // строка 575: Чуть лучше по медиуму чем французская пушка выше, но при этом больше р
+images/equip/Хорошая пушка ТОЛЬКО ПО МЕДИУМУ с большим разбросом.png    // строка 575: Чуть лучше по медиуму чем французская пушка выше, но при этом больше р
+images/equip/r583.png    // строка 583, после: «Если нужна пушка против медиума/хэви и нет ничего лучше» (широкая картинка)
+images/equip/Крайне универсальные и крутые магнитные торпеды.png    // строка 672: Крайне универсальные и крутые магнитные торпеды
+images/equip/r671_G.png    // строка 672: Крайне универсальные и крутые магнитные торпеды
+images/equip/Мощные торпеды с хорошим уроном.png    // строка 672: Крайне универсальные и крутые магнитные торпеды
+images/equip/r671_N.png    // строка 672: Крайне универсальные и крутые магнитные торпеды
+images/equip/610mm Quadruple Torpedo Mount (Cruiser).png    // строка 682: Крайне универсальные и крутые магнитные торпеды
+images/equip/Хорошие магнитные торпеды, но имеют долгое кд..png    // строка 682: Крайне универсальные и крутые магнитные торпеды
+images/equip/Дешёвые достаточно сильные торпеды.png    // строка 689: Дешёвые достаточно сильные торпеды
+images/equip/Торпеды против лайта....png    // строка 689: Дешёвые достаточно сильные торпеды
+images/equip/r697.png    // строка 697, после: «Дешёвые торпеды для начала игры» (широкая картинка)
+images/equip/Лучшая торпеда для подлодок.png    // строка 787: Лучшая торпеда для подлодок
+images/equip/r786_E.png    // строка 787: Лучшая торпеда для подлодок
+images/equip/r795.png    // строка 795, после: «Хорошие торпеды если вы не можете поставить биддеры или подлодка не мо» (широкая картинка)
+images/equip/r835_C.png    // строка 836: Урон бомбами практически не отличается от ему подобных, однако обладае
+images/equip/Grumman F7F Tigercat.png    // строка 844: Grumman F7F Tigercat
+images/equip/Хороший файтер с баффом ПВО флота.png    // строка 851: Хороший файтер с баффом ПВО флота
+images/equip/r850_G.png    // строка 851: Хороший файтер с баффом ПВО флота
+images/equip/r859.png    // строка 859, после: «Хорошие дешёвые файтеры.» (широкая картинка)
+images/equip/Лучший ракетный файтер против медиума и хэви.png    // строка 948: Лучший ракетный файтер против медиума и хэви
+images/equip/Топ 2 ракетный файтер против медиума и лайта.png    // строка 955: Топ 2 ракетный файтер против медиума и лайта
+images/equip/Топ 1 ракетный файтер по лайту.png    // строка 955: Топ 2 ракетный файтер против медиума и лайта
+images/equip/r962.png    // строка 962, после: «Лучший среди золотых ракетных файтеров по хэви» (широкая картинка)
+images/equip/Лучший бомбер по хэви..png    // строка 1051: Лучший бомбер по хэви.
+images/equip/Лучший бомбер по лайту. Долгая перезарядка.png    // строка 1051: Лучший бомбер по хэви.
+images/equip/r1050_I.png    // строка 1051: Лучший бомбер по хэви.
+images/equip/Curtiss XSB3C (Experimental).png    // строка 1060: Curtiss XSB3C (Experimental)
+images/equip/F4U (VBF-94 Squadron).png    // строка 1060: Curtiss XSB3C (Experimental)
+images/equip/Fairey Barracuda (831 Squadron).png    // строка 1060: Curtiss XSB3C (Experimental)
+images/equip/Дешёвый и очень хороший бомбер.png    // строка 1066: Дешёвый и очень хороший бомбер
+images/equip/Дешёвый хороший бомбер.png    // строка 1066: Дешёвый и очень хороший бомбер
+images/equip/Дешёвый бомбер с быстрой перезарядкой.png    // строка 1066: Дешёвый и очень хороший бомбер
+images/equip/Ковровый бомбер. Нужен редко.png    // строка 1066: Дешёвый и очень хороший бомбер
+images/equip/r1073.png    // строка 1073, после: «Ультрадешман с быстрой перезарядкой (только для условной Ark Royal)» (широкая картинка)
+images/equip/Лучший параллельный торпедоносец. Может летать на перехват.png    // строка 1161: Лучший параллельный торпедоносец. Может летать на перехват
+images/equip/r1160_G.png    // строка 1161: Лучший параллельный торпедоносец. Может летать на перехват
+images/equip/Хороший сильный параллельный торпедоносец.png    // строка 1168: Хороший сильный параллельный торпедоносец
+images/equip/r1167_K.png    // строка 1168: Хороший сильный параллельный торпедоносец
+images/equip/r1174_C.png    // строка 1175: Хороший сильный параллельный торпедоносец. Его торпеды быстрее, чем у 
+images/equip/Хороший дешёвый параллельный торпедоносец.png    // строка 1182: Хороший дешёвый параллельный торпедоносец
+images/equip/Торпеды замедляют врагов. Нужен очень редко.png    // строка 1182: Хороший дешёвый параллельный торпедоносец
+images/equip/r1189.png    // строка 1189, после: «Только на Formidable» (широкая картинка)
+images/equip/Самый сильный веерный торпедоносец с хорошим кд..png    // строка 1278: Самый сильный веерный торпедоносец с хорошим кд.
+images/equip/Урон как у вит-2, но кд быстрее.png    // строка 1278: Самый сильный веерный торпедоносец с хорошим кд.
+images/equip/Сильный веерный торпедоносец, но с долгим кд.png    // строка 1278: Самый сильный веерный торпедоносец с хорошим кд.
+images/equip/r1291.png    // строка 1291, после: «Дешёвый веерный торпедоносец» (широкая картинка)
+images/equip/Лучшая зенитка в игре.png    // строка 1377: Лучшая зенитка в игре
+images/equip/Урон чуть меньше чем у зенитки слева, но дает 15 точности.png    // строка 1377: Лучшая зенитка в игре
+images/equip/Топ 2 зенитка. На +13 сравнима с ур зениткой +10.png    // строка 1384: Топ 2 зенитка. На +13 сравнима с ур зениткой +10
+images/equip/Дешёвая хорошая зенитка.png    // строка 1391: Дешёвая хорошая зенитка
+images/equip/Она чуть лучше, чем зенитка слева, но получается тяжелее.png    // строка 1391: Дешёвая хорошая зенитка
+images/equip/r1390_G.png    // строка 1391: Дешёвая хорошая зенитка
+images/equip/r1397_C.png    // строка 1398: Дешёвая неплохая зенитка. Хороший урон но маленькая дальность
+images/equip/Чуть хуже британской зенитки сверху.png    // строка 1398: Дешёвая неплохая зенитка. Хороший урон но маленькая дальность
+images/equip/r1405.png    // строка 1405, после: «"Иногда такое чудо советуют ставить на корабли с плохим пво для повыше» (широкая картинка)
+images/equip/Лучшая зенитка для баффа точности..png    // строка 1493: Лучшая зенитка для баффа точности.
+images/equip/Топ2 зенитка для баффа точности..png    // строка 1493: Лучшая зенитка для баффа точности.
+images/equip/Лучшая зенитка для баффа фп.png    // строка 1493: Лучшая зенитка для баффа точности.
+images/equip/Зенитка для разгона точности..png    // строка 1500: Зенитка для разгона точности.
+images/equip/r1507.png    // строка 1507, после: «Оно не работает. На данный момент не появился корабль, на котором оно » (широкая картинка)
+images/equip/Лучший противоподло- дочный аукс для авангарда.png    // строка 1556: Лучший противоподло- дочный аукс для авангарда
+images/equip/r1555_G.png    // строка 1556: Лучший противоподло- дочный аукс для авангарда
+images/equip/r1562_C.png    // строка 1563: Можно ставить дополнительно на другой корабль, если не хватает ежа
+images/equip/Лимитка. Неплохой самолет если не хватает ганнета.png    // строка 1563: Можно ставить дополнительно на другой корабль, если не хватает ежа
+images/equip/Бюджетный противоподлодочный самолет.png    // строка 1570: Бюджетный противоподлодочный самолет
+images/equip/Лучше взять самолеты выше.png    // строка 1577: Лучше взять самолеты выше
+images/equip/r1605_C.png    // строка 1606: Лучший аукс на живучесть. Ставится в 99% случаев на 99% тяжелых и лёгк
+images/equip/Как руль, но дает меньше EVA и скорость всему флоту.png    // строка 1606: Лучший аукс на живучесть. Ставится в 99% случаев на 99% тяжелых и лёгк
+images/equip/r1605_N.png    // строка 1606: Лучший аукс на живучесть. Ставится в 99% случаев на 99% тяжелых и лёгк
+images/equip/Немного хуже руля, дает скорость кораблю.png    // строка 1613: Немного хуже руля, дает скорость кораблю
+images/equip/r1612_G.png    // строка 1613: Немного хуже руля, дает скорость кораблю
+images/equip/Дает HP. Может неплохо баффнуть весь флот.png    // строка 1613: Немного хуже руля, дает скорость кораблю
+images/equip/r1612_M.png    // строка 1613: Немного хуже руля, дает скорость кораблю
+images/equip/r1612_N.png    // строка 1613: Немного хуже руля, дает скорость кораблю
+images/equip/r1619_C.png    // строка 1620: Как каблук, но не дает скорость (ну и не делает музой, очевидно)
+images/equip/Дешёвый аукс на HP. ОЧЕНЬ часто ставится на эсминцы.png    // строка 1620: Как каблук, но не дает скорость (ну и не делает музой, очевидно)
+images/equip/Дает HP. Уменьшает урон получаемый от торпед. Крутой аукс.png    // строка 1620: Как каблук, но не дает скорость (ну и не делает музой, очевидно)
+images/equip/r1619_N.png    // строка 1620: Как каблук, но не дает скорость (ну и не делает музой, очевидно)
+images/equip/r1619_O.png    // строка 1620: Как каблук, но не дает скорость (ну и не делает музой, очевидно)
+images/equip/Дает EVA. Баффает FP.png    // строка 1627: Дает EVA. Баффает FP
+images/equip/r1634.png    // строка 1634, после: «Дешман. Дает EVA. Для новичков» (широкая картинка)
+images/equip/Type 93 Pure Oxygen Torpedo.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Super Heavy Shell.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Admiralty Fire Control Table.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/6CRH Armor Piercing Shell.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Steam Catapult.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Frontier Medal.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Funkmess- Ortung 25 Radar.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Fargo Direct Drone.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/High Performance Anti-Air Radar.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Pressure-Resistant Hull Design.png    // строка 1724: Type 93 Pure Oxygen Torpedo
+images/equip/Дешёвая версия УР торпеды.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/r1730_C.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Срезает кд первого залпа линкора. Дает FP и HIT.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/r1730_K.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Увеличивает хп и скорость самолетов..png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/r1730_N.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Дает FP и EVA..png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Дает FP и HP эсминцам..png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Дешман ПВО аукс..png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/r1730_AA.png    // строка 1731: Дешёвая версия УР торпеды
+images/equip/Drop Tank.png    // строка 1739: Drop Tank
+images/equip/Dynamic Cannon.png    // строка 1739: Drop Tank
+images/equip/Speedy Sprouty Botanist.png    // строка 1739: Drop Tank
+images/equip/Ninjutsu Scroll.png    // строка 1739: Drop Tank
+images/equip/← лимитки.png    // строка 1739: Drop Tank
+images/equip/r1746.png    // строка 1746, после: «Дешман аукс на урон для гк эсминцев. Можно юзать для таймингов (напр. » (широкая картинка)
+images/equip/r1795_B.png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+images/equip/Ставится на аваносцы вне авиационных миров (13, 15).png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+images/equip/Ставится на торпедные эсминцы.png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+images/equip/Ставится в 99% случаев.png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+images/equip/Ставится очень часто, особенно в авиационных мирах.png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+images/equip/Лучший аугмент на подлодки на урон (за искл. уникальных).png    // строка 1796: Ставится на линкоры в 99% случаев. Если линкор воюет против лайта - лу
+
+=== Операция Сирена (6) ===
+images/os/r121.png    // строка 121, после: «Итак, ежедневки вы можете найти тут:» (широкая картинка)
+images/os/r134.png    // строка 134, после: «Компасы вы можете найти в инвентаре, иногда их нужно активировать чтоб» (широкая картинка)
+images/os/r143.png    // строка 143, после: «В вихрях (стронхолдах) вы так-же можете получить различные ресурсы, но» (широкая картинка)
+images/os/r151.png    // строка 151, после: «Арбитр это ежемесячный босс. У него есть две формы - нормал и хард. Ха» (широкая картинка)
+images/os/r206.png    // строка 206, после: «Это в SETTINGS ⮕ OPTIONS» (широкая картинка)
+images/os/r219.png    // строка 219, после: «Это вот тут:» (широкая картинка)
+
+=== Прототипы (47) ===
+images/proto/Neptune.png    // строка 2: Neptune
+images/proto/Monarch.png    // строка 2: Neptune
+images/proto/Ibuki.png    // строка 7: Ibuki
+images/proto/Izumo.png    // строка 7: Ibuki
+images/proto/Roon.png    // строка 12: Roon
+images/proto/Saint Louis.png    // строка 12: Roon
+images/proto/Seattle.png    // строка 17: Seattle
+images/proto/Georgia.png    // строка 17: Seattle
+images/proto/Kitakaze.png    // строка 24: Kitakaze
+images/proto/Azuma.png    // строка 24: Kitakaze
+images/proto/Friedrich der Große.png    // строка 29: Friedrich der Große
+images/proto/Gascogne.png    // строка 29: Friedrich der Große
+images/proto/Cheshire.png    // строка 34: Cheshire
+images/proto/Drake.png    // строка 34: Cheshire
+images/proto/Mainz.png    // строка 41: Mainz
+images/proto/Odin.png    // строка 41: Mainz
+images/proto/Champagne.png    // строка 46: Champagne
+images/proto/Anchorage.png    // строка 51: Anchorage
+images/proto/Hakuryuu.png    // строка 51: Anchorage
+images/proto/Ägir.png    // строка 58: Ägir
+images/proto/August von Parseval.png    // строка 58: Ägir
+images/proto/Marco Polo.png    // строка 63: Marco Polo
+images/proto/Plymouth.png    // строка 68: Plymouth
+images/proto/Prinz Rupprecht.png    // строка 68: Plymouth
+images/proto/Harbin.png    // строка 75: Harbin
+images/proto/Chkalov.png    // строка 75: Harbin
+images/proto/Brest.png    // строка 80: Brest
+images/proto/Kearsarge.png    // строка 85: Kearsarge
+images/proto/Shimanto.png    // строка 85: Kearsarge
+images/proto/Felix Schultz.png    // строка 92: Felix Schultz
+images/proto/Hindenburg.png    // строка 92: Felix Schultz
+images/proto/Flandre.png    // строка 97: Flandre
+images/proto/Halford.png    // строка 102: Halford
+images/proto/Daisen.png    // строка 102: Halford
+images/proto/Napoli.png    // строка 109: Napoli
+images/proto/Admiral Nakhimov.png    // строка 109: Napoli
+images/proto/Bayard.png    // строка 114: Bayard
+images/proto/Mecklenburg.png    // строка 119: Mecklenburg
+images/proto/Gouden Leeuw.png    // строка 119: Mecklenburg
+images/proto/Dmitri Donskoi.png    // строка 126: Dmitri Donskoi
+images/proto/Kansas.png    // строка 126: Dmitri Donskoi
+images/proto/Vittorio Cuniberti.png    // строка 131: Vittorio Cuniberti
+images/proto/Max Immelmann.png    // строка 136: Max Immelmann
+images/proto/Valparaíso.png    // строка 136: Max Immelmann
+images/proto/Duncan.png    // строка 143: Duncan
+images/proto/Takahashi.png    // строка 143: Duncan
+images/proto/Orage.png    // строка 148: Orage
+
+=== Что скупать / фармить (114) ===
+images/shop/Dock Expansion.png    // строка 10: Dock Expansion
+images/shop/Promise Ring.png    // строка 10: Dock Expansion
+images/shop/Расширение дорма.png    // строка 10: Dock Expansion
+images/shop/Второй этаж дорма.png    // строка 10: Dock Expansion
+images/shop/Prototype Bulin MKII.png    // строка 21: Prototype Bulin MKII
+images/shop/Kawakaze.png    // строка 21: Prototype Bulin MKII
+images/shop/Eldridge.png    // строка 21: Prototype Bulin MKII
+images/shop/Albacore.png    // строка 21: Prototype Bulin MKII
+images/shop/U-37.png    // строка 21: Prototype Bulin MKII
+images/shop/Noshiro.png    // строка 21: Prototype Bulin MKII
+images/shop/Helena.png    // строка 32: 800
+images/shop/Unicorn.png    // строка 32: 800
+images/shop/Tai Yuan.png    // строка 32: 800
+images/shop/Chang Chun.png    // строка 32: 800
+images/shop/Stephen Potter.png    // строка 32: 800
+images/shop/London.png    // строка 32: 800
+images/shop/Naganami.png    // строка 32: 800
+images/shop/r34_K.png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Топовый хиллер игры. Требует ретрофит..png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Топовый ракетный эсминец (нужен айтем для ретрофита)..png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Хороший ракетный эсминец. (нужен айтем для ретрофита)..png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/r34_V.png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Стеклопушка и баффер FP эскорту. Требует ретро..png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Хороший торпедный эсминец и баффер..png    // строка 35: Позволяет дамажить тому, что давмажить не должно. Очень желательно рет
+images/shop/Phoenix.png    // строка 38: 300
+images/shop/Portland.png    // строка 38: 300
+images/shop/полтер сосал.png    // строка 38: 300
+images/shop/Ariake.png    // строка 38: 300
+images/shop/Неплохой нод танк на ноды в начале игры..png    // строка 41: Неплохой нод танк на ноды в начале игры.
+images/shop/Норм танк до 13 мира включительно. (Ебанутым можно и в 15.).png    // строка 41: Неплохой нод танк на ноды в начале игры.
+images/shop/Дешёвый баффер авиков с топовым баффом..png    // строка 41: Неплохой нод танк на ноды в начале игры.
+images/shop/T3 Upgrade Part.png    // строка 44: T3 Upgrade Part
+images/shop/T4 Upgrade Part.png    // строка 44: T3 Upgrade Part
+images/shop/Royal Gourmet.png    // строка 44: T3 Upgrade Part
+images/shop/Full Course.png    // строка 44: T3 Upgrade Part
+images/shop/T3 Retrofit Blueprint.png    // строка 44: T3 Upgrade Part
+images/shop/T3 Skill Book.png    // строка 44: T3 Upgrade Part
+images/shop/Super Rare Cat Box.png    // строка 44: T3 Upgrade Part
+images/shop/General Blueprint S1.png    // строка 44: T3 Upgrade Part
+images/shop/General Blueprint S2.png    // строка 44: T3 Upgrade Part
+images/shop/General Blueprint S3.png    // строка 44: T3 Upgrade Part
+images/shop/Cognitive Chips.png    // строка 51: Cognitive Chips
+images/shop/Crystallized Heat-Resistant Steel.png    // строка 62: Crystallized Heat-Resistant Steel
+images/shop/Nanoceramic Alloy.png    // строка 62: Crystallized Heat-Resistant Steel
+images/shop/Neuroplastic Prosthetic Arm.png    // строка 62: Crystallized Heat-Resistant Steel
+images/shop/Supercavitation Generator.png    // строка 62: Crystallized Heat-Resistant Steel
+images/shop/T3 META Universal Skill Book.png    // строка 62: Crystallized Heat-Resistant Steel
+images/shop/Illustrious µ.png    // строка 83: Illustrious µ
+images/shop/Roon µ.png    // строка 83: Illustrious µ
+images/shop/Royal Fortune.png    // строка 83: Illustrious µ
+images/shop/Independence.png    // строка 83: Illustrious µ
+images/shop/Type 93 Pure Oxygen Torpedo.png    // строка 83: Illustrious µ
+images/shop/FuMO 25.png    // строка 83: Illustrious µ
+images/shop/Improved Snorkel.png    // строка 83: Illustrious µ
+images/shop/Type 1 Armor Piercing Shell.png    // строка 83: Illustrious µ
+images/shop/Super Heavy Shell.png    // строка 83: Illustrious µ
+images/shop/Vought F4U Corsair (VF-17 Squadron).png    // строка 83: Illustrious µ
+images/shop/533mm Magnetic Torpedo.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/Bréguet Br.810.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/Homing Beacon.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/Pressure-Resistant Hull Design.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/Cognitive Arrays.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/6CRH Armor Piercing Shell.png    // строка 90: 533mm Magnetic Torpedo
+images/shop/Enterprise.png    // строка 101: 80
+images/shop/Illustrious.png    // строка 101: 80
+images/shop/Ryuuhou.png    // строка 101: 80
+images/shop/Hood.png    // строка 101: 80
+images/shop/Nagato.png    // строка 101: 80
+images/shop/Один из лучших авиков для новичка вплоть до 14-4.png    // строка 104: Один из лучших авиков для новичка вплоть до 14-4
+images/shop/Саппорт в 15 мир.png    // строка 104: Один из лучших авиков для новичка вплоть до 14-4
+images/shop/Неплохой хиллер, хиллит подлодки.png    // строка 104: Один из лучших авиков для новичка вплоть до 14-4
+images/shop/Неплохой линейный крейсер для новичка.png    // строка 104: Один из лучших авиков для новичка вплоть до 14-4
+images/shop/Один из лучших линкоров для новчика вплоть до 14-4.png    // строка 104: Один из лучших авиков для новичка вплоть до 14-4
+images/shop/Belfast.png    // строка 107: Belfast
+images/shop/San Diego.png    // строка 107: Belfast
+images/shop/Kazagumo.png    // строка 107: Belfast
+images/shop/U-96.png    // строка 107: Belfast
+images/shop/Atago.png    // строка 107: Belfast
+images/shop/Не самый плохой лёгкий крейсер, можно взять в начале игры.png    // строка 110: Не самый плохой лёгкий крейсер, можно взять в начале игры
+images/shop/ИМБА, МАСТХЭВ, БРАТЬ.png    // строка 110: Не самый плохой лёгкий крейсер, можно взять в начале игры
+images/shop/Лучший саппорт под авики.png    // строка 110: Не самый плохой лёгкий крейсер, можно взять в начале игры
+images/shop/Ядро вульфпака.png    // строка 110: Не самый плохой лёгкий крейсер, можно взять в начале игры
+images/shop/Неплохой тяж для новичка (с аугментом).png    // строка 110: Не самый плохой лёгкий крейсер, можно взять в начале игры
+images/shop/Special General Blueprint S7.png    // строка 113: Prototype Bulin MKII
+images/shop/General Blueprint S7.png    // строка 113: Prototype Bulin MKII
+images/shop/Specialized Core.png    // строка 113: Prototype Bulin MKII
+images/shop/Sparkling Mic.png    // строка 124: Sparkling Mic
+images/shop/Eau de Barbecue.png    // строка 124: Sparkling Mic
+images/shop/Seal of the Black Tortoise.png    // строка 124: Sparkling Mic
+images/shop/Seal of the Azure Dragon.png    // строка 124: Sparkling Mic
+images/shop/Seal of the White Tiger.png    // строка 124: Sparkling Mic
+images/shop/Specialized Bulin Custom MKIII.png    // строка 124: Sparkling Mic
+images/shop/Гинденбург ган (чертёж).png    // строка 124: Sparkling Mic
+images/shop/Тенрай (чертёж).png    // строка 124: Sparkling Mic
+images/shop/Дрейк ган (чертёж).png    // строка 124: Sparkling Mic
+images/shop/Жижа ган (чертёж).png    // строка 124: Sparkling Mic
+images/shop/Плимут ган (чертёж).png    // строка 131: Плимут ган (чертёж)
+images/shop/Очень хорошая зенитка.png    // строка 142: 15
+images/shop/Очень хорошая пушка на линкоры.png    // строка 142: 15
+images/shop/Очень хороший веерный торпедоносец.png    // строка 142: 15
+images/shop/Прекрасный файтер против медиума.png    // строка 142: 15
+images/shop/Количество в месяц - 20.png    // строка 146: Количество в месяц - 20
+images/shop/Феликс ган.png    // строка 146: Количество в месяц - 20
+images/shop/Фландр ган.png    // строка 146: Количество в месяц - 20
+images/shop/Одна из лучших пушек на лёгкие крейсера.png    // строка 149: 15
+images/shop/Очень хорошая пушка на линкоры. Аналог шампура.png    // строка 149: 15
+images/shop/War Archives.png    // строка 154: War Archives
+images/shop/Cosmic Kicks.png    // строка 162: U-37
+
+=== Хороший ли корабль? (3) ===
+images/goodship/r29.png    // строка 29, после: «Я не собираюсь расписывать вам каждую формулу, просто напишу что как и» (широкая картинка)
+images/goodship/r112.png    // строка 112, после: «Теперь разберем ещё один из важных пунктов - скиллы. Я не думаю, что с» (широкая картинка)
+images/goodship/r121.png    // строка 121, после: «Ну и на последок нужно расписать то, на что всегда важно обращать вним» (широкая картинка)
+
+=== Барражи (684) ===
+images/faces/Allen M. Sumner.png    // лицо корабля, строка 3
+images/barrages/Allen M. Sumner.gif    // гифка барража, строка 3
+images/faces/An Shan.png    // лицо корабля, строка 4
+images/barrages/An Shan.gif    // гифка барража, строка 4
+images/faces/Ayanami.png    // лицо корабля, строка 5
+images/barrages/Ayanami.gif    // гифка барража, строка 5
+images/faces/Bristol.png    // лицо корабля, строка 6
+images/barrages/Bristol.gif    // гифка барража, строка 6
+images/faces/Collett.png    // лицо корабля, строка 7
+images/barrages/Collett.gif    // гифка барража, строка 7
+images/faces/Eldridge.png    // лицо корабля, строка 8
+images/barrages/Eldridge.gif    // гифка барража, строка 8
+images/faces/Evertsen.png    // лицо корабля, строка 9
+images/barrages/Evertsen.gif    // гифка барража, строка 9
+images/faces/Felix Schultz.png    // лицо корабля, строка 10
+images/barrages/Felix Schultz.gif    // гифка барража, строка 10
+images/faces/Fujinami.png    // лицо корабля, строка 11
+images/barrages/Fujinami.gif    // гифка барража, строка 11
+images/faces/Fu Shun.png    // лицо корабля, строка 12
+images/barrages/Fu Shun.gif    // гифка барража, строка 12
+images/faces/Halford.png    // лицо корабля, строка 13
+images/barrages/Halford.gif    // гифка барража, строка 13
+images/faces/Hammann II.png    // лицо корабля, строка 14
+images/barrages/Hammann II.gif    // гифка барража, строка 14
+images/faces/Hatsuzuki.png    // лицо корабля, строка 15
+images/barrages/Hatsuzuki.gif    // гифка барража, строка 15
+images/faces/Ingraham.png    // лицо корабля, строка 16
+images/barrages/Ingraham.gif    // гифка барража, строка 16
+images/faces/Janus.png    // лицо корабля, строка 17
+images/barrages/Janus.gif    // гифка барража, строка 17
+images/faces/Javelin.png    // лицо корабля, строка 18
+images/barrages/Javelin.gif    // гифка барража, строка 18
+images/faces/Jervis.png    // лицо корабля, строка 19
+images/barrages/Jervis.gif    // гифка барража, строка 19
+images/faces/Kasumi.png    // лицо корабля, строка 20
+images/barrages/Kasumi.gif    // гифка барража, строка 20
+images/faces/Kasumi META.png    // лицо корабля, строка 21
+images/barrages/Kasumi META.gif    // гифка барража, строка 21
+images/faces/Kawakaze.png    // лицо корабля, строка 22
+images/barrages/Kawakaze.gif    // гифка барража, строка 22
+images/faces/Kawakaze МЕТА.png    // лицо корабля, строка 23
+images/barrages/Kawakaze МЕТА.gif    // гифка барража, строка 23
+images/faces/Kazagumo.png    // лицо корабля, строка 24
+images/barrages/Kazagumo.gif    // гифка барража, строка 24
+images/faces/Kiev.png    // лицо корабля, строка 25
+images/barrages/Kiev.gif    // гифка барража, строка 25
+images/faces/Kitakaze.png    // лицо корабля, строка 26
+images/barrages/Kitakaze.gif    // гифка барража, строка 26
+images/faces/L'Audacieux.png    // лицо корабля, строка 27
+images/barrages/L'Audacieux.gif    // гифка барража, строка 27
+images/faces/L'Indomptable.png    // лицо корабля, строка 28
+images/barrages/L'Indomptable.gif    // гифка барража, строка 28
+images/faces/Laffey.png    // лицо корабля, строка 29
+images/barrages/Laffey.gif    // гифка барража, строка 29
+images/faces/Laffey II.png    // лицо корабля, строка 30
+images/barrages/Laffey II.gif    // гифка барража, строка 30
+images/faces/Le Hardi.png    // лицо корабля, строка 31
+images/barrages/Le Hardi.gif    // гифка барража, строка 31
+images/faces/Le Malin.png    // лицо корабля, строка 32
+images/barrages/Le Malin.gif    // гифка барража, строка 32
+images/faces/Le Malin µ.png    // лицо корабля, строка 33
+images/barrages/Le Malin µ.gif    // гифка барража, строка 33
+images/faces/Le Terrible.png    // лицо корабля, строка 34
+images/barrages/Le Terrible.gif    // гифка барража, строка 34
+images/faces/Le Triomphant.png    // лицо корабля, строка 35
+images/barrages/Le Triomphant.gif    // гифка барража, строка 35
+images/faces/Maury (Retrofit).png    // лицо корабля, строка 36
+images/barrages/Maury (Retrofit).gif    // гифка барража, строка 36
+images/faces/Mogador.png    // лицо корабля, строка 37
+images/barrages/Mogador.gif    // гифка барража, строка 37
+images/faces/Nana Astar Deviluke.png    // лицо корабля, строка 38
+images/barrages/Nana Astar Deviluke.gif    // гифка барража, строка 38
+images/faces/Nicholas.png    // лицо корабля, строка 39
+images/barrages/Nicholas.gif    // гифка барража, строка 39
+images/faces/Nubian.png    // лицо корабля, строка 40
+images/barrages/Nubian.gif    // гифка барража, строка 40
+images/faces/Ognevoy.png    // лицо корабля, строка 41
+images/barrages/Ognevoy.gif    // гифка барража, строка 41
+images/faces/Orage.png    // лицо корабля, строка 42
+images/barrages/Orage.gif    // гифка барража, строка 42
+images/faces/Otto von Alvensleben.png    // лицо корабля, строка 43
+images/barrages/Otto von Alvensleben.gif    // гифка барража, строка 43
+images/faces/Ozornoy.png    // лицо корабля, строка 44
+images/barrages/Ozornoy.gif    // гифка барража, строка 44
+images/faces/Pompeo Magno.png    // лицо корабля, строка 45
+images/barrages/Pompeo Magno.gif    // гифка барража, строка 45
+images/faces/Shigure.png    // лицо корабля, строка 46
+images/barrages/Shigure.gif    // гифка барража, строка 46
+images/faces/Shimakaze.png    // лицо корабля, строка 47
+images/barrages/Shimakaze.gif    // гифка барража, строка 47
+images/faces/Stephen Potter.png    // лицо корабля, строка 48
+images/barrages/Stephen Potter.gif    // гифка барража, строка 48
+images/faces/Suzutsuki.png    // лицо корабля, строка 49
+images/barrages/Suzutsuki.gif    // гифка барража, строка 49
+images/faces/Tai Yuan.png    // лицо корабля, строка 50
+images/barrages/Tai Yuan.gif    // гифка барража, строка 50
+images/faces/Tashkent.png    // лицо корабля, строка 51
+images/barrages/Tashkent.gif    // гифка барража, строка 51
+images/faces/Tashkent µ.png    // лицо корабля, строка 52
+images/barrages/Tashkent µ.gif    // гифка барража, строка 52
+images/faces/Trafalgar.png    // лицо корабля, строка 53
+images/barrages/Trafalgar.gif    // гифка барража, строка 53
+images/faces/Vittorio Cuniberti.png    // лицо корабля, строка 54
+images/barrages/Vittorio Cuniberti.gif    // гифка барража, строка 54
+images/faces/Wakatsuki.png    // лицо корабля, строка 55
+images/barrages/Wakatsuki.gif    // гифка барража, строка 55
+images/faces/William D. Porter.png    // лицо корабля, строка 56
+images/barrages/William D. Porter.gif    // гифка барража, строка 56
+images/faces/Yukikaze.png    // лицо корабля, строка 57
+images/barrages/Yukikaze.gif    // гифка барража, строка 57
+images/faces/Yuudachi.png    // лицо корабля, строка 58
+images/barrages/Yuudachi.gif    // гифка барража, строка 58
+images/faces/Yuudachi META.png    // лицо корабля, строка 59
+images/barrages/Yuudachi META.gif    // гифка барража, строка 59
+images/faces/Z1.png    // лицо корабля, строка 60
+images/barrages/Z1.gif    // гифка барража, строка 60
+images/faces/Z23.png    // лицо корабля, строка 61
+images/barrages/Z23.gif    // гифка барража, строка 61
+images/faces/Z46.png    // лицо корабля, строка 62
+images/barrages/Z46.gif    // гифка барража, строка 62
+images/faces/Z47.png    // лицо корабля, строка 63
+images/barrages/Z47.gif    // гифка барража, строка 63
+images/faces/Z52.png    // лицо корабля, строка 64
+images/barrages/Z52.gif    // гифка барража, строка 64
+images/faces/Aurora.png    // лицо корабля, строка 101
+images/barrages/Aurora.gif    // гифка барража, строка 101
+images/faces/Avrora.png    // лицо корабля, строка 102
+images/barrages/Avrora.gif    // гифка барража, строка 102
+images/faces/Bayard.png    // лицо корабля, строка 103
+images/barrages/Bayard.gif    // гифка барража, строка 103
+images/faces/Belfast.png    // лицо корабля, строка 104
+images/barrages/Belfast.gif    // гифка барража, строка 104
+images/faces/Chao Ho.png    // лицо корабля, строка 105
+images/barrages/Chao Ho.gif    // гифка барража, строка 105
+images/faces/Chapayev.png    // лицо корабля, строка 106
+images/barrages/Chapayev.gif    // гифка барража, строка 106
+images/faces/Charybdis.png    // лицо корабля, строка 107
+images/barrages/Charybdis.gif    // гифка барража, строка 107
+images/faces/Cleopatra.png    // лицо корабля, строка 108
+images/barrages/Cleopatra.gif    // гифка барража, строка 108
+images/faces/Cleveland META.png    // лицо корабля, строка 109
+images/barrages/Cleveland META.gif    // гифка барража, строка 109
+images/faces/De Zeven Provinciën.png    // лицо корабля, строка 110
+images/barrages/De Zeven Provinciën.gif    // гифка барража, строка 110
+images/faces/Dido.png    // лицо корабля, строка 111
+images/barrages/Dido.gif    // гифка барража, строка 111
+images/faces/Dido µ.png    // лицо корабля, строка 112
+images/barrages/Dido µ.gif    // гифка барража, строка 112
+images/faces/Dmitri Donskoi.png    // лицо корабля, строка 113
+images/barrages/Dmitri Donskoi.gif    // гифка барража, строка 113
+images/faces/Duca degli Abruzzi.png    // лицо корабля, строка 114
+images/barrages/Duca degli Abruzzi.gif    // гифка барража, строка 114
+images/faces/Duisburg.png    // лицо корабля, строка 115
+images/barrages/Duisburg.gif    // гифка барража, строка 115
+images/faces/Emden.png    // лицо корабля, строка 116
+images/barrages/Emden.gif    // гифка барража, строка 116
+images/faces/Fargo.png    // лицо корабля, строка 117
+images/barrages/Fargo.gif    // гифка барража, строка 117
+images/faces/Giuseppe Garibaldi.png    // лицо корабля, строка 118
+images/barrages/Giuseppe Garibaldi.gif    // гифка барража, строка 118
+images/faces/Guichen.png    // лицо корабля, строка 119
+images/barrages/Guichen.gif    // гифка барража, строка 119
+images/faces/Harbin.png    // лицо корабля, строка 120
+images/barrages/Harbin.gif    // гифка барража, строка 120
+images/faces/Helena.png    // лицо корабля, строка 121
+images/barrages/Helena.gif    // гифка барража, строка 121
+images/faces/Helena META.png    // лицо корабля, строка 122
+images/barrages/Helena META.gif    // гифка барража, строка 122
+images/faces/Hermione.png    // лицо корабля, строка 123
+images/barrages/Hermione.gif    // гифка барража, строка 123
+images/faces/Houston II.png    // лицо корабля, строка 124
+images/barrages/Houston II.gif    // гифка барража, строка 124
+images/faces/Isuzu.png    // лицо корабля, строка 125
+images/barrages/Isuzu.gif    // гифка барража, строка 125
+images/faces/Jeanne d'Arc.png    // лицо корабля, строка 126
+images/barrages/Jeanne d'Arc.gif    // гифка барража, строка 126
+images/faces/Jintsuu.png    // лицо корабля, строка 127
+images/barrages/Jintsuu.gif    // гифка барража, строка 127
+images/faces/Jintsuu META.png    // лицо корабля, строка 128
+images/barrages/Jintsuu META.gif    // гифка барража, строка 128
+images/faces/Kinu.png    // лицо корабля, строка 129
+images/barrages/Kinu.gif    // гифка барража, строка 129
+images/faces/Kirov.png    // лицо корабля, строка 130
+images/barrages/Kirov.gif    // гифка барража, строка 130
+images/faces/Kirov META.png    // лицо корабля, строка 131
+images/barrages/Kirov META.gif    // гифка барража, строка 131
+images/faces/Kuybyshev.png    // лицо корабля, строка 132
+images/barrages/Kuybyshev.gif    // гифка барража, строка 132
+images/faces/Magdeburg.png    // лицо корабля, строка 133
+images/barrages/Magdeburg.gif    // гифка барража, строка 133
+images/faces/Mainz.png    // лицо корабля, строка 134
+images/barrages/Mainz.gif    // гифка барража, строка 134
+images/faces/Marseillaise.png    // лицо корабля, строка 135
+images/barrages/Marseillaise.gif    // гифка барража, строка 135
+images/faces/Neptune.png    // лицо корабля, строка 136
+images/barrages/Neptune.gif    // гифка барража, строка 136
+images/faces/Noshiro.png    // лицо корабля, строка 137
+images/barrages/Noshiro.gif    // гифка барража, строка 137
+images/faces/Noshiro µ.png    // лицо корабля, строка 138
+images/barrages/Noshiro µ.gif    // гифка барража, строка 138
+images/faces/Nürnberg.png    // лицо корабля, строка 139
+images/barrages/Nürnberg.gif    // гифка барража, строка 139
+images/faces/Oleg.png    // лицо корабля, строка 140
+images/barrages/Oleg.gif    // гифка барража, строка 140
+images/faces/Pamiat' Merkuria.png    // лицо корабля, строка 141
+images/barrages/Pamiat' Merkuria.gif    // гифка барража, строка 141
+images/faces/Pamiat' Merkuria META.png    // лицо корабля, строка 142
+images/barrages/Pamiat' Merkuria META.gif    // гифка барража, строка 142
+images/faces/Plymouth.png    // лицо корабля, строка 143
+images/barrages/Plymouth.gif    // гифка барража, строка 143
+images/faces/Regensburg.png    // лицо корабля, строка 144
+images/barrages/Regensburg.gif    // гифка барража, строка 144
+images/faces/Reno.png    // лицо корабля, строка 145
+images/barrages/Reno.gif    // гифка барража, строка 145
+images/faces/Sakawa.png    // лицо корабля, строка 146
+images/barrages/Sakawa.gif    // гифка барража, строка 146
+images/faces/San Diego.png    // лицо корабля, строка 147
+images/barrages/San Diego.gif    // гифка барража, строка 147
+images/faces/Sante Fe.png    // лицо корабля, строка 148
+images/barrages/Sante Fe.gif    // гифка барража, строка 148
+images/faces/Scylla.png    // лицо корабля, строка 149
+images/barrages/Scylla.gif    // гифка барража, строка 149
+images/faces/Seattle.png    // лицо корабля, строка 150
+images/barrages/Seattle.gif    // гифка барража, строка 150
+images/faces/Shimanto.png    // лицо корабля, строка 151
+images/barrages/Shimanto.gif    // гифка барража, строка 151
+images/faces/Sirius.png    // лицо корабля, строка 152
+images/barrages/Sirius.gif    // гифка барража, строка 152
+images/faces/Superb.png    // лицо корабля, строка 153
+images/barrages/Superb.gif    // гифка барража, строка 153
+images/faces/Swiftsure.png    // лицо корабля, строка 154
+images/barrages/Swiftsure.gif    // гифка барража, строка 154
+images/faces/Takahashi.png    // лицо корабля, строка 155
+images/barrages/Takahashi.gif    // гифка барража, строка 155
+images/faces/Tiger.png    // лицо корабля, строка 156
+images/barrages/Tiger.gif    // гифка барража, строка 156
+images/faces/Vicksburg.png    // лицо корабля, строка 157
+images/barrages/Vicksburg.gif    // гифка барража, строка 157
+images/faces/Voroshilov.png    // лицо корабля, строка 158
+images/barrages/Voroshilov.gif    // гифка барража, строка 158
+images/faces/Watarase.png    // лицо корабля, строка 159
+images/barrages/Watarase.gif    // гифка барража, строка 159
+images/faces/Yat Sen.png    // лицо корабля, строка 160
+images/barrages/Yat Sen.gif    // гифка барража, строка 160
+images/faces/Ying Swei.png    // лицо корабля, строка 161
+images/barrages/Ying Swei.gif    // гифка барража, строка 161
+images/faces/Admiral Hipper.png    // лицо корабля, строка 201
+images/barrages/Admiral Hipper.gif    // гифка барража, строка 201
+images/faces/Admiral Hipper META.png    // лицо корабля, строка 202
+images/barrages/Admiral Hipper META.gif    // гифка барража, строка 202
+images/faces/Algérie.png    // лицо корабля, строка 203
+images/barrages/Algérie.gif    // гифка барража, строка 203
+images/faces/Algérie META.png    // лицо корабля, строка 204
+images/barrages/Algérie META.gif    // гифка барража, строка 204
+images/faces/Anchorage.png    // лицо корабля, строка 205
+images/barrages/Anchorage.gif    // гифка барража, строка 205
+images/faces/Asama.png    // лицо корабля, строка 206
+images/barrages/Asama.gif    // гифка барража, строка 206
+images/faces/Atago.png    // лицо корабля, строка 207
+images/barrages/Atago.gif    // гифка барража, строка 207
+images/faces/Baltimore.png    // лицо корабля, строка 208
+images/barrages/Baltimore.gif    // гифка барража, строка 208
+images/faces/Blücher.png    // лицо корабля, строка 209
+images/barrages/Blücher.gif    // гифка барража, строка 209
+images/faces/Bremerton.png    // лицо корабля, строка 210
+images/barrages/Bremerton.gif    // гифка барража, строка 210
+images/faces/Brennus.png    // лицо корабля, строка 211
+images/barrages/Brennus.gif    // гифка барража, строка 211
+images/faces/Chang Wu.png    // лицо корабля, строка 212
+images/barrages/Chang Wu.gif    // гифка барража, строка 212
+images/faces/Cheshire.png    // лицо корабля, строка 213
+images/barrages/Cheshire.gif    // гифка барража, строка 213
+images/faces/Chien Wu.png    // лицо корабля, строка 214
+images/barrages/Chien Wu.gif    // гифка барража, строка 214
+images/faces/Chikuma.png    // лицо корабля, строка 215
+images/barrages/Chikuma.gif    // гифка барража, строка 215
+images/faces/Choukai.png    // лицо корабля, строка 216
+images/barrages/Choukai.gif    // гифка барража, строка 216
+images/faces/Drake.png    // лицо корабля, строка 218
+images/barrages/Drake.gif    // гифка барража, строка 218
+images/faces/Friedrich Carl.png    // лицо корабля, строка 219
+images/barrages/Friedrich Carl.gif    // гифка барража, строка 219
+images/faces/Gouden Leeuw.png    // лицо корабля, строка 220
+images/barrages/Gouden Leeuw.gif    // гифка барража, строка 220
+images/faces/Gorizia.png    // лицо корабля, строка 221
+images/barrages/Gorizia.gif    // гифка барража, строка 221
+images/faces/Hindenburg.png    // лицо корабля, строка 222
+images/barrages/Hindenburg.gif    // гифка барража, строка 222
+images/faces/Ibuki.png    // лицо корабля, строка 223
+images/barrages/Ibuki.gif    // гифка барража, строка 223
+images/faces/Kursk.png    // лицо корабля, строка 224
+images/barrages/Kursk.gif    // гифка барража, строка 224
+images/faces/London.png    // лицо корабля, строка 225
+images/barrages/London.gif    // гифка барража, строка 225
+images/faces/Maya.png    // лицо корабля, строка 226
+images/barrages/Maya.gif    // гифка барража, строка 226
+images/faces/Minneapolis.png    // лицо корабля, строка 227
+images/barrages/Minneapolis.gif    // гифка барража, строка 227
+images/faces/Moskva.png    // лицо корабля, строка 228
+images/barrages/Moskva.gif    // гифка барража, строка 228
+images/faces/Mogami.png    // лицо корабля, строка 229
+images/barrages/Mogami.gif    // гифка барража, строка 229
+images/faces/Napoli.png    // лицо корабля, строка 230
+images/barrages/Napoli.gif    // гифка барража, строка 230
+images/faces/New Orleans.png    // лицо корабля, строка 231
+images/barrages/New Orleans.gif    // гифка барража, строка 231
+images/faces/Northampton II.png    // лицо корабля, строка 232
+images/barrages/Northampton II.gif    // гифка барража, строка 232
+images/faces/Pittsburgh.png    // лицо корабля, строка 233
+images/barrages/Pittsburgh.gif    // гифка барража, строка 233
+images/faces/Pola.png    // лицо корабля, строка 234
+images/barrages/Pola.gif    // гифка барража, строка 234
+images/faces/Prinz Adalbert.png    // лицо корабля, строка 235
+images/barrages/Prinz Adalbert.gif    // гифка барража, строка 235
+images/faces/Prinz Eugen.png    // лицо корабля, строка 236
+images/barrages/Prinz Eugen.gif    // гифка барража, строка 236
+images/faces/Prinz Eugen µ.png    // лицо корабля, строка 237
+images/barrages/Prinz Eugen µ.gif    // гифка барража, строка 237
+images/faces/Prinz Heinrich.png    // лицо корабля, строка 238
+images/barrages/Prinz Heinrich.gif    // гифка барража, строка 238
+images/faces/Prinz Moritz.png    // лицо корабля, строка 239
+images/barrages/Prinz Moritz.gif    // гифка барража, строка 239
+images/faces/Roon.png    // лицо корабля, строка 240
+images/barrages/Roon.gif    // гифка барража, строка 240
+images/faces/Roon µ.png    // лицо корабля, строка 241
+images/barrages/Roon µ.gif    // гифка барража, строка 241
+images/faces/Saint Louis.png    // лицо корабля, строка 242
+images/barrages/Saint Louis.gif    // гифка барража, строка 242
+images/faces/San Francisco.png    // лицо корабля, строка 243
+images/barrages/San Francisco.gif    // гифка барража, строка 243
+images/faces/Shropshire.png    // лицо корабля, строка 244
+images/barrages/Shropshire.gif    // гифка барража, строка 244
+images/faces/Surrey.png    // лицо корабля, строка 245
+images/barrages/Surrey.gif    // гифка барража, строка 245
+images/faces/Takao.png    // лицо корабля, строка 246
+images/barrages/Takao.gif    // гифка барража, строка 246
+images/faces/Tallinn.png    // лицо корабля, строка 247
+images/barrages/Tallinn.gif    // гифка барража, строка 247
+images/faces/Unzen.png    // лицо корабля, строка 248
+images/barrages/Unzen.gif    // гифка барража, строка 248
+images/faces/Wichita META.png    // лицо корабля, строка 249
+images/barrages/Wichita META.gif    // гифка барража, строка 249
+images/faces/Zara.png    // лицо корабля, строка 250
+images/barrages/Zara.gif    // гифка барража, строка 250
+images/faces/Ägir.png    // лицо корабля, строка 301
+images/barrages/Ägir.gif    // гифка барража, строка 301
+images/faces/Azuma.png    // лицо корабля, строка 302
+images/barrages/Azuma.gif    // гифка барража, строка 302
+images/faces/Brest.png    // лицо корабля, строка 303
+images/barrages/Brest.gif    // гифка барража, строка 303
+images/faces/Cherbourg.png    // лицо корабля, строка 304
+images/barrages/Cherbourg.gif    // гифка барража, строка 304
+images/faces/Guam.png    // лицо корабля, строка 305
+images/barrages/Guam.gif    // гифка барража, строка 305
+images/faces/Kronshtadt.png    // лицо корабля, строка 306
+images/barrages/Kronshtadt.gif    // гифка барража, строка 306
+images/faces/Admiral Zenker.png    // лицо корабля, строка 321
+images/barrages/Admiral Zenker.gif    // гифка барража, строка 321
+images/faces/Alabama.png    // лицо корабля, строка 322
+images/barrages/Alabama.gif    // гифка барража, строка 322
+images/faces/Alsace.png    // лицо корабля, строка 323
+images/barrages/Alsace.gif    // гифка барража, строка 323
+images/faces/Alvitr.png    // лицо корабля, строка 324
+images/barrages/Alvitr.gif    // гифка барража, строка 324
+images/faces/Amagi.png    // лицо корабля, строка 325
+images/barrages/Amagi.gif    // гифка барража, строка 325
+images/faces/Andrea Doria META.png    // лицо корабля, строка 326
+images/barrages/Andrea Doria META.gif    // гифка барража, строка 326
+images/faces/Arizona META.png    // лицо корабля, строка 327
+images/barrages/Arizona META.gif    // гифка барража, строка 327
+images/faces/Azuchi.png    // лицо корабля, строка 328
+images/barrages/Azuchi.gif    // гифка барража, строка 328
+images/faces/Bismarck.png    // лицо корабля, строка 329
+images/barrages/Bismarck.gif    // гифка барража, строка 329
+images/faces/Bismarck Zwei.png    // лицо корабля, строка 330
+images/barrages/Bismarck Zwei.gif    // гифка барража, строка 330
+images/faces/Brünhilde.png    // лицо корабля, строка 331
+images/barrages/Brünhilde.gif    // гифка барража, строка 331
+images/faces/Champagne.png    // лицо корабля, строка 332
+images/barrages/Champagne.gif    // гифка барража, строка 332
+images/faces/Clemenceau.png    // лицо корабля, строка 333
+images/barrages/Clemenceau.gif    // гифка барража, строка 333
+images/faces/Colorado.png    // лицо корабля, строка 334
+images/barrages/Colorado.gif    // гифка барража, строка 334
+images/faces/Constellation.png    // лицо корабля, строка 335
+images/barrages/Constellation.gif    // гифка барража, строка 335
+images/faces/Daisen.png    // лицо корабля, строка 336
+images/barrages/Daisen.gif    // гифка барража, строка 336
+images/faces/Duncan.png    // лицо корабля, строка 337
+images/barrages/Duncan.gif    // гифка барража, строка 337
+images/faces/Flandre.png    // лицо корабля, строка 338
+images/barrages/Flandre.gif    // гифка барража, строка 338
+images/faces/Francesco Caracciolo.png    // лицо корабля, строка 339
+images/barrages/Francesco Caracciolo.gif    // гифка барража, строка 339
+images/faces/Friedrich der Große.png    // лицо корабля, строка 340
+images/barrages/Friedrich der Große.gif    // гифка барража, строка 340
+images/faces/Gangut META.png    // лицо корабля, строка 341
+images/barrages/Gangut META.gif    // гифка барража, строка 341
+images/faces/Gascogne.png    // лицо корабля, строка 342
+images/barrages/Gascogne.gif    // гифка барража, строка 342
+images/faces/Georgia.png    // лицо корабля, строка 343
+images/barrages/Georgia.gif    // гифка барража, строка 343
+images/faces/Gneisenau META.png    // лицо корабля, строка 344
+images/barrages/Gneisenau META.gif    // гифка барража, строка 344
+images/faces/Götz von Berlichingen.png    // лицо корабля, строка 345
+images/barrages/Götz von Berlichingen.gif    // гифка барража, строка 345
+images/faces/Hiei META.png    // лицо корабля, строка 346
+images/barrages/Hiei META.gif    // гифка барража, строка 346
+images/faces/Hood.png    // лицо корабля, строка 347
+images/barrages/Hood.gif    // гифка барража, строка 347
+images/faces/Howe.png    // лицо корабля, строка 348
+images/barrages/Howe.gif    // гифка барража, строка 348
+images/faces/Huan Ch'ang.png    // лицо корабля, строка 349
+images/barrages/Huan Ch'ang.gif    // гифка барража, строка 349
+images/faces/Indiana.png    // лицо корабля, строка 350
+images/barrages/Indiana.gif    // гифка барража, строка 350
+images/faces/Izumo.png    // лицо корабля, строка 351
+images/barrages/Izumo.gif    // гифка барража, строка 351
+images/faces/Jean Bart.png    // лицо корабля, строка 352
+images/barrages/Jean Bart.gif    // гифка барража, строка 352
+images/faces/Kaga (Battleship).png    // лицо корабля, строка 353
+images/barrages/Kaga (Battleship).gif    // гифка барража, строка 353
+images/faces/Kansas.png    // лицо корабля, строка 354
+images/barrages/Kansas.gif    // гифка барража, строка 354
+images/faces/Kazan.png    // лицо корабля, строка 355
+images/barrages/Kazan.gif    // гифка барража, строка 355
+images/faces/Kearsarge.png    // лицо корабля, строка 356
+images/barrages/Kearsarge.gif    // гифка барража, строка 356
+images/faces/Kii.png    // лицо корабля, строка 357
+images/barrages/Kii.gif    // гифка барража, строка 357
+images/faces/King George V.png    // лицо корабля, строка 358
+images/barrages/King George V.gif    // гифка барража, строка 358
+images/faces/Lion.png    // лицо корабля, строка 359
+images/barrages/Lion.gif    // гифка барража, строка 359
+images/faces/Littorio.png    // лицо корабля, строка 360
+images/barrages/Littorio.gif    // гифка барража, строка 360
+images/faces/Lützow.png    // лицо корабля, строка 361
+images/barrages/Lützow.gif    // гифка барража, строка 361
+images/faces/Marco Polo.png    // лицо корабля, строка 362
+images/barrages/Marco Polo.gif    // гифка барража, строка 362
+images/faces/Maryland.png    // лицо корабля, строка 363
+images/barrages/Maryland.gif    // гифка барража, строка 363
+images/faces/Massachusetts.png    // лицо корабля, строка 364
+images/barrages/Massachusetts.gif    // гифка барража, строка 364
+images/faces/Masséna.png    // лицо корабля, строка 365
+images/barrages/Masséna.gif    // гифка барража, строка 365
+images/faces/Mecklenburg.png    // лицо корабля, строка 366
+images/barrages/Mecklenburg.gif    // гифка барража, строка 366
+images/faces/Monarch.png    // лицо корабля, строка 367
+images/barrages/Monarch.gif    // гифка барража, строка 367
+images/faces/Musashi.png    // лицо корабля, строка 368
+images/barrages/Musashi.gif    // гифка барража, строка 368
+images/faces/Nagato.png    // лицо корабля, строка 369
+images/barrages/Nagato.gif    // гифка барража, строка 369
+images/faces/Nagato META.png    // лицо корабля, строка 370
+images/barrages/Nagato META.gif    // гифка барража, строка 370
+images/faces/Nelson.png    // лицо корабля, строка 371
+images/barrages/Nelson.gif    // гифка барража, строка 371
+images/faces/New Jersey.png    // лицо корабля, строка 372
+images/barrages/New Jersey.gif    // гифка барража, строка 372
+images/faces/Odin.png    // лицо корабля, строка 373
+images/barrages/Odin.gif    // гифка барража, строка 373
+images/faces/Oumi.png    // лицо корабля, строка 374
+images/barrages/Oumi.gif    // гифка барража, строка 374
+images/faces/Owari.png    // лицо корабля, строка 375
+images/barrages/Owari.gif    // гифка барража, строка 375
+images/faces/Prinz Rupprecht.png    // лицо корабля, строка 376
+images/barrages/Prinz Rupprecht.gif    // гифка барража, строка 376
+images/faces/Queen Elizabeth META.png    // лицо корабля, строка 377
+images/barrages/Queen Elizabeth META.gif    // гифка барража, строка 377
+images/faces/Raffaelo.png    // лицо корабля, строка 378
+images/barrages/Raffaelo.gif    // гифка барража, строка 378
+images/faces/Renown META.png    // лицо корабля, строка 379
+images/barrages/Renown META.gif    // гифка барража, строка 379
+images/faces/Repulse META.png    // лицо корабля, строка 380
+images/barrages/Repulse META.gif    // гифка барража, строка 380
+images/faces/Richelieu.png    // лицо корабля, строка 381
+images/barrages/Richelieu.gif    // гифка барража, строка 381
+images/faces/Roma.png    // лицо корабля, строка 382
+images/barrages/Roma.gif    // гифка барража, строка 382
+images/faces/Royal Oak.png    // лицо корабля, строка 383
+images/barrages/Royal Oak.gif    // гифка барража, строка 383
+images/faces/Scharnhorst META.png    // лицо корабля, строка 384
+images/barrages/Scharnhorst META.gif    // гифка барража, строка 384
+images/faces/Seydlitz.png    // лицо корабля, строка 385
+images/barrages/Seydlitz.gif    // гифка барража, строка 385
+images/faces/Sovetskaya Belorussiya.png    // лицо корабля, строка 386
+images/barrages/Sovetskaya Belorussiya.gif    // гифка барража, строка 386
+images/faces/Sovetskaya Rossiya.png    // лицо корабля, строка 387
+images/barrages/Sovetskaya Rossiya.gif    // гифка барража, строка 387
+images/faces/Sovetsky Soyuz.png    // лицо корабля, строка 388
+images/barrages/Sovetsky Soyuz.gif    // гифка барража, строка 388
+images/faces/Strasbourg.png    // лицо корабля, строка 389
+images/barrages/Strasbourg.gif    // гифка барража, строка 389
+images/faces/Suruga.png    // лицо корабля, строка 390
+images/barrages/Suruga.gif    // гифка барража, строка 390
+images/faces/Tosa.png    // лицо корабля, строка 391
+images/barrages/Tosa.gif    // гифка барража, строка 391
+images/faces/Ulrich von Hutten.png    // лицо корабля, строка 392
+images/barrages/Ulrich von Hutten.gif    // гифка барража, строка 392
+images/faces/Valparaíso.png    // лицо корабля, строка 393
+images/barrages/Valparaíso.gif    // гифка барража, строка 393
+images/faces/Vanguard.png    // лицо корабля, строка 394
+images/barrages/Vanguard.gif    // гифка барража, строка 394
+images/faces/Vittorio Veneto.png    // лицо корабля, строка 395
+images/barrages/Vittorio Veneto.gif    // гифка барража, строка 395
+images/faces/Warspite.png    // лицо корабля, строка 396
+images/barrages/Warspite.gif    // гифка барража, строка 396
+images/faces/Washington.png    // лицо корабля, строка 397
+images/barrages/Washington.gif    // гифка барража, строка 397
+images/faces/West Virginia.png    // лицо корабля, строка 398
+images/barrages/West Virginia.gif    // гифка барража, строка 398
+images/faces/Admiral Nakhimov.png    // лицо корабля, строка 451
+images/barrages/Admiral Nakhimov.gif    // гифка барража, строка 451
+images/faces/Akagi µ.png    // лицо корабля, строка 452
+images/barrages/Akagi µ.gif    // гифка барража, строка 452
+images/faces/Albion.png    // лицо корабля, строка 453
+images/barrages/Albion.gif    // гифка барража, строка 453
+images/faces/Amagi(CV).png    // лицо корабля, строка 454
+images/barrages/Amagi(CV).gif    // гифка барража, строка 454
+images/faces/Aquila.png    // лицо корабля, строка 455
+images/barrages/Aquila.gif    // гифка барража, строка 455
+images/faces/Ark Royal.png    // лицо корабля, строка 456
+images/barrages/Ark Royal.gif    // гифка барража, строка 456
+images/faces/Ark Royal META.png    // лицо корабля, строка 457
+images/barrages/Ark Royal META.gif    // гифка барража, строка 457
+images/faces/Arromanches.png    // лицо корабля, строка 458
+images/barrages/Arromanches.gif    // гифка барража, строка 458
+images/faces/August von Parseval.png    // лицо корабля, строка 459
+images/barrages/August von Parseval.gif    // гифка барража, строка 459
+images/faces/Béarn META.png    // лицо корабля, строка 460
+images/barrages/Béarn META.gif    // гифка барража, строка 460
+images/faces/Bennington.png    // лицо корабля, строка 461
+images/barrages/Bennington.gif    // гифка барража, строка 461
+images/faces/Bois Belleau.png    // лицо корабля, строка 462
+images/barrages/Bois Belleau.gif    // гифка барража, строка 462
+images/faces/Bunker Hill.png    // лицо корабля, строка 463
+images/barrages/Bunker Hill.gif    // гифка барража, строка 463
+images/faces/Centaur.png    // лицо корабля, строка 464
+images/barrages/Centaur.gif    // гифка барража, строка 464
+images/faces/Chen Hai.png    // лицо корабля, строка 465
+images/barrages/Chen Hai.gif    // гифка барража, строка 465
+images/faces/Chkalov.png    // лицо корабля, строка 466
+images/barrages/Chkalov.gif    // гифка барража, строка 466
+images/faces/Cowpens.png    // лицо корабля, строка 467
+images/barrages/Cowpens.gif    // гифка барража, строка 467
+images/faces/Elbe META.png    // лицо корабля, строка 468
+images/barrages/Elbe META.gif    // гифка барража, строка 468
+images/faces/Essex.png    // лицо корабля, строка 469
+images/barrages/Essex.gif    // гифка барража, строка 469
+images/faces/Formidable.png    // лицо корабля, строка 470
+images/barrages/Formidable.gif    // гифка барража, строка 470
+images/faces/Franklin.png    // лицо корабля, строка 471
+images/barrages/Franklin.gif    // гифка барража, строка 471
+images/faces/Fritz Rumey.png    // лицо корабля, строка 472
+images/barrages/Fritz Rumey.gif    // гифка барража, строка 472
+images/faces/Glorious META.png    // лицо корабля, строка 473
+images/barrages/Glorious META.gif    // гифка барража, строка 473
+images/faces/Graf Zeppelin.png    // лицо корабля, строка 474
+images/barrages/Graf Zeppelin.gif    // гифка барража, строка 474
+images/faces/Hakuhou.png    // лицо корабля, строка 475
+images/barrages/Hakuhou.gif    // гифка барража, строка 475
+images/faces/Hakuryuu.png    // лицо корабля, строка 476
+images/barrages/Hakuryuu.gif    // гифка барража, строка 476
+images/faces/Hiryuu.png    // лицо корабля, строка 477
+images/barrages/Hiryuu.gif    // гифка барража, строка 477
+images/faces/Hiryuu META.png    // лицо корабля, строка 478
+images/barrages/Hiryuu META.gif    // гифка барража, строка 478
+images/faces/Hornet META.png    // лицо корабля, строка 479
+images/barrages/Hornet META.gif    // гифка барража, строка 479
+images/faces/Hornet II.png    // лицо корабля, строка 480
+images/barrages/Hornet II.gif    // гифка барража, строка 480
+images/faces/Hwah Jah.png    // лицо корабля, строка 481
+images/barrages/Hwah Jah.gif    // гифка барража, строка 481
+images/faces/Illustrious.png    // лицо корабля, строка 482
+images/barrages/Illustrious.gif    // гифка барража, строка 482
+images/faces/Illustrious µ.png    // лицо корабля, строка 483
+images/barrages/Illustrious µ.gif    // гифка барража, строка 483
+images/faces/Impero.png    // лицо корабля, строка 484
+images/barrages/Impero.gif    // гифка барража, строка 484
+images/faces/Implacable.png    // лицо корабля, строка 485
+images/barrages/Implacable.gif    // гифка барража, строка 485
+images/faces/Independence.png    // лицо корабля, строка 486
+images/barrages/Independence.gif    // гифка барража, строка 486
+images/faces/Indomitable.png    // лицо корабля, строка 487
+images/barrages/Indomitable.gif    // гифка барража, строка 487
+images/faces/Intrepid.png    // лицо корабля, строка 488
+images/barrages/Intrepid.gif    // гифка барража, строка 488
+images/faces/Joffre.png    // лицо корабля, строка 489
+images/barrages/Joffre.gif    // гифка барража, строка 489
+images/faces/Katsuragi.png    // лицо корабля, строка 490
+images/barrages/Katsuragi.gif    // гифка барража, строка 490
+images/faces/Lexington II.png    // лицо корабля, строка 491
+images/barrages/Lexington II.gif    // гифка барража, строка 491
+images/faces/Max Immelmann.png    // лицо корабля, строка 492
+images/barrages/Max Immelmann.gif    // гифка барража, строка 492
+images/faces/Perseus.png    // лицо корабля, строка 493
+images/barrages/Perseus.gif    // гифка барража, строка 493
+images/faces/Peter Strasser.png    // лицо корабля, строка 494
+images/barrages/Peter Strasser.gif    // гифка барража, строка 494
+images/faces/Saratoga.png    // лицо корабля, строка 495
+images/barrages/Saratoga.gif    // гифка барража, строка 495
+images/faces/Saratoga META.png    // лицо корабля, строка 496
+images/barrages/Saratoga META.gif    // гифка барража, строка 496
+images/faces/Shangri-La.png    // лицо корабля, строка 497
+images/barrages/Shangri-La.gif    // гифка барража, строка 497
+images/faces/Shinano.png    // лицо корабля, строка 498
+images/barrages/Shinano.gif    // гифка барража, строка 498
+images/faces/Souryuu.png    // лицо корабля, строка 499
+images/barrages/Souryuu.gif    // гифка барража, строка 499
+images/faces/Souryuu META.png    // лицо корабля, строка 500
+images/barrages/Souryuu META.gif    // гифка барража, строка 500
+images/faces/Taihou.png    // лицо корабля, строка 501
+images/barrages/Taihou.gif    // гифка барража, строка 501
+images/faces/Taihou META.png    // лицо корабля, строка 502
+images/barrages/Taihou META.gif    // гифка барража, строка 502
+images/faces/Taihou µ.png    // лицо корабля, строка 503
+images/barrages/Taihou µ.gif    // гифка барража, строка 503
+images/faces/Theseus.png    // лицо корабля, строка 504
+images/barrages/Theseus.gif    // гифка барража, строка 504
+images/faces/Ticonderoga.png    // лицо корабля, строка 505
+images/barrages/Ticonderoga.gif    // гифка барража, строка 505
+images/faces/Unryuu.png    // лицо корабля, строка 506
+images/barrages/Unryuu.gif    // гифка барража, строка 506
+images/faces/Volga.png    // лицо корабля, строка 507
+images/barrages/Volga.gif    // гифка барража, строка 507
+images/faces/Yorktown II.png    // лицо корабля, строка 508
+images/barrages/Yorktown II.gif    // гифка барража, строка 508
+images/faces/Yorktown META.png    // лицо корабля, строка 509
+images/barrages/Yorktown META.gif    // гифка барража, строка 509
+images/faces/Zuihou.png    // лицо корабля, строка 510
+images/barrages/Zuihou.gif    // гифка барража, строка 510
+images/faces/Zuikaku.png    // лицо корабля, строка 511
+images/barrages/Zuikaku.gif    // гифка барража, строка 511
+images/faces/Albacore.png    // лицо корабля, строка 551
+images/barrages/Albacore.gif    // гифка барража, строка 551
+images/faces/Archerfish.png    // лицо корабля, строка 552
+images/barrages/Archerfish.gif    // гифка барража, строка 552
+images/faces/Cavalla.png    // лицо корабля, строка 553
+images/barrages/Cavalla.gif    // гифка барража, строка 553
+images/faces/Flasher.png    // лицо корабля, строка 554
+images/barrages/Flasher.gif    // гифка барража, строка 554
+images/faces/Homura.png    // лицо корабля, строка 555
+images/barrages/Homura.gif    // гифка барража, строка 555
+images/faces/I-404.png    // лицо корабля, строка 556
+images/barrages/I-404.gif    // гифка барража, строка 556
+images/faces/Leonardo da Vinci.png    // лицо корабля, строка 557
+images/barrages/Leonardo da Vinci.gif    // гифка барража, строка 557
+images/faces/Maggiore Baracca.png    // лицо корабля, строка 558
+images/barrages/Maggiore Baracca.gif    // гифка барража, строка 558
+images/faces/U-2501.png    // лицо корабля, строка 559
+images/barrages/U-2501.gif    // гифка барража, строка 559
+images/faces/U-37.png    // лицо корабля, строка 560
+images/barrages/U-37.gif    // гифка барража, строка 560
+images/faces/U-81.png    // лицо корабля, строка 561
+images/barrages/U-81.gif    // гифка барража, строка 561
+images/faces/U-96.png    // лицо корабля, строка 562
+images/barrages/U-96.gif    // гифка барража, строка 562
+images/faces/U-552.png    // лицо корабля, строка 563
+images/barrages/U-552.gif    // гифка барража, строка 563
+images/faces/U-556 META.png    // лицо корабля, строка 564
+images/barrages/U-556 META.gif    // гифка барража, строка 564
+images/faces/Amity.png    // лицо корабля, строка 571
+images/barrages/Amity.gif    // гифка барража, строка 571
+images/faces/Fancy.png    // лицо корабля, строка 572
+images/barrages/Fancy.gif    // гифка барража, строка 572
+images/faces/Ganj-i-Sawai.png    // лицо корабля, строка 573
+images/barrages/Ganj-i-Sawai.gif    // гифка барража, строка 573
+images/faces/Golden Hind.png    // лицо корабля, строка 574
+images/barrages/Golden Hind.gif    // гифка барража, строка 574
+images/faces/Lyme.png    // лицо корабля, строка 575
+images/barrages/Lyme.gif    // гифка барража, строка 575
+images/faces/Mary Celeste.png    // лицо корабля, строка 576
+images/barrages/Mary Celeste.gif    // гифка барража, строка 576
+images/faces/Pearl.png    // лицо корабля, строка 577
+images/barrages/Pearl.gif    // гифка барража, строка 577
+images/faces/Queen Anne's Revenge.png    // лицо корабля, строка 578
+images/barrages/Queen Anne's Revenge.gif    // гифка барража, строка 578
+images/faces/Royal Fortune.png    // лицо корабля, строка 579
+images/barrages/Royal Fortune.gif    // гифка барража, строка 579
+images/faces/São Martinho.png    // лицо корабля, строка 580
+images/barrages/São Martinho.gif    // гифка барража, строка 580
+
+=== Гостганы и саммоны (29) ===
+images/ghost/Admiral Nakhimov.png    // строка 2
+images/ghost/Allen M. Sumner.png    // строка 4
+images/ghost/Ägir.png    // строка 6
+images/ghost/Bismarck Zwei.png    // строка 8
+images/ghost/Blücher.png    // строка 10
+images/ghost/Brest.png    // строка 12
+images/ghost/Chao Ho класс.png    // строка 14
+images/ghost/Hai Chi класс.png    // строка 15
+images/ghost/Drake.png    // строка 16
+images/ghost/Duisburg.png    // строка 18
+images/ghost/Fritz Rumey.png    // строка 20
+images/ghost/Kearsarge.png    // строка 22
+images/ghost/Kirov META.png    // строка 24
+images/ghost/Kronshtadt.png    // строка 26
+images/ghost/Kursk.png    // строка 28
+images/ghost/Laffey II.png    // строка 30
+images/ghost/Leonardo da Vinci.png    // строка 32
+images/ghost/Maya.png    // строка 34
+images/ghost/Napoli.png    // строка 36
+images/ghost/Odin.png    // строка 38
+images/ghost/P класс.png    // строка 40
+images/ghost/Prinz Heinrich.png    // строка 41
+images/ghost/Prinz Rupprecht.png    // строка 42
+images/ghost/Pittsburgh.png    // строка 44
+images/ghost/Scharnhorst META.png    // строка 46
+images/ghost/Shimanto.png    // строка 48
+images/ghost/Triple 150mm (Type 5 Prototype).png    // строка 50
+images/ghost/Z52.png    // строка 52
+images/ghost/Карри большой молодец.png    // строка 54
+
+=== Мяуфицеры (3) ===
+images/cats/r13.png    // строка 13, после: «Скилл это единственный стабильный аспект блохастых. Это фиксированный » (широкая картинка)
+images/cats/r26.png    // строка 26, после: «У каждого кота с рождения есть 2 (синие и фиолки), или 4 (голда) базов» (широкая картинка)
+images/cats/r37.png    // строка 37, после: «Ещё важной механикой котов является прокачка. Коты получают опыт за до» (широкая картинка)
+
+=== Кроссфлоты (beta) (28) ===
+images/cross/Shimakaze.png    // строка 4
+images/cross/William D. Porter.png    // строка 5
+images/cross/Trafalgar.png    // строка 6
+images/cross/Z52.png    // строка 7
+images/cross/Moskva.png    // строка 8
+images/cross/Unzen.png    // строка 9
+images/cross/Guam.png    // строка 10
+images/cross/Kronshtadt.png    // строка 11
+images/cross/Alsace.png    // строка 14
+images/cross/Bismarck Zwei.png    // строка 15
+images/cross/Götz von Berlichingen.png    // строка 16
+images/cross/Lion.png    // строка 17
+images/cross/Marco Polo.png    // строка 18
+images/cross/Musashi.png    // строка 19
+images/cross/New Jersey.png    // строка 20
+images/cross/Raffaelo.png    // строка 21
+images/cross/Sovetsky Soyuz.png    // строка 22
+images/cross/Tosa.png    // строка 23
+images/cross/Ulrich von Hutten.png    // строка 24
+images/cross/Vanguard.png    // строка 25
+images/cross/Fusou META.png    // строка 26
+images/cross/Amagi(CV).png    // строка 27
+images/cross/Essex.png    // строка 28
+images/cross/Fritz Rumey.png    // строка 29
+images/cross/IndependenceCasablancaArgus.png    // строка 30
+images/cross/Perseus.png    // строка 31
+images/cross/Shinano.png    // строка 32
+images/cross/Yorktown II.png    // строка 33
