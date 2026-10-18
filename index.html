@@ -324,10 +324,9 @@ function renderGrid(s,v,o){
           else if(it.kind==='par')cls='par'+(o.hdr>50&&sg.c===0&&(q===0||(txt.length<=60&&!/\n/.test(txt)&&it.a===it.b))?' big':'');
           else{cls='f';if(isNum(txt))cls+=' num';else if(it.kind==='cards'&&q===it.a&&ne.length>1&&it.b>it.a)cls+=' nm';
             if(it.kind==='tbl')cls+=' tbl';if(hdRow)cls+=' th'}
-          let inner; //ХУЕТА 1
-          if(o.nav==='equip'&&sg.c>=14&&NAVEQ[navNorm(txt)])inner='<a class="nl" data-go="'+NAVEQ[navNorm(txt)]+'">'+esc(txt.replace(/-\n/g,'').replace(/\n/g,' '))+'</a>';
-          else if(o.f==='proto' && sg.c===1 && txt) inner = cell(txt) + slotH('proto', keyOf(txt), {h:100}); // <--- ДОБАВЛЕНА ЭТА СТРОКА
-          else inner=cell(txt); //КОНЕЦ ХУЕТА 2
+         let inner; //Я РОТ ЕБАЛ БЛЯТЬ ЭТИ КАРТИНКИ ХИНКИ
+         if(o.nav==='equip'&&sg.c>=14&&NAVEQ[navNorm(txt)])inner='<a class="nl" data-go="'+NAVEQ[navNorm(txt)]+'">'+esc(txt.replace(/-\n/g,'').replace(/\n/g,' '))+'</a>';
+         else inner=cell(txt); //КОНЕЦ ХУЕТА 2
           if(it.kind==='par')inner='<div class="pw">'+inner+'</div>';
           h+='<td class="'+cls+'"'+cs+'>'+inner+'</td>'});
         h+='</tr>'}
