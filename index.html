@@ -316,7 +316,7 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
    const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Оставлось дней/.test(x));
   const dsc=extra.find(([n])=>n===19);
    const dsc=extra.find(([n])=>n===19);
-  if(dsc){dsc[1]='https://discord.gg/Whe3g7f3B'}
+  if(dsc){dsc[1]='https://discord.gg/jKHrNbabzv'}
     if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+(x.startsWith('<a ')?x:cell(x))+'</td></tr>').join('')+'</table></div>';
   const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
