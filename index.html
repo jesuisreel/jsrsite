@@ -310,13 +310,10 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
      card(oc,'oc',dOC)+card(mt,'meta',dMT)+'</div>';
-  const skip=new Set([10,11,14,16,17]);
-  const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
-  if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
-  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
-  h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
-   items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
-  v.innerHTML=h}
+    h+='<div class="dt" style="margin-top:22px"><table>'+
+     '<tr><td><a href="https://discord.gg/jKHrNbabzv" target="_blank" rel="noopener">Discord</a></td></tr>'+
+     '<tr><td><a href="https://northernparliament.github.io/AL/" target="_blank" rel="noopener">Перевод сюжета от Seiffear</a></td></tr>'+
+     '</table></div>';
 
 function doc(s,v,o){
   const rows=trim(s.rows);let h='<div class="doc">',first=true,grp=[],grpStart=0;
