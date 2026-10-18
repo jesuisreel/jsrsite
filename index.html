@@ -222,16 +222,9 @@ const isTxt=t=>String(t).trim()&&!isNum(t);
 const keyOf=t=>String(t).replace(/[\\/:*?"<>|]+/g,'').replace(/\s+/g,' ').trim();
 const colL=n=>{let s='';n++;while(n){s=String.fromCharCode(65+(n-1)%26)+s;n=Math.floor((n-1)/26)}return s};
 function fmt(t){t=String(t).trim();if(/^-?\d+\.\d{3,}$/.test(t))return String(+(+t).toFixed(2));return t}
-function cell(t){
-  t=fmt(t);
-  if(!t)return'';
+function cell(t){t=fmt(t);if(!t)return'';
   if(IMG.test(t))return'<img loading="lazy" src="'+encodeURI(t)+'">';
-  let html = esc(t);
-  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  html = html.replace(/(^|[^"'>])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
-  return html;
-}
-}
+  return esc(t).replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
 function trim(rows){
   let w=0;rows.forEach(r=>r.forEach((c,i)=>{if(String(c).trim())w=Math.max(w,i+1)}));
   let h=rows.length;while(h&&!rows[h-1].some(c=>String(c).trim()))h--;
@@ -308,7 +301,7 @@ const chipsH=l=>'<div class="chips">'+l.map(([t,r])=>'<a data-go="'+r+'">'+esc(t
 function home(s,v){
   const r=s.rows;const ver=(r[0]||[])[3]||'';$('ver').textContent=ver;
   const sub=(r[0]||[])[2]||'';
-let h='<div class="hero"><div class="eyebrow">Je suis reel Azur Lane database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+' — сборник гайдов по Azur Lane. <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ 0.1 '+esc(ver)+'</div></div>';
+let h='<div class="hero"><div class="eyebrow">Unofficial community database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+' — единая точка входа в посос по Azur Lane. <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ 0.1 '+esc(ver)+'</div></div>';
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
@@ -317,20 +310,9 @@ let h='<div class="hero"><div class="eyebrow">Je suis reel Azur Lane database</d
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
      card(oc,'oc',dOC)+card(mt,'meta',dMT)+'</div>';
-    const skip=new Set([10,11,14,16,17]);
-  const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Оставлено дней/.test(x));
-  
-  // === ИСПРАВЛЕНИЕ: Обработка кастомных ссылок вида [Текст](Ссылка) ===
-  if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>{
-      // Сначала проверяем на наличие Markdown-ссылки
-      let match = x.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
-      if (match) {
-          return '<tr data-r="'+n+'"><td><a href="'+match[2]+'" target="_blank" rel="noopener">'+match[1]+'</a></td></tr>';
-      } else {
-          // Если это не маркдаун, обрабатываем через cell (чтобы обычные ссылки тоже работали)
-          return '<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>';
-      }
-  }).join('')+'</table></div>';
+  const skip=new Set([10,11,14,16,17]);
+  const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
+  if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
   const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
    items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
