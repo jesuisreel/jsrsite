@@ -324,7 +324,7 @@ const chipsH=l=>'<div class="chips">'+l.map(([t,r])=>'<a data-go="'+r+'">'+esc(t
 function home(s,v){
   const r=s.rows;const ver=(r[0]||[])[3]||'';$('ver').textContent=ver;
   const sub=(r[0]||[])[2]||'';
-let h='<div class="hero"><div class="eyebrow">Unofficial community database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+'  <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ 0.1 '+esc(ver)+'</div></div>';
+let h='<div class="hero"><div class="eyebrow">Unofficial community database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+'  <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ: Beta v1.0 '+esc(ver)+'</div></div>';
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
