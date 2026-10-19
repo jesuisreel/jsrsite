@@ -343,17 +343,49 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
 
 function doc(s,v,o){
   const rows=trim(s.rows);let h='<div class="doc">',first=true,grp=[],grpStart=0;
+  
+  // оаоаоаооа ммммммммммммммммм дайте мне пульт от ядерки
+  const topRow = rows[0] || [];
+  const navItems = [];
+  topRow.forEach((cellText, colIndex) => {
+    const t = String(cellText).trim();
+    if (t && (t.includes('СМЕШАРИК') || t.includes('ПОБОЛЬШЕ') || t.includes('МАЛЕНЬКИХ'))) {
+      let targetRow = -1;
+      for (let r = 1; r < rows.length; r++) {
+        if (String(rows[r][0] || '').trim().includes(t) || String(rows[r][0] || '').trim().startsWith(t)) {
+          targetRow = r + 1; 
+          break;
+        }
+      }
+      if (targetRow === -1) {
+         if (t.includes('СМЕШАРИК')) targetRow = 188; 
+         else if (t.includes('ПОБОЛЬШЕ')) targetRow = 20;
+         else if (t.includes('МАЛЕНЬКИХ')) targetRow = 3;
+      }
+      if (targetRow > 0) navItems.push({ text: t, row: targetRow });
+    }
+  });
+
+  if (navItems.length > 0) {
+    // Закрепляем кнопок
+    h += '<div class="chips-wrap" style="position:sticky;top:0;z-index:10;background:var(--bg);padding:10px 0;margin-top:-10px;margin-bottom:10px;border-bottom:1px solid var(--line)">';
+    h += '<div class="chips" style="margin:0">' + navItems.map(item => 
+      `<a data-go="${item.row}" style="cursor:pointer">${esc(item.text)}</a>`
+    ).join('') + '</div></div>';
+  }
+
   const flush=()=>{if(!grp.length)return;
     const used=[];grp.forEach(r=>r.forEach((c,i)=>{if(String(c).trim())used[i]=1}));
     const cols=used.map((u,i)=>u?i:-1).filter(i=>i>=0);
     h+='<div class="dt"><table>'+grp.map((r,k)=>{const nm=String(r[0]||'').trim(),sh=o.f==='fleet'&&nm&&nm.length<=40&&r.slice(1).some(c=>String(c).trim());return '<tr data-r="'+(grpStart+k+1)+'"'+(k==0&&grp.length>2&&r.filter(c=>String(c).trim()).length>1?' class="h"':'')+'>'+(o.f==='fleet'?'<td class="sl">'+(sh?slotH('fleet',keyOf(nm.split('\n')[0]),{h:64}):'')+'</td>':'')+cols.map(i=>'<td>'+cell(r[i]||'')+'</td>').join('')+'</tr>'}).join('')+'</table></div>';grp=[]};
+  
   for(let i=0;i<rows.length;i++){const r=rows[i];const ne=r.filter(c=>String(c).trim());
     if(!ne.length){flush();let j=i;while(j<rows.length&&isBlankRow(rows[j]))j++;
       if(j-i>=(o.f==='fleet'?2:5)&&j<rows.length)h+='<div data-r="'+(i+1)+'" style="margin:14px 0">'+slotH(o.f,'r'+(i+1),{band:1})+'</div>';
       i=j-1;continue}
     if(ne.length==1){flush();const t=ne[0].trim();
       if(first){h+='<h1 data-r="'+(i+1)+'">'+esc(t)+'</h1>';first=false}
-      else if(t.length<80&&!t.includes('\n'))h+='<h2 data-r="'+(i+1)+'">'+esc(t)+'</h2>';
+      else if(t.length<80&&!t.includes('\n'))h+='<h2 data-r="'+(i+1)+'" style="scroll-margin-top:20px">'+esc(t)+'</h2>'; 
       else h+='<p data-r="'+(i+1)+'">'+cell(t)+'</p>';}
     else{first=false;if(!grp.length)grpStart=i;grp.push(r)}}
   flush();v.innerHTML=h+'</div>'}
