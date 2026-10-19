@@ -202,7 +202,7 @@ td.sl .slot{height:100%}
 // имя листа в data.js → [название, иконка, тип, описание, опции]
 // типы: home | doc | dict | classes | grid (свободная сетка) | sheet (таблица строка-в-строку) | raw
 const CFG={
-'Обложка':['Обложка','⌂','home','',{f:'cover'}],
+'Главная':['Главная','⌂','home','',{f:'cover'}],
 'Патчноут':['Патчноут и датамайн','◷','doc','Патчноуты и датамайны.',{f:'patch'}],
 'Флотостроение':['Флотостроение','⚓','doc','Руководство по построению флотов.',{f:'fleet'}],
 'Классы':['Классы кораблей','▦','classes','Классы кораблей и их описания.',{f:'classes'}],
@@ -336,7 +336,7 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   const skip=new Set([10,11,14,16,17]);
   const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
   if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
-  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
+  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Главная'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
    items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
   v.innerHTML=h}
