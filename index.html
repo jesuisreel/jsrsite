@@ -328,7 +328,7 @@ let h='<div class="hero"><div class="eyebrow">Je suis reel Azur Lane database</d
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
-  const lbl=String(cl[0]||'Актуальный ивент').trim().replace(/:$/,'');
+  const lbl=String(cl[0]||'Актуальные события').trim().replace(/:$/,'');
   const card=(t,k,d)=>'<div class="evc"><div class="evh"><b>'+esc(t)+'</b>'+(d?'<span>Осталось дней: '+esc(d)+'</span>':'')+'</div>'+slotH('cover',k,{band:1,h:200})+'</div>';
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
