@@ -190,7 +190,7 @@ td.sl .slot{height:100%}
 </style></head><body>
 <aside><div class="brand"><i>JSR</i><div><b>JE SUIS REEL</b><small>AZUR LANE DATABASE</small></div></div>
 <div class="lbl">БАЗА ЗНАНИЙ</div><nav id="nav"></nav>
-<div class="foot"><b>Разработчики</b><br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Кодер</span><br>MrKyk</p><div class="v"></div></aside>
+<div class="foot"><b>Фанатская фанбаза</b><br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v"></div></aside>
 <main><div class="top"><span>JSR</span>/<b id="crumb"></b><span class="sp"></span>
 <div class="gs"><input id="gs" placeholder="Поиск по всему сайту…  ( / )" autocomplete="off"><div id="sr"></div></div>
 <button class="btn" id="slotsBtn" title="Скачать список файлов-картинок, которые ожидает сайт">🖼 Список картинок</button>
@@ -202,8 +202,8 @@ td.sl .slot{height:100%}
 // имя листа в data.js → [название, иконка, тип, описание, опции]
 // типы: home | doc | dict | classes | grid (свободная сетка) | sheet (таблица строка-в-строку) | raw
 const CFG={
-'Главная':['Главная','⌂','home','',{f:'cover'}],
-'Патчноут':['Патчноут и рераны','◷','doc','Патчноуты и рераны.',{f:'patch'}],
+'Обложка':['Обложка','⌂','home','',{f:'cover'}],
+'Патчноут':['Патчноут и датамайн','◷','doc','Патчноуты и датамайны.',{f:'patch'}],
 'Флотостроение':['Флотостроение','⚓','doc','Руководство по построению флотов.',{f:'fleet'}],
 'Классы':['Классы кораблей','▦','classes','Классы кораблей и их описания.',{f:'classes'}],
 'Сленг':['Сленг','Aa','doc','Сленг игроков Azur Lane.',{f:'slang'}],
@@ -324,11 +324,11 @@ const chipsH=l=>'<div class="chips">'+l.map(([t,r])=>'<a data-go="'+r+'">'+esc(t
 function home(s,v){
   const r=s.rows;const ver=(r[0]||[])[3]||'';$('ver').textContent=ver;
   const sub=(r[0]||[])[2]||'';
-let h='<div class="hero"><div class="eyebrow">Je suis reel Azur Lane database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+'  <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">Beta v1.0 '+esc(ver)+'</div></div>';
+let h='<div class="hero"><div class="eyebrow">Unofficial community database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+' — единая точка входа в посос по Azur Lane. <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ 0.1 '+esc(ver)+'</div></div>';
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
-  const lbl=String(cl[0]||'Актуальные события').trim().replace(/:$/,'');
+  const lbl=String(cl[0]||'Актуальный ивент').trim().replace(/:$/,'');
   const card=(t,k,d)=>'<div class="evc"><div class="evh"><b>'+esc(t)+'</b>'+(d?'<span>Осталось дней: '+esc(d)+'</span>':'')+'</div>'+slotH('cover',k,{band:1,h:200})+'</div>';
   h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
@@ -336,7 +336,7 @@ let h='<div class="hero"><div class="eyebrow">Je suis reel Azur Lane database</d
   const skip=new Set([10,11,14,16,17]);
   const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
   if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
-  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Главная'&&CFG[x.name]);
+  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
    items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
   v.innerHTML=h}
