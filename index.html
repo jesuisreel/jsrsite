@@ -101,9 +101,8 @@ a.nl{display:inline-block;margin:2px 3px 2px 0}
 .slot.band{min-height:84px;font-size:11px}
 .slot.ok{border:0;background:none;padding:0;display:block;min-height:0!important}
 .slot.ok .sl-l{display:none}
-.slot img{display:block;max-width:100%;max-height:none;margin:0;border-radius:6px}
+.slot img{display:block;width:100%;height:100%;object-fit:contain;margin:0;border-radius:6px}
 .g .slot{width:100%}
-.g .slot.ok img{max-height:420px;width:auto;margin:0 auto}
 .icn{width:64px}.icn .slot{min-height:56px}
 .dt td.sl{width:76px;padding:6px}
 td.sl .slot{height:100%}
@@ -124,10 +123,10 @@ td.sl .slot{height:100%}
 .ecard .etag{align-self:flex-start;font-size:10px;font-weight:700;color:var(--ac);border:1px solid var(--ac2);border-radius:6px;padding:1px 6px}
 .ecard.shop .en{background:#143329;color:var(--ac);border-radius:8px;padding:5px 6px}
 .ecard.shop .en i{font-style:normal;color:var(--tx)}
-.ecard .slot{min-height:96px}
+.ecard .slot{height:96px;min-height:96px;overflow:hidden}
 .egrid.eq{gap:0;align-items:stretch;margin:0 0 -1px;border:1px solid var(--line);border-radius:0;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 127px,var(--line) 127px,var(--line) 128px)}
 .egrid.eq .ecard{border:0;border-right:1px solid var(--line);border-radius:0;background:#0f241d;padding:0 0 8px;gap:4px;grid-row:1;justify-content:flex-start}
-.egrid.eq .ecard .slot{min-height:110px;border-radius:0}
+.egrid.eq .ecard .slot{height:110px;min-height:110px;border-radius:0;overflow:hidden}
 .egrid.eq .ecard .en{font-size:13px;font-weight:500;padding:4px 6px 0}
 .egrid.eq .ecard .ed{font-size:12px;padding:6px 6px 0;margin-top:auto}
 .egrid.eq .ecard .etag{margin:4px 0 0 6px}
@@ -157,7 +156,7 @@ td.sl .slot{height:100%}
 .pcard{display:flex;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-height:150px}
 .pface{width:130px;flex:none;display:flex}
 .pface .slot{border-radius:0;min-height:150px;height:100%}
-.pface .slot.ok img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.pface .slot.ok img{width:100%;height:100%;object-fit:contain;border-radius:0}
 .pbody{flex:1;min-width:0;display:flex;flex-direction:column}
 .phd{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#143329}
 .phd b{flex:1;font-size:16px;color:var(--ac)}
@@ -202,7 +201,7 @@ td.sl .slot{height:100%}
 // имя листа в data.js → [название, иконка, тип, описание, опции]
 // типы: home | doc | dict | classes | grid (свободная сетка) | sheet (таблица строка-в-строку) | raw
 const CFG={
-'Обложка':['Обложка','⌂','home','',{f:'cover'}],
+'Главная':['Главная','⌂','home','',{f:'cover'}],
 'Патчноут':['Патчноут и датамайн','◷','doc','Патчноуты и датамайны.',{f:'patch'}],
 'Флотостроение':['Флотостроение','⚓','doc','Руководство по построению флотов.',{f:'fleet'}],
 'Классы':['Классы кораблей','▦','classes','Классы кораблей и их описания.',{f:'classes'}],
@@ -336,7 +335,7 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   const skip=new Set([10,11,14,16,17]);
   const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
   if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
-  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
+  const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Главная'&&CFG[x.name]);
   h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
    items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
   v.innerHTML=h}
