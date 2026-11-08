@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JSR — Je Suis Reel · Azur Lane Database</title>
+<script>try{if(localStorage.getItem('jsr-theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,"Segoe UI",Arial,sans-serif}
@@ -125,6 +126,17 @@ a.nl{display:inline-block;margin:2px 3px 2px 0}
 .fleet-doc .dt td.sl .slot{width:101px;height:103px;min-height:103px!important}
 .fleet-doc .dt td.sl .slot.ok{display:flex;align-items:flex-end;justify-content:flex-start}
 .fleet-doc .dt td.sl .slot img{width:101px;height:103px;max-width:100%;object-fit:scale-down;object-position:left bottom}
+/* Групповые портреты выводятся в отдельных таблицах без пустых столбцов. */
+@media(min-width:769px){
+.fleet-doc .dt.fleet-group table{table-layout:fixed}
+.fleet-doc .dt.fleet-group td.sl{width:321px}
+.fleet-doc .dt.fleet-group td:nth-child(2){width:18%}
+.fleet-doc .dt.fleet-group td:not(.sl){font-size:12px;line-height:1.3;overflow-wrap:anywhere}
+}
+/* Широкие групповые изображения сохраняют ту же высоту, что и остальные. */
+@media(min-width:769px){.fleet-doc .dt td.sl:has(.slot:is([data-k="AzumaBrestGuamKronshtadt"],[data-k="An ShanChang ChunTai YuanFu Shun"],[data-k="KasumiNoshiroJintsuu"],[data-k="ShinanoHakuryuuAmagi II"])){width:321px;min-width:321px}}
+.fleet-doc .dt td.sl .slot:is([data-k="AzumaBrestGuamKronshtadt"],[data-k="An ShanChang ChunTai YuanFu Shun"],[data-k="KasumiNoshiroJintsuu"],[data-k="ShinanoHakuryuuAmagi II"]).ok{width:max-content;max-width:100%;overflow-x:auto}
+.fleet-doc .dt td.sl .slot:is([data-k="AzumaBrestGuamKronshtadt"],[data-k="An ShanChang ChunTai YuanFu Shun"],[data-k="KasumiNoshiroJintsuu"],[data-k="ShinanoHakuryuuAmagi II"]) img{width:auto;height:103px;max-width:none;flex:none}
 td.sl .slot{height:100%}
 .dict h2{display:flex;justify-content:space-between;align-items:center}.dict h2 a{font-size:11px;font-weight:400;color:var(--mut);cursor:pointer}
 .dict .dt tr:not(.h) td:nth-child(3){color:#c9dcd2;font-size:13px;font-weight:500}
@@ -138,8 +150,8 @@ td.sl .slot{height:100%}
 .evg .evc .slot{height:210px;min-height:210px!important;width:210px;max-width:100%;display:flex;align-items:center;justify-content:center}
 .evg .evc .slot.ok{width:max-content;max-width:100%}
 .evg .evc .slot img{display:block;width:auto;height:auto;max-width:min(600px,calc(100vw - 320px));max-height:210px;object-fit:contain;margin:0}
-.cover-links{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;align-self:center}
-.cover-links a{display:inline-flex;align-items:center;justify-content:center;min-width:110px;padding:9px 16px;border-radius:9px;font-size:14px;font-weight:700;color:#fff;text-decoration:none;transition:filter .15s,transform .15s}
+.cover-links{display:flex;flex-direction:column;gap:10px;align-self:stretch;flex:0 1 300px;min-width:min(260px,100%);max-width:100%}
+.cover-links a{display:flex;flex:1;align-items:center;justify-content:center;width:100%;min-height:110px;padding:16px;border-radius:9px;font-size:18px;font-weight:700;color:#fff;text-decoration:none;transition:filter .15s,transform .15s}
 .cover-links a:first-child:not(:last-child){background:#5865f2}.cover-links a:last-child{background:#e22b35}
 .cover-links a:hover{filter:brightness(1.15);transform:translateY(-1px)}.cover-links a:focus-visible{outline:2px solid #fff;outline-offset:3px}
 @media(max-width:700px){.evg .evc .slot img{max-width:calc(100vw - 80px)}}
@@ -153,7 +165,8 @@ td.sl .slot{height:100%}
 .ecard.shop .en{background:#143329;color:var(--ac);border-radius:8px;padding:5px 6px}
 .ecard.shop .en i{font-style:normal;color:var(--tx)}
 .ecard .slot{min-height:96px}
-.egrid.eq{gap:0;align-items:stretch;margin:0 0 -1px;border:1px solid var(--line);border-radius:0;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 127px,var(--line) 127px,var(--line) 128px)}
+.egrid.eq{gap:0;align-items:stretch;margin:0;border:1px solid var(--line);border-radius:0;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 127px,var(--line) 127px,var(--line) 128px)}
+.egrid.eq + .egrid.eq{border-top:0}
 .egrid.eq .ecard{border:0;border-right:1px solid var(--line);border-radius:0;background:#0f241d;padding:0 0 8px;gap:4px;grid-row:1;justify-content:flex-start}
 .egrid.eq .ecard .slot{min-height:110px;border-radius:0}
 .egrid.eq .ecard .en{font-size:13px;font-weight:500;padding:4px 6px 0}
@@ -162,7 +175,7 @@ td.sl .slot{height:100%}
 .eqax{display:grid;grid-template-columns:140px 1fr;grid-template-rows:auto auto;gap:8px 14px;margin:6px 0 10px;color:var(--ac);font-weight:800;font-size:11px;letter-spacing:.05em}
 .eqc{grid-row:1;grid-column:1;font-size:16px;line-height:1.2;text-align:center;align-self:center}
 .eqax{grid-template-columns:170px 1fr;gap:6px 14px;align-items:start}
-.eqr{grid-row:1;grid-column:2;display:flex;flex-direction:column;align-items:flex-start;gap:6px}.eqr .slot{width:320px;min-height:90px;flex:none}
+.eqr{grid-row:1;grid-column:2;display:flex;flex-direction:column;align-items:center;width:260px;max-width:100%;gap:6px}.eqr .slot{width:120px;max-width:100%;min-height:60px!important;flex:none}
 .eqd{grid-row:2;grid-column:1;display:flex;flex-direction:column;align-items:center;gap:6px}.eqd .slot{width:90px;min-height:170px}.eqd b,.eqr b{text-align:center}
 .eqr .slot.ok,.eqd .slot.ok{min-height:0}.eqr .slot img,.eqd .slot img{max-width:100%;max-height:none;width:100%;height:auto}
 .eqd{grid-row:2;grid-column:1;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}.eqd .slot{width:60px}
@@ -213,6 +226,7 @@ td.sl .slot{height:100%}
 .gw .slot{border-color:rgba(168,230,193,.3);background:rgba(168,230,193,.04);color:var(--mut);min-height:40px}
 .gw .slot.ok{border:0;background:none}
 .gw .slot.ok img{margin:0 auto;max-height:130px}
+.gw .gc .gi .slot.ok{display:flex;align-items:center;justify-content:center}.gw .gc .gi .slot img{width:48px;height:48px;max-width:100%;max-height:48px;object-fit:contain}
 .gw .hd .slot{min-height:30px}
 .gr{margin-top:6px}
 .eff-grid{display:grid;grid-template-columns:repeat(7,minmax(155px,1fr));gap:3px;min-width:1085px;margin:8px 0 16px}
@@ -238,8 +252,14 @@ td.sl .slot{height:100%}
 .meow-page p{font-size:var(--meow-text);line-height:1.4;white-space:pre-wrap;margin:8px 0}
 .meow-text{display:flex;gap:18px;align-items:flex-start;margin:16px 0}.meow-text p{flex:1;min-width:0}
 .meow-image{flex:none;max-width:100%}.meow-image .slot{height:100%}
+.meow-intro-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:18px;margin:16px 0;align-items:stretch}
+.meow-intro-copy{display:flex;flex-direction:column;justify-content:space-around;min-width:0}.meow-intro-copy p{margin:8px 0}
+.meow-intro-visual{min-width:0}.meow-intro-visual .meow-image{width:100%!important}.meow-intro-visual p{font-size:var(--meow-text);margin:4px 0;font-style:italic}
+.meow-intro-dorm{width:100%!important;margin-top:10px}@media(max-width:800px){.meow-intro-row{grid-template-columns:1fr}}
 .meow-cats{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.meow-cat{display:flex;gap:12px;flex:1 1 340px;min-width:0;padding:12px;background:var(--card);border:1px solid var(--line);border-radius:10px}.meow-cat b{font-size:20pt}.meow-cat p{font-size:16px;flex:1}
+.meow-cat .meow-image .slot.ok{display:flex;align-items:center;justify-content:center}.meow-cat .meow-image .slot img{width:100%;height:127px;object-fit:contain;object-position:center}
 .meow-talents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.meow-talent{display:flex;align-items:center;gap:10px;min-height:63px;padding:5px;background:var(--card)}.meow-talent p{font-size:16px;margin:0}
+.meow-talent .meow-image .slot.ok{display:flex;align-items:center;justify-content:center}.meow-talent .meow-image .slot img{width:100%;height:63px;object-fit:contain;object-position:center}
 .meow-method{display:flex;align-items:stretch;gap:22px;margin:14px 0;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:12px}.meow-method-main{flex:2;min-width:0}.meow-method-main>strong{color:#fff;font-size:var(--meow-text);line-height:1.35}.meow-method-notes{flex:1;min-width:0;border-left:1px solid var(--line);padding-left:20px}.meow-method p{font-size:18px;line-height:1.55;margin:8px 0}.meow-method-notes strong{color:#fff}
 @media(max-width:800px){.meow-text{flex-wrap:wrap}.meow-talents{grid-template-columns:1fr}.meow-page h1{font-size:42px}.meow-page h2{font-size:30px}.meow-page p{font-size:18px}.meow-method{flex-direction:column}.meow-method-notes{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}.meow-method-main>strong{font-size:20px}}
 
@@ -286,6 +306,7 @@ td.sl .slot{height:100%}
 .os-advanced .os-text{font-size:clamp(18px,1.5vw,22px);line-height:1.5}.os-advanced.os-heading .os-text{font-size:clamp(21px,1.8vw,26px)}.os-advanced .os-image{flex-shrink:1}.os-advanced.os-row{align-items:flex-start}
 .os-image .slot.ok{display:flex;align-items:center;justify-content:flex-start}
 .os-image .slot img{width:auto;height:auto;max-width:100%;max-height:var(--os-height,240px);object-fit:contain}
+.os-image:has(.slot:is([data-k="os2"],[data-k="os3"])){width:356px;flex:0 1 356px}.os-image .slot:is([data-k="os2"],[data-k="os3"]).ok{height:156px;display:flex;align-items:center;justify-content:center}.os-image .slot:is([data-k="os2"],[data-k="os3"]) img{width:100%;height:156px;max-height:156px;object-fit:contain}
 .os-map{overflow:auto;margin:12px 0 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
 .os-map table{border-collapse:collapse;width:100%;min-width:760px}.os-map td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}.os-map tr:last-child td{border:0}
 .os-map .os-map-title td{background:#143329;color:var(--ac);font-weight:700}.os-map .slot{width:175px;height:180px;min-height:180px!important}
@@ -299,22 +320,176 @@ td.sl .slot{height:100%}
 .os-ports table{border-collapse:collapse;table-layout:fixed;width:100%;min-width:1100px}.os-ports th,.os-ports td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px;vertical-align:top;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45}.os-ports th{width:140px;background:#143329;color:var(--ac);font-size:16px;text-align:left}.os-ports td:last-child{border-right:0}.os-ports tr:last-child td{border-bottom:0}.os-ports-images td{height:145px}.os-ports .slot{height:125px;min-height:125px!important}.os-ports .slot.ok{display:flex;align-items:center;justify-content:center}.os-ports .slot img{width:auto;height:auto;max-width:100%;max-height:125px;object-fit:contain}.os-ports tr{scroll-margin-top:70px}
 @media(max-width:700px){.os-row{padding:12px;gap:10px}.os-image{width:min(100%,var(--os-width,240px))}.os-text{flex-basis:100%}.os-title{font-size:27px}}
 
+
+.archive-embed{position:relative;width:100%;height:calc(100vh - 110px);min-height:500px;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.archive-embed iframe{position:absolute;top:-40px;left:0;display:block;width:100%;height:calc(100% + 80px);border:0;background:#fff}
+@media(max-width:700px){.archive-embed{height:calc(100vh - 85px);min-height:360px;border-radius:10px}}
+/* Светлая тема использует ту же зелёную палитру и структуру интерфейса. */
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f8f5;--side:#edf5f0;--card:#fff;--line:rgba(38,91,63,.18);--ac:#206341;--ac2:#5f9f79;--tx:#182b21;--mut:#557366}
+[data-theme="light"] *{scrollbar-color:#8ab99b #e9f2ec}
+[data-theme="light"] *::-webkit-scrollbar-track,[data-theme="light"] *::-webkit-scrollbar-corner{background:#e9f2ec}
+[data-theme="light"] *::-webkit-scrollbar-thumb{background:#8ab99b;border-color:#e9f2ec}
+[data-theme="light"] main{background:radial-gradient(900px 500px at 70% 0,#e2f2e8 0,transparent 70%),var(--bg)}
+[data-theme="light"] .brand i,[data-theme="light"] .cardl i{background:#dcefe3}
+[data-theme="light"] nav button.on,[data-theme="light"] .dt tr.h td,[data-theme="light"] .sheet tr.hd td:not(.rn),[data-theme="light"] .g td.f.th,[data-theme="light"] .ecard.shop .en,[data-theme="light"] .phd,[data-theme="light"] .os-map .os-map-title td,[data-theme="light"] .os-detail th,[data-theme="light"] .os-ports th{background:#dcefe3}
+[data-theme="light"] .sheet tr.pin td{background:#dcefe3!important}
+[data-theme="light"] nav button:hover,[data-theme="light"] .sheet tr:hover td:not(.rn){background:rgba(45,122,76,.06)}
+[data-theme="light"] .sheet th,[data-theme="light"] .sheet th.rn,[data-theme="light"] .sheet td.rn{background:#e5f1e9}
+[data-theme="light"] .top input,[data-theme="light"] .top input#gs,[data-theme="light"] .btn{background-color:#fff}
+[data-theme="light"] #sr{background:#fff;box-shadow:0 20px 50px rgba(24,57,38,.18)}
+[data-theme="light"] .sri:hover,[data-theme="light"] .sri.sel{background:#e6f3ea}
+[data-theme="light"] .hero{background:linear-gradient(120deg,#d3eadb,#eff8f1 60%,#fff)}
+[data-theme="light"] .hero:after{color:rgba(32,99,65,.06)}
+[data-theme="light"] .hero p,[data-theme="light"] .doc p,[data-theme="light"] .g td.par,[data-theme="light"] .dict .dt tr:not(.h) td:nth-child(3),[data-theme="light"] .dict .dt td:first-child,[data-theme="light"] .ecard .ed,[data-theme="light"] .pds,[data-theme="light"] .sri,[data-theme="light"] .shop-card p{color:#304d3c}
+[data-theme="light"] .chips a,[data-theme="light"] a.nl,[data-theme="light"] .shop-nav a,[data-theme="light"] .os-nav a,[data-theme="light"] .g td.f,[data-theme="light"] .ecard,[data-theme="light"] .egrid.eq .ecard,[data-theme="light"] .gst .gl{background:#f0f7f2}
+[data-theme="light"] .chips a:hover,[data-theme="light"] a.nl:hover,[data-theme="light"] .shop-nav a:hover,[data-theme="light"] .shop-nav a:focus-visible,[data-theme="light"] .os-nav a:hover{background:#dcefe3}
+[data-theme="light"] .g td.sec,[data-theme="light"] .shsec{background:linear-gradient(90deg,#daeee1,transparent)}
+[data-theme="light"] .slot{border-color:rgba(40,105,68,.32);background:rgba(51,135,82,.04)}
+[data-theme="light"] .slot.ok,[data-theme="light"] .gw .slot.ok{background:none}
+[data-theme="light"] .shop-note{background:#e8f4eb;color:#304d3c}
+[data-theme="light"] .shop-price{background:#e4f2e8;border-color:var(--line)}
+[data-theme="light"] .meow-method-main>strong,[data-theme="light"] .meow-method-notes strong,[data-theme="light"] .meow-text strong[style*="color:#fff"]{color:var(--tx)!important}
+.theme-toggle{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex:none;color:var(--tx)}
+.theme-toggle:focus-visible{outline:2px solid var(--ac2);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:none}
+  ::view-transition-new(root){animation:theme-reveal 650ms cubic-bezier(.22,1,.36,1) both}
+  @keyframes theme-reveal{from{clip-path:circle(0 at var(--theme-x) var(--theme-y))}to{clip-path:circle(var(--theme-radius) at var(--theme-x) var(--theme-y))}}
+}
+@media(max-width:700px){.top{padding-left:10px;padding-right:10px;gap:6px}.top .gs{min-width:0;flex:1}.top input#gs,.top input#gs:focus{width:100%;min-width:0}.theme-toggle{padding:6px}.theme-toggle .theme-label{display:none}}
+
+
+/* Мобильная раскладка: десктопные размеры и таблицы не затрагиваются. */
+.mobile-menu-button,.mobile-menu-backdrop,.mobile-menu-close{display:none}
+@media(max-width:768px){
+  body{height:100vh;height:100dvh}
+  aside{position:fixed;z-index:102;inset:0 auto 0 0;width:min(300px,86vw);height:100%;transform:translateX(-105%);transition:transform .25s ease;box-shadow:8px 0 32px rgba(0,0,0,.22)}
+  body.menu-open aside{transform:translateX(0)}
+  .mobile-menu-backdrop{display:block;position:fixed;z-index:101;inset:0;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+  body.menu-open .mobile-menu-backdrop{opacity:1;visibility:visible}
+  .mobile-menu-button,.mobile-menu-close{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:none;font-size:21px;line-height:1;padding:0}
+  .mobile-menu-close{margin-left:auto;margin-right:8px}
+  nav button{min-height:46px;padding:11px 14px}
+  main{width:100%;min-width:0}
+  .top{height:auto;min-height:54px;display:flex;flex-wrap:wrap;gap:8px;padding:7px 12px 9px}
+  .top .sp{display:none}.top>span:first-of-type{display:none}.top .crumb-separator{display:none}
+  .top #crumb{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .top .gs{order:5;flex:1 0 100%;width:100%;min-width:0}
+  .top input#gs,.top input#gs:focus{width:100%;height:40px;font-size:16px}
+  .theme-toggle{min-width:40px;min-height:40px;justify-content:center;padding:6px}.theme-toggle .theme-label{display:none}
+  #sr{left:0;right:auto;top:44px;width:100%;max-width:none;max-height:55dvh}
+  #view{padding:14px!important;min-height:0}#view.fx{padding:10px!important}
+  .scr{max-width:100%;min-width:0;padding:0 2px}.sheet{max-width:100%}
+  .chips,.shop-nav,.os-nav{flex-wrap:nowrap;overflow-x:auto;max-width:100%;padding-bottom:10px;scrollbar-width:thin}
+  .chips a,.shop-nav a,.os-nav a{flex:none;min-height:34px;display:inline-flex;align-items:center}
+  .hero{padding:28px 22px;border-radius:18px}.hero h1{font-size:clamp(44px,13vw,68px)}.hero:after{font-size:140px;bottom:-28px}
+  .sh{margin:28px 0 14px;gap:10px}.grid{grid-template-columns:minmax(0,1fr);gap:12px}.cardl{padding:16px}.cardl i{margin-bottom:14px}
+  .evg{gap:12px}.evc{width:100%;padding:12px}.cover-links{flex-basis:100%}.cover-links a{min-height:60px}
+  .doc{max-width:100%}.doc h1{font-size:28px}.dt{max-width:100%}.dt table{min-width:560px}
+  .pgrid{grid-template-columns:minmax(0,1fr);gap:10px}.ptitle{font-size:28px}.pface{width:100px}
+  .gw{padding:14px 12px;overflow-x:auto}.gw h1{font-size:32px}.gw p{font-size:17px}.gw table{min-width:680px}
+  .meow-page h1{font-size:clamp(30px,9vw,42px)}.meow-page h2{font-size:clamp(24px,7vw,30px)}.meow-page p{font-size:16px}.meow-cats{gap:8px}.meow-cat{flex-basis:100%;padding:10px}.meow-cat b{font-size:20px}.meow-cat p{font-size:15px}.meow-intro-row{gap:8px}.meow-intro-visual p{font-size:15px}.meow-method{padding:12px;gap:12px}.meow-method p{font-size:16px}
+  .os-page,.shop-page{max-width:100%;min-width:0}.os-row{margin:8px 0}.os-image{max-width:100%}.archive-embed{height:calc(100dvh - 145px);min-height:360px}
+  .eqax{grid-template-columns:115px 1fr;gap:6px;font-size:10px}.eqc{font-size:12px}.eqr{width:min(260px,100%)}.eqd{max-width:115px}
+}
+/* Содержимое сравнительных таблиц перестраивается только на телефоне. */
+.egrid-scroll,.gw-table-scroll{display:contents}.egrid-scroll + .egrid-scroll .egrid.eq{border-top:0}
+@media(max-width:768px){
+  .dt table,.dt tbody,.dt tr,.dt td{display:block;width:100%;min-width:0;max-width:100%}
+  .dt tr{padding:10px 12px;border-bottom:1px solid var(--line)}.dt tr:last-child{border:0}
+  .dt td{padding:4px 0;border:0;overflow-wrap:anywhere}.dt td:empty{display:none}
+  .classes-doc .dt tr.h,.dict .dt tr.h{display:none}
+  .fleet-doc .dt td.sl{width:100%;min-width:0}.fleet-doc .dt td.sl:empty{display:none}
+  .classes-doc .dt td:not(.sl):not(:empty)::before{display:block;color:var(--mut);font-size:11px;font-weight:600}
+  .classes-doc .dt td:nth-child(2)::before{content:'Код'}.classes-doc .dt td:nth-child(3)::before{content:'Класс (EN)'}.classes-doc .dt td:nth-child(4)::before{content:'Класс (RU)'}.classes-doc .dt td:nth-child(5)::before{content:'Описание'}
+  .dict .dt td:first-child{width:100%;font-weight:700}.dict .dt td:nth-child(3)::before{content:'Как называют';display:block;font-size:11px;color:var(--mut)}
+  .dict .dt td:nth-child(2) .slot{max-width:150px}
+  .sheet-mobile-cards>table,.sheet-mobile-cards>table>tbody,.sheet-mobile-cards>table>tbody>tr,.sheet-mobile-cards>table>tbody>tr>td{display:block;width:100%;min-width:0;max-width:100%}
+  .sheet-mobile-cards>table>tbody>tr{border-bottom:1px solid var(--line);padding:8px 12px;scroll-margin-top:12px}
+  .sheet-mobile-cards>table>tbody>tr.hd:first-child{display:none}
+  .sheet-mobile-cards>table>tbody>tr>td{border:0;padding:5px 0;overflow-wrap:anywhere;white-space:pre-wrap}
+  .sheet-mobile-cards>table>tbody>tr>td:empty{display:none}
+  .sheet-mobile-cards>table>tbody>tr:not(.hd)>td[data-label]:not(.sl):not(:empty)::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--mut);font-size:11px;font-weight:600;line-height:1.3}
+  .sheet-mobile-cards>table>tbody>tr>td.sl .slot{max-width:180px}
+  .sheet-mobile-cards td.cross-text{padding:8px 0!important}.sheet-mobile-cards td.cross-text>div{position:static;width:100%;max-width:100%;font-size:16px}
+  .sheet-mobile-cards tr.pin td{position:static;box-shadow:none}
+  .equip-grid>table,.equip-grid>table>tbody,.equip-grid>table>tbody>tr,.equip-grid>table>tbody>tr>td,.goodship-grid>table,.goodship-grid>table>tbody,.goodship-grid>table>tbody>tr,.goodship-grid>table>tbody>tr>td{display:block;width:100%!important;min-width:0;max-width:100%;overflow-wrap:anywhere}
+  .equip-grid>table>colgroup,.goodship-grid>table>colgroup{display:none}.equip-grid>table td:empty,.goodship-grid>table td:empty{display:none}
+  .equip-grid .pw,.goodship-grid .pw{max-width:100%}.equip-grid .shsec h3{font-size:18px;white-space:normal;overflow-wrap:anywhere}
+  .egrid-scroll{display:block;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}.egrid.eq{margin:0;width:max-content}
+  .gw{overflow:visible}.gw-table-scroll{display:block;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}.gw-table-scroll table{min-width:680px}.gw .gc .gt{font-size:24px}.gw .gc .gt.sm{font-size:19px}.gw td.lb,.gw td.nt{font-size:16px}
+}
+/* Компактные сравнительные таблицы на узких экранах. */
+@media(max-width:768px){
+  .equip-grid .shsec h3{flex:1;min-width:0}
+  .gw-table-scroll{overflow:visible;width:100%}.gw-table-scroll table{min-width:0;width:100%;table-layout:auto}
+  .gw-table-scroll table,.gw-table-scroll tbody{display:block}.gw-table-scroll colgroup{display:none}
+  .gw-table-scroll tr{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));width:100%;border-bottom:1px solid var(--line)}
+  .gw-table-scroll tr.hr td{height:auto;min-height:0}.gw-table-scroll tr.hr td:last-child{display:none}
+  .gw-table-scroll td{display:block;min-width:0;overflow-wrap:anywhere}.gw td.lb{width:auto;padding:6px 3px;font-size:clamp(10px,2.7vw,14px)}
+  .gw td.hd{padding:5px 2px;font-size:clamp(9px,2.5vw,13px)}.gw td.nt{grid-column:1/-1;padding:7px 4px;font-size:14px;border:0;border-top:1px solid var(--line)}
+  .gw .gc{min-height:80px;flex-direction:column;justify-content:center;gap:3px;padding:4px 1px}.gw .gc .gi{min-width:0;max-width:100%;flex:none}
+  .gw .gc .gi .slot{min-height:32px!important}.gw .gc .gi .slot.ok{min-height:0!important}
+  .gw .gc .gi .slot img{width:32px;height:32px;max-height:32px}.gw .gc .gt,.gw .gc .gt.sm{flex:none;font-size:clamp(12px,3.1vw,17px);text-align:center;overflow-wrap:anywhere}
+  .eff-grid{min-width:0;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.eff-items{min-height:0}.eff-head{height:auto;min-height:65px;font-size:14px}.eff-item{min-height:65px}.eff-label,.eff-value{font-size:13px;padding:5px}
+}
+@media(max-width:380px){.meow-cat{flex-wrap:wrap}.meow-cat p{flex-basis:100%}.top{padding-left:8px;padding-right:8px}}
+.gst-mobile{display:none}
+@media(max-width:768px){
+  .gst{overflow:visible}.gst>table{display:none}
+  .gst-mobile{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .gst-card{min-width:0;border-radius:8px;overflow:hidden;background:#0f241d}
+  .gst-card-head{min-height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 5px;color:#fff;text-align:center;font-size:14px;font-weight:700;line-height:1.25;overflow-wrap:anywhere}
+  .gst-card-head .slot{width:52px;min-height:30px!important;margin:0 auto 4px}.gst-card-head .slot img{max-width:100%;max-height:30px;object-fit:contain}
+  .gst-card-row{display:grid;grid-template-columns:52px minmax(0,1fr);align-items:center;gap:5px;padding:7px 6px;border-top:1px solid rgba(255,255,255,.15);color:#fff;font-size:13px;line-height:1.3}
+  .gst-card-label{font-weight:700;color:var(--tx);overflow-wrap:anywhere}.gst-card-value{white-space:pre-wrap;overflow-wrap:anywhere}
+}
+@media(max-width:350px){.gst-mobile{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){aside,.mobile-menu-backdrop{transition:none}}
 </style></head><body>
-<aside><div class="brand"><i>JSR</i><div><b>JE SUIS REEL</b><small>AZUR LANE DATABASE</small></div></div>
-<div class="lbl">БАЗА ЗНАНИЙ</div><nav id="nav"></nav>
-<div class="foot"><b>Фанатская фанбаза</b><br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v"></div></aside>
-<main><div class="top"><span>JSR</span>/<b id="crumb"></b><span class="sp"></span>
+<div class="mobile-menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+<aside id="site-menu" aria-label="Навигация сайта"><div class="brand"><i>JSR</i><div><b>JE SUIS REEL</b><small>AZUR LANE DATABASE</small></div><button class="btn mobile-menu-close" id="menu-close" type="button" aria-label="Закрыть меню">×</button></div>
+<nav id="nav"></nav>
+<div class="foot"><b>Created by:</b><br><span style="color:var(--ac)">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:var(--ac)">Разработчик:</span><br>MrKyk</p><div class="v"></div></aside>
+<main><div class="top"><button class="btn mobile-menu-button" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">☰</button><span>JSR</span><span class="crumb-separator">/</span><b id="crumb"></b><span class="sp"></span>
 <div class="gs"><input id="gs" placeholder="Поиск по всему сайту…  ( / )" autocomplete="off"><div id="sr"></div></div>
-<button class="btn" id="slotsBtn" title="Скачать список файлов-картинок, которые ожидает сайт">🖼 Список картинок</button>
-<span class="ver" id="ver"></span></div>
+<button class="btn theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему"><span class="theme-icon" aria-hidden="true"></span><span class="theme-label"></span></button>
+</div>
 <div id="view"></div></main>
 <script src="data.js"></script>
 <script>
+// Тему применяем до отрисовки, а недоступное хранилище не мешает работе сайта.
+(function(){const root=document.documentElement,button=document.getElementById('theme-toggle');
+  function update(){const light=root.dataset.theme==='light';button.querySelector('.theme-icon').textContent=light?'☾':'☀';button.querySelector('.theme-label').textContent=light?'Тёмная тема':'Светлая тема';button.setAttribute('aria-label',light?'Включить тёмную тему':'Включить светлую тему');button.title=button.getAttribute('aria-label')}
+  let transitioning=false;
+  button.addEventListener('click',()=>{
+    if(transitioning)return;
+    const light=root.dataset.theme!=='light';
+    const apply=()=>{if(light)root.dataset.theme='light';else delete root.dataset.theme;try{localStorage.setItem('jsr-theme',light?'light':'dark')}catch(e){}update()};
+    if(!document.startViewTransition||window.matchMedia('(prefers-reduced-motion: reduce)').matches){apply();return}
+    const rect=button.getBoundingClientRect(),x=rect.left+rect.width/2,y=rect.top+rect.height/2;
+    const radius=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+    root.style.setProperty('--theme-x',x+'px');root.style.setProperty('--theme-y',y+'px');root.style.setProperty('--theme-radius',radius+'px');
+    transitioning=true;
+    try{document.startViewTransition(apply).finished.finally(()=>{transitioning=false})}catch(e){transitioning=false;apply()}
+  });update();
+})();
+// На телефоне боковое меню открывается поверх страницы.
+(function(){
+  const menu=document.getElementById('site-menu'),toggle=document.getElementById('menu-toggle'),close=document.getElementById('menu-close'),backdrop=document.getElementById('menu-backdrop'),mobile=window.matchMedia('(max-width: 768px)');
+  function sync(){const open=mobile.matches&&document.body.classList.contains('menu-open');toggle.setAttribute('aria-expanded',String(open));menu.inert=mobile.matches&&!open}
+  function setOpen(open,restore){document.body.classList.toggle('menu-open',open&&mobile.matches);sync();if(open&&mobile.matches)close.focus();else if(restore&&mobile.matches)toggle.focus()}
+  toggle.addEventListener('click',()=>setOpen(!document.body.classList.contains('menu-open'),false));
+  close.addEventListener('click',()=>setOpen(false,true));backdrop.addEventListener('click',()=>setOpen(false,true));
+  document.getElementById('nav').addEventListener('click',e=>{if(e.target.closest('button'))setOpen(false,false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open')){e.preventDefault();setOpen(false,true)}});
+  mobile.addEventListener?mobile.addEventListener('change',()=>setOpen(false,false)):mobile.addListener(()=>setOpen(false,false));sync();
+})();
 // ================= КОНФИГ =================
 // имя листа в data.js → [название, иконка, тип, описание, опции]
 // типы: home | doc | dict | classes | grid (свободная сетка) | sheet (таблица строка-в-строку) | raw
 const CFG={
-'Обложка':['Обложка','⌂','home','',{f:'cover'}],
+'Обложка':['Главная','⌂','home','',{f:'cover'}],
 'Патчноут':['Патчноут и датамайн','◷','doc','Патчноуты и датамайны.',{f:'patch'}],
 'Флотостроение':['Флотостроение','⚓','doc','Руководство по построению флотов.',{f:'fleet'}],
 'Классы':['Классы кораблей','▦','classes','Классы кораблей и их описания.',{f:'classes'}],
@@ -328,11 +503,11 @@ const CFG={
 'Барражи':['Барражи','≋','sheet','Таблица барражей.',{f:'barrages',nav:'barr',pin:1}],
 'Гостганы и саммоны':['Гостганы и саммоны','✢','sheet','Гостганы и саммоны.',{f:'ghost',slot:{col:1,name:0,from:1}}],
 'Мяуфицеры':['Мяуфицеры','☻','doc','Мяуфицеры и их навыки.',{f:'cats'}],
-'Кроссфлоты':['Кроссфлоты (beta)','⇄','sheet','Кроссфлоты.',{f:'cross',pin:1,slot:{col:0,name:1,from:3}}],
+'Кроссфлоты':['Кроссфлоты','⇄','sheet','Кроссфлоты.',{f:'cross',pin:1,slot:{col:0,name:1,from:3}}],
 'Тесты':['Архив тестов','▤','embed','Архив тестов (Google Sheets).',{
   f:'tests',
   url:'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDE2N2O2tiuGaluqmmzTepeR9Omt9y_qFxt4GoavmoE7evOom6AOhLBTDnCykUIjwHldU63tkfaTpd/pubhtml?gid=1061765372&single=true',
-  embed:'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDE2N2O2tiuGaluqmmzTepeR9Omt9y_qFxt4GoavmoE7evOom6AOhLBTDnCykUIjwHldU63tkfaTpd/pubhtml?gid=1061765372&single=true'
+  embed:'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDE2N2O2tiuGaluqmmzTepeR9Omt9y_qFxt4GoavmoE7evOom6AOhLBTDnCykUIjwHldU63tkfaTpd/pubhtml?gid=1061765372&single=true&widget=true'
 }] // агугагага
 };
 const EXTS='png,jpg,webp,gif';
@@ -428,15 +603,16 @@ function buildEquipNav(rows){
   const m={};defs.forEach(([k,re])=>{for(let i=4;i<rows.length;i++){if(re.test(String(rows[i][2]||'').trim())||re.test(String(rows[i][3]||'').trim())){m[k]=i+1;break}}});
   return m}
 function equipChips(rows){const out=[];for(const r of [5,6]){(rows[r]||[]).forEach((t,c)=>{if(c>=14&&String(t).trim()){const k=navNorm(t);if(NAVEQ[k])out.push([String(t).replace(/-\n/g,'').replace(/\s+/g,' ').trim(),NAVEQ[k]])}})}return out}
-function barrNav(rows){const idx=[];rows.forEach((r,i)=>{if(String(r[1]||'').startsWith('Эсминцы |'))idx.push(i)});
-  const labels=String(rows[idx[0]][1]).split('|').map(x=>x.trim());return{idx,labels,map:labels.map((l,j)=>[l,(idx[j]!==undefined?idx[j]+2:0)])}}
+function barrNav(rows){const idx=[];rows.forEach((r,i)=>{if(String(r[1]||'').trim().startsWith('Эсминцы |'))idx.push(i)});
+  const labels=idx.length?String(rows[idx[0]][1]).split('|').map(x=>x.trim()):[];
+  return{idx,map:labels.flatMap((label,j)=>idx[j]===undefined?[]:[[label,idx[j]+1]])}}
 const chipsH=l=>'<div class="chips">'+l.map(([t,r])=>'<a data-go="'+r+'">'+esc(t)+'</a>').join('')+'</div>';
 
 // ================= РЕНДЕРЕРЫ =================
 function home(s,v){
-  const r=s.rows;const ver=(r[0]||[])[3]||'';$('ver').textContent=ver;
+  const r=s.rows;const ver=(r[0]||[])[3]||'';
   const sub=(r[0]||[])[2]||'';
-let h='<div class="hero"><div class="eyebrow">Unofficial community database</div><h1>JE SUIS<br><em>REEL.</em></h1><p>'+esc(sub)+' — единая точка входа в посос по Azur Lane. <br><span style="color:red">Авторы:</span><br>OLEXIRje<br>Carehowname (ex)<br>PolterSyroed<br><span style="color:red">Разработчик</span><br>MrKyk</p><div class="v">ВЕРСИЯ 0.1 '+esc(ver)+'</div></div>';
+let h='<div class="hero"><div class="eyebrow">JE SUIS REEL AZUR LANE DATABASE</div><h1>JE SUIS<br><em>REEL.</em></h1><div class="v">ВЕРСИЯ Beta 1.0 '+esc(ver)+'</div></div>';
   const cl=(r[9]||[]),ev=String(cl[4]||'').trim();
   const oc=String((r[10]||[])[3]||'ОС').trim(),mt=String((r[10]||[])[5]||'Meta').trim();
   const dOC=String((r[16]||[])[3]||'').trim(),dMT=String((r[16]||[])[5]||'').trim();
@@ -444,15 +620,15 @@ let h='<div class="hero"><div class="eyebrow">Unofficial community database</div
   const card=(t,k,d)=>'<div class="evc"><div class="evh"><b>'+esc(t)+'</b>'+(d?'<span>Осталось дней: '+esc(d)+'</span>':'')+'</div>'+slotH('cover',k,{band:1,h:200})+'</div>';
   const discordCell=r.flat().map(x=>String(x).trim()).find(x=>/^\[Discord\]\(https?:\/\/[^\s)]+\)$/i.test(x));
   const socials='<div class="cover-links">'+(discordCell?cell(discordCell):'')+'<a href="https://www.youtube.com/@OLEXIRje" target="_blank" rel="noopener noreferrer">Youtube</a></div>';
-  h+='<div class="sh"><div><div class="eyebrow">'+esc(lbl)+'</div><h2>'+esc(ev||'Ивент')+'</h2></div></div>'+
+  h+='<div class="sh"><div><div class="eyebrow">ТЕКУЩИЕ СОБЫТИЯ</div></div></div>'+
      '<div class="evg"><div class="evc"><div class="evh"><b>'+esc(ev||'Ивент')+'</b></div>'+slotH('cover','event',{band:1,h:280})+'</div>'+
      card(oc,'oc',dOC)+card(mt,'meta',dMT)+socials+'</div>';
   const skip=new Set([10,11,14,16,17]);
   const extra=r.slice(1).map((x,i)=>[i+2,x.filter(c=>String(c).trim()&&String(c).trim()!==discordCell).map(c=>String(c).trim()).join(' · ')]).filter(([n,x])=>x&&!skip.has(n)&&!/^\d+$/.test(x)&&!/Оставшееся время|:\d\d:\d\d|Осталось дней/.test(x));
   if(extra.length)h+='<div class="dt" style="margin-top:22px"><table>'+extra.map(([n,x])=>'<tr data-r="'+n+'"><td>'+cell(x)+'</td></tr>').join('')+'</table></div>';
   const items=SHEETS.map((x,i)=>[x,i]).filter(([x])=>x.name!=='Обложка'&&CFG[x.name]);
-  h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div><h2>Все разделы</h2></div><span>'+items.length+' доступных листов</span></div><div class="grid">'+
-   items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b><small>'+esc(c[3])+'</small></div>'}).join('')+'</div>';
+  h+='<div class="sh"><div><div class="eyebrow">Навигация по базе</div></div></div><div class="grid">'+
+   items.map(([x,i])=>{const c=CFG[x.name];return'<div class="cardl" onclick="show('+i+')"><i>'+c[1]+'</i><b>'+esc(c[0])+'</b></div>'}).join('')+'</div>';
   v.innerHTML=h}
 
 function doc(s,v,o){
@@ -514,8 +690,15 @@ function doc(s,v,o){
       else h+='<p data-r="'+(i+1)+'">'+cell(t)+'</p>';
     } else {
       first=false;
-      if(!grp.length) grpStart=i;
-      grp.push(r);
+      const nm=String(r[0]||'').trim();
+      const groupPortrait=o.f==='fleet' && ['Azuma/Brest/Guam/Kronshtadt','An Shan/Chang Chun/Tai Yuan/Fu Shun','Kasumi/Noshiro/Jintsuu','Shinano/Hakuryuu/Amagi II'].includes(nm);
+      if(groupPortrait){
+        flush();
+        h+='<div class="dt fleet-group"><table><tr data-r="'+(i+1)+'"><td class="sl">'+slotH('fleet',keyOf(nm),{h:64})+'</td>'+r.filter(c=>String(c).trim()).map(c=>'<td>'+cell(c)+'</td>').join('')+'</tr></table></div>';
+      }else{
+        if(!grp.length) grpStart=i;
+        grp.push(r);
+      }
     }
   }
   flush();
@@ -539,7 +722,7 @@ function dict(s,v){
   v.innerHTML=h+'</div></div>'}
 
 function classes(s,v,o){
-  const rows=s.rows;let h='<div class="doc"><h1>Классы кораблей</h1><div class="dt"><table>';
+  const rows=s.rows;let h='<div class="doc classes-doc"><h1>Классы кораблей</h1><div class="dt"><table>';
   h+='<tr class="h"><td>Иконка</td><td>Код</td><td>Класс (EN)</td><td>Класс (RU)</td><td>Описание</td></tr>';
   rows.forEach((r,i)=>{const code=String(r[1]||'').trim();if(!code)return;
     h+='<tr data-r="'+(i+1)+'"><td class="sl">'+slotH(o.f,keyOf(code),{h:56})+'</td><td><b>'+esc(code)+'</b></td><td>'+cell(r[2]||'')+'</td><td>'+cell(r[3]||'')+'</td><td>'+cell(r[5]||'')+(String(r[4]||'').trim()?'<div style="color:var(--mut);margin-top:4px;font-size:12px">'+cell(r[4])+'</div>':'')+'</td></tr>'});
@@ -555,14 +738,14 @@ function eqChip(rows,b){for(let q=b.a;q<=b.b;q++)for(const c of b.cols)if(c>=14&
 function cardsH(cards,cls,f){
   const used=new Set();cards.forEach(cd=>{while(used.has(cd.idx))cd.idx++;used.add(cd.idx)});
   const N=Math.max(...cards.map(cd=>cd.idx))+1;
-  return '<div class="egrid'+(cls==='eq'?' eq':'')+'" data-r="'+(cards[0].row+1)+'" style="grid-template-columns:repeat('+N+',128px)">'+cards.map(cd=>{
+  return (cls==='eq'?'<div class="egrid-scroll">':'')+'<div class="egrid'+(cls==='eq'?' eq':'')+'" data-r="'+(cards[0].row+1)+'" style="--eq-cols:'+N+';grid-template-columns:repeat('+N+',128px)">'+cards.map(cd=>{
     const limitNote=cls==='eq'&&cd.names.some(n=>/^(?:<--|←)\s*лимитк[аи]\s*$/i.test(n.trim()));
     const sl=limitNote?'<div aria-hidden="true" style="height:110px;flex:none"></div>':cd.key?slotH(f,cd.key,{h:cls==='shop'?96:110}):'';
     const nm=cd.names.length?'<div class="en">'+cd.names.map(nl2).join('<br>')+(cd.qty?' <i>×'+esc(cd.qty)+'</i>':'')+'</div>':'';
     const ds=cd.desc.length?'<div class="ed">'+cd.desc.map(nl2).join('<br>')+'</div>':'';
     const pr=cd.price?'<div class="pr">'+nl2(cd.price)+'</div>':'';
     const body=cls==='shop'?nm+sl+pr+ds:sl+(cd.tag?'<span class="etag">ПМК</span>':'')+nm+ds;
-    return '<div class="ecard '+cls+'" style="grid-column:'+(cd.idx+1)+'" data-r="'+(cd.row+1)+'">'+body+'</div>'}).join('')+'</div>'}
+    return '<div class="ecard '+cls+'" style="grid-column:'+(cd.idx+1)+'" data-r="'+(cd.row+1)+'">'+body+'</div>'}).join('')+'</div>'+(cls==='eq'?'</div>':'')}
 
 // Эквип: картинка сверху, ниже название, затем описание
 function equipGroups(rows,P,o){const it=P.items,G=new Map();
@@ -640,7 +823,14 @@ function goodTable(rows,hr,hend,o){
     if(only===1&&vals[0])h+='<td colspan="'+hc.length+'" class="gm">'+nl2(vals[0])+'</td>';
     else h+=vals.map((t,i)=>'<td style="background:'+COL[i%7]+'">'+nl2(t)+'</td>').join('');
     h+='</tr>'}
-  return h+'</tbody></table></div>'}
+  h+='</tbody></table><div class="gst-mobile">';
+  hc.forEach((c,i)=>{const name=TT(rows,hr,c);
+    h+='<section class="gst-card"><div class="gst-card-head" style="background:'+COL[i%7]+'">'+slotH(o.f,'class_'+keyOf(name.split('\n')[0]),{h:30})+'<div>'+nl2(name)+'</div></div>';
+    for(let q=hr+1;q<=hend;q++){const lab=TT(rows,q,lc);if(!lab)continue;
+      const vals=hc.map(col=>TT(rows,q,col));const val=vals.filter(Boolean).length===1&&vals[0]?vals[0]:vals[i];
+      h+='<div class="gst-card-row" data-r="'+(q+1)+'"><span class="gst-card-label">'+esc(lab)+'</span><span class="gst-card-value">'+nl2(val||'—')+'</span></div>'}
+    h+='</section>'});
+  return h+'</div></div>'}
 
 function renderHybrid(s,v,o){
   const rows=trim(s.rows);let chips='';
@@ -652,17 +842,17 @@ function renderHybrid(s,v,o){
     for(let q=0;q<rows.length;q++){if(rows[q].filter(c=>String(c).trim()).length>=6&&rows[q].some(c=>/Эсминцы/.test(c))){hr=q;break}}
     if(hr>=0){hend=hr;for(let q=hr+1;q<rows.length;q++){if(rows[q].some(c=>String(c).trim()==='LCK')){hend=q;break}}}}
   const open='<table><colgroup>'+'<col style="width:64px">'.repeat(W)+'</colgroup><tbody>';
-  let h=chips+'<div class="sheet g cv">'+(o.f==='equip'?'<div class="eqax"><div class="eqc">ДЛЯ ПОНИМАНИЯ РАСПОЛОЖЕНИЯ</div><div class="eqr">'+slotH('equip','arrow_right',{h:90})+'<b>УМЕНЬШЕНИЕ УНИВЕРСАЛЬНОСТИ</b></div><div class="eqd">'+slotH('equip','arrow_down',{h:170})+'<b>УМЕНЬШЕНИЕ ЭФФЕКТИВНОСТИ</b></div></div>':''),inT=false,doneT=false;
+  let h=chips+'<div class="sheet g cv '+(o.f==='equip'?'equip-grid':o.f==='goodship'?'goodship-grid':'')+'">'+(o.f==='equip'?'<div class="eqax"><div class="eqc">ДЛЯ ПОНИМАНИЯ РАСПОЛОЖЕНИЯ</div><div class="eqr">'+slotH('equip','arrow_right',{h:90})+'<b>УМЕНЬШЕНИЕ УНИВЕРСАЛЬНОСТИ</b></div><div class="eqd">'+slotH('equip','arrow_down',{h:170})+'<b>УМЕНЬШЕНИЕ ЭФФЕКТИВНОСТИ</b></div></div>':''),inT=false,doneT=false;
   const tab=x=>{if(!inT){h+=open;inT=true}h+=x};
   const out=x=>{if(inT){h+='</tbody></table>';inT=false}h+=x};
   for(let k=0;k<it.length;k++){const x=it[k];
     if(hr>=0&&x.b>=hr&&x.a<=hend){if(!doneT){doneT=true;out(goodTable(rows,hr,hend,o))}continue}
     if(G.has(k)){const g=G.get(k);out(g.html);k=g.kk;continue}
     if(x.t==='g'){
-      if(x.band){if(o.f!=='equip')out('<div class="bandw" data-r="'+(x.a+1)+'">'+slotH(o.f,x.band.key,{band:1})+'</div>');continue}
+      if(x.band){if(o.f!=='equip'&&!(o.f==='goodship'&&['r73','r82'].includes(x.band.key)))out('<div class="bandw" data-r="'+(x.a+1)+'">'+slotH(o.f,x.band.key,{band:1})+'</div>');continue}
       if(o.f==='equip'&&G.has(k+1))continue;
       tab('<tr class="sp"><td colspan="'+W+'" style="height:'+Math.min(x.L,3)*7+'px"></td></tr>');continue}
-    if(o.f==='equip'&&eqChip(rows,x)){
+    if(o.f==='equip'&&(eqChip(rows,x)||(x.a===x.b&&x.cols.some(c=>TT(rows,x.a,c)==='Зенитки (с "баффами")')))){
       const ts=[];for(let q=x.a;q<=x.b;q++)x.cols.forEach(c=>{const t=TT(rows,q,c);if(t&&c<14)ts.push(t.replace(/\s+/g,' '))});
       out('<div class="shsec" data-r="'+(x.a+1)+'"><h3>'+esc(ts.join(' · '))+'</h3></div>');continue}
     if(o.f==='shop'&&x.kind==='sec'){
@@ -741,28 +931,41 @@ function renderGridOld(s,v,o){
   h+='</tbody></table></div>';v.innerHTML=h}
 
 function sheet(s,v,o){
-  const rows=trim(s.rows);const w=Math.max(...rows.map(r=>r.length));
-  let nav=null,chips='';if(o.nav==='barr'){nav=barrNav(rows);chips=chipsH(nav.map)}
-  let h=chips+'<div class="sheet"><table><tbody>';
+  let rows=trim(s.rows),crossGuide='';
+  if(o.f==='cross'){
+    crossGuide=String((rows[1]||[]).slice(1).find(c=>String(c||'').trim())||'');
+    const columns=rows[0].map((_,c)=>c).filter(c=>c===0||rows.some((row,r)=>r!==1&&String(row[c]||'').trim()));
+    rows=rows.map(row=>columns.map(c=>row[c]||''));
+  }
+  const w=Math.max(...rows.map(r=>r.length));
+  let nav=null,chips='';if(o.nav==='barr'){nav=barrNav(rows);chips='<div class="chips">'+nav.map.map(([t,r])=>'<a href="#barr-'+r+'" data-barr-go="'+r+'">'+esc(t)+'</a>').join('')+'</div>'}
+  let h=chips+'<div class="sheet sheet-mobile-cards"><table><tbody>';
   const bar=s.name==='Барражи';
   const crossStart=o.f==='cross'?rows.findIndex(row=>/^Итак, нам нужно собрать флот/.test(String(row[0]||'').trim())):-1;
   rows.forEach((row,r)=>{
+    // В исходной таблице между категориями могут быть сотни пустых строк.
+    if(bar&&isBlankRow(row))return;
+    if(o.f==='cross'&&r===1&&/^На случай, если вы хотите/.test(String(row[0]||'').trim())){
+      h+='<tr data-r="'+(r+1)+'"><td class="cross-text" colspan="'+w+'"><div>'+cell(row[0])+(crossGuide?'<br><small><a href="#cross-guide-start">'+esc(crossGuide)+'</a></small>':'')+'</div></td></tr>';return;
+    }
     if(crossStart>=0&&r>=crossStart&&row.every(c=>!String(c).trim())){
       h+='<tr data-r="'+(r+1)+'"><td class="cross-text" colspan="'+w+'" style="padding:8px 16px"></td></tr>';return;
     }
     if(crossStart>=0&&r>=crossStart&&String(row[0]||'').trim()&&row.slice(1).every(c=>!String(c).trim())){
       const text=String(row[0]).trim(),key=/^Я лично себе заебенил такое/.test(text)?'cross_fleet':(/^Ну а это мои основные флоты в ОС/.test(text)?'os_fleets':'');
-      h+='<tr data-r="'+(r+1)+'"><td class="cross-text" colspan="'+w+'"><div>'+cell(row[0])+(key?'<div style="width:min(1030px,100%);margin-top:12px">'+slotH('cross',key,{h:key==='os_fleets'?450:150})+'</div>':'')+'</div></td></tr>';return;
+      h+='<tr data-r="'+(r+1)+'"'+(r===crossStart?' id="cross-guide-start"':'')+'><td class="cross-text" colspan="'+w+'"><div>'+cell(row[0])+(key?'<div style="width:min(1030px,100%);margin-top:12px">'+slotH('cross',key,{h:key==='os_fleets'?450:150})+'</div>':'')+'</div></td></tr>';return;
     }
     const isNav=nav&&nav.idx.includes(r);
     h+='<tr data-r="'+(r+1)+'"'+((r==0||(row.filter(c=>String(c).trim()).length==1&&r<3)&&!isNav)?' class="hd'+(o.pin&&r==0?' pin':'')+'"':'')+'>';
     for(let c=0;c<w;c++){let inner=cell(row[c]||''),sl='';
-      if(isNav&&c==1)inner=nav.map.map(([t,rr])=>'<a class="nl" data-go="'+rr+'">'+esc(t)+'</a>').join('');
+      if(isNav&&c==0){const section=nav.map.find(([,rr])=>rr===r+1);inner=section?'<a class="nl" id="barr-'+section[1]+'" data-go="'+section[1]+'">'+esc(section[0])+'</a>':''}
+      if(isNav&&c==1)inner='';
       if(bar&&r>1&&!isNav&&String(row[1]||'').trim()){const n=keyOf(row[1]);
         if(c==2){sl=slotH('faces',n,{x:'png,jpg,webp,gif',h:72})}
-        if(c==6&&!String(row[c]||'').trim()){sl=slotH('barrages',n,{x:'gif,webp,png,jpg',h:90})}}
+        if(c==6&&!String(row[c]||'').trim()){sl=slotH('barrages','nogif',{x:'gif,webp,png,jpg',h:90})}}
       if(o.slot&&r>=o.slot.from&&c==o.slot.col&&String(row[o.slot.name]||'').trim()&&!String(row[c]||'').trim())sl=slotH(o.f,keyOf(String(row[o.slot.name]).split('\n')[0]),{h:72});
-      h+='<td'+(sl?' class="sl"':'')+'>'+inner+sl+'</td>'}
+      const label=String((rows[0]||[])[c]||'').trim();
+      h+='<td'+(sl?' class="sl"':'')+(label?' data-label="'+esc(label)+'"':'')+'>'+inner+sl+'</td>'}
     h+='</tr>'});
   v.innerHTML=h+'</tbody></table></div>'}
 
@@ -780,7 +983,7 @@ function goodship(s,v,o){
   let first=true;
   for(let r=0;r<iH;r++){const t=String(rows[r][0]||'').trim();if(!t)continue;
     if(first){h+='<h1 data-r="'+(r+1)+'">'+esc(t)+'</h1>';first=false}else h+='<p data-r="'+(r+1)+'">'+esc(t)+'</p>'}
-  h+='<table><colgroup><col style="width:15%">'+heads.map(()=>'<col>').join('')+'<col style="width:34%"></colgroup>';
+  h+='<div class="gw-table-scroll"><table><colgroup><col style="width:15%">'+heads.map(()=>'<col>').join('')+'<col style="width:34%"></colgroup>';
   h+='<tr class="hr" data-r="'+(iH+1)+'"><td class="lb"></td>'+heads.map(x=>'<td class="hd">'+esc(x.t.split('\n')[0])+slotH('goodship','class_'+keyOf(x.t.split('\n')[0]),{h:30})+'</td>').join('')+'<td style="border:0"></td></tr>';
   const note=(a,b)=>{const out=[];for(let r=a;r<b;r++){const t=(rows[r]||[]).filter((c,i)=>i>=NOTE&&String(c).trim()).map(c=>String(c)).join('').trim();if(t)out.push(t)}return out.join('\n')};
   [[iA,iB],[iB,iC],[iC,iC+3]].forEach(([a,b])=>{
@@ -791,7 +994,7 @@ function goodship(s,v,o){
       const c=cs.find(c=>c>=x.c&&c<nxt);txt=c!==undefined?String(rows[a][c]).trim():'';
       h+='<td><div class="gc"><div class="gi">'+slotH('goodship','stat_'+keyOf(lab)+'_'+keyOf(x.t.split('\n')[0]),{h:90})+'</div><div class="gt'+(txt.length>5?' sm':'')+'">'+esc(txt)+'</div></div></td>'});
     h+='<td class="nt">'+esc(note(a,b))+'</td></tr>'});
-  h+='</table>';
+  h+='</table></div>';
   if(iT>=0)h+='<p data-r="'+(iT+1)+'">'+esc(String(rows[iT][0]).trim())+'</p>';
   h+='</div>';
   const start=iU>=0?iU:(iT>=0?iT+1:iC+3);
@@ -803,7 +1006,7 @@ function goodship(s,v,o){
     v.innerHTML='<div class="scr">'+h+'<div class="gr">'+renderPart(rows.slice(start))+'</div></div>';return;
   }
   const cols=[[0,3],[7,10],[14,17],[21,24],[28,31],[35,38],[42,46]];
-  let efficiency='<div class="gw"><p data-r="'+(iEff+1)+'">'+esc(rows[iEff][0])+'</p><div class="eff-grid">';
+  let efficiency='<div class="gw"><p data-r="'+(iEff+1)+'">'+esc(rows[iEff][0])+'</p><div class="gw-table-scroll"><div class="eff-grid">';
   cols.forEach(([labelCol,valueCol])=>{
     const name=String(rows[iEffHead][valueCol]||'').trim();
     efficiency+='<div class="eff-col"><div class="eff-head">'+esc(name)+slotH('goodship','class_'+keyOf(name),{h:30})+'</div><div class="eff-items">';
@@ -826,13 +1029,24 @@ function goodship(s,v,o){
     if(table&&savedColumns&&!table.querySelector('colgroup'))table.insertBefore(savedColumns,table.firstChild);
     return tmp.innerHTML;
   };
-  efficiency+='</div></div>';
+  efficiency+='</div></div></div>';
   v.innerHTML='<div class="scr">'+h+'<div class="gr">'+renderPart(rows.slice(start,iEff))+'</div>'+efficiency+'<div class="gr">'+renderTail()+'</div></div>'}
 
 function meowficers(s,v,o){
   const l=s.layout||{},rows=s.rows;let h='<div class="meow-page" style="--meow-title:'+(l.titleSize||60)+'pt;--meow-heading:'+(l.headingSize||36)+'pt;--meow-text:'+(l.textSize||20)+'pt">';
   const img=(key,w,height)=>'<div class="meow-image" style="width:'+w+'px;min-height:'+height+'px">'+slotH('cats',key,{h:height})+'</div>';
+  const introText=(row,italic)=>{let text=esc(String(rows[row-1][0]||''));if(italic)text=text.replace(italic,'<em>$1</em>');return '<p>'+text+'</p>'};
+  const introImg=(key,height,extra='')=>'<div class="'+extra+'" data-r="'+key.slice(1)+'">'+img(key,l.introWidth||526,height)+'</div>';
+  const intro=()=>{
+    const heights=l.introHeights||[127,286,83,429,212,332,319,127];
+    return '<div class="meow-intro">'+
+      '<div class="meow-intro-row"><div class="meow-intro-copy" data-r="12">'+introText(12,/(\(Пример:.*\)\.)$/)+'</div><div class="meow-intro-visual">'+introImg('r12',heights[0])+introImg('r14',heights[1])+'</div></div>'+
+      '<div class="meow-intro-row"><div class="meow-intro-copy"><div data-r="20">'+introText(20,/(\(Во избежания.*\))$/)+'</div><div data-r="25">'+introText(25,/(\(То есть у условных.*?\))/)+'</div></div><div class="meow-intro-visual">'+introImg('r21',heights[2])+introImg('r20',heights[3])+'</div></div>'+
+      '<div class="meow-intro-row"><div class="meow-intro-copy" data-r="31">'+introText(31)+'</div><div class="meow-intro-visual"><p>'+esc(rows[30][16]||'')+'</p>'+introImg('r31',heights[4])+'</div></div>'+
+      '<div class="meow-intro-row"><div class="meow-intro-copy"><div data-r="36">'+introText(36)+'</div>'+introImg('r39',heights[6],'meow-intro-dorm')+'</div><div class="meow-intro-visual"><p>'+esc(String(rows[35][16]||'').replace('Ультим��тивная','Ультимативная'))+'</p>'+introImg('r36',heights[5])+introImg('r42',heights[7])+'</div></div></div>';
+  };
   rows.forEach((row,i)=>{
+    if(i===11){h+=intro();return}if(i>11&&i<43)return;
     const non=row.map((t,c)=>({c,t:String(t||'').trim()})).filter(x=>x.t);if(!non.length)return;
     const first=non[0].t;
     if(i===0){h+='<h1 data-r="1">'+esc(first)+'</h1>';return}
@@ -991,7 +1205,7 @@ v.className=fx?'fx':'';v.style.padding=(s.name==='ОС'||s.name==='Что ску
   if(s.name==='Что скупать/фармить')renderShopExample(s,v);
   else if(s.name==='Мяуфицеры')meowficers(s,v,o);
   else if(s.name==='ОС')renderOperationSiren(s,v);
-  else if(t=='embed')v.innerHTML='<iframe title="Архив тестов" src="'+esc(o.embed)+'" style="display:block;width:100%;height:calc(100vh - 110px);min-height:500px;border:0" loading="lazy"></iframe>';
+  else if(t=='embed')v.innerHTML='<section class="archive-embed" aria-label="Архив тестов"><iframe title="Архив тестов — Google Таблица" src="'+esc(o.embed)+'" loading="lazy"></iframe></section>';
   else if(!s.rows.length)v.innerHTML='<div class="empty">Нет данных.</div>';
   else if(t=='home')home(s,v);else if(t=='grid'){if(o.f==='goodship')goodship(s,v,o);else renderGrid(s,v,o)}else if(t=='sheet')sheet(s,v,o);else if(t=='raw')raw(s,v); //от сюда до мне страшно кусок гавнокода
   //бля мне страшно 
@@ -1016,7 +1230,7 @@ function markWords(el,words){
   const tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const nodes=[];while(tw.nextNode())nodes.push(tw.currentNode);
   nodes.forEach(n=>{if(!re.test(n.nodeValue)){re.lastIndex=0;return}re.lastIndex=0;
     const sp=document.createElement('span');sp.innerHTML=esc(n.nodeValue).replace(re,'<mark class="hit">$1</mark>');n.replaceWith(...sp.childNodes)})}
-VIEW.addEventListener('click',e=>{const campaign=e.target.closest('[data-shop-campaign]');if(campaign){e.preventDefault();$('shop-campaign').scrollIntoView({block:'start',behavior:'smooth'});return}const a=e.target.closest('[data-go]');if(a){e.preventDefault();goRow(+a.dataset.go)}});
+VIEW.addEventListener('click',e=>{const barr=e.target.closest('[data-barr-go]');if(barr){e.preventDefault();const row=VIEW.querySelector('tr[data-r="'+barr.dataset.barrGo+'"]'),sheet=row&&row.closest('.sheet');if(row&&sheet){const header=sheet.querySelector('tr.pin');const offset=header?header.getBoundingClientRect().height:0;sheet.scrollTop+=row.getBoundingClientRect().top-sheet.getBoundingClientRect().top-sheet.clientTop-offset;flash(row)}return}const campaign=e.target.closest('[data-shop-campaign]');if(campaign){e.preventDefault();$('shop-campaign').scrollIntoView({block:'start',behavior:'smooth'});return}const a=e.target.closest('[data-go]');if(a){e.preventDefault();goRow(+a.dataset.go)}});
 
 // ================= ГЛОБАЛЬНЫЙ ПОИСК =================
 const IDX=[];
@@ -1063,7 +1277,7 @@ function slotsOf(i){
   else if(t==='classes'){s.rows.forEach((r,k)=>{if(String(r[1]||'').trim())add(o.f,keyOf(r[1]),'строка '+(k+1)+': '+firstTxt(r))})}
   else if(t==='sheet'){const rows=trim(s.rows);
     if(o.f==='cross'){add('cross','cross_fleet','пример кроссфлота');add('cross','os_fleets','основные флоты в ОС')}
-    if(s.name==='Барражи')rows.forEach((r,k)=>{if(k>1&&String(r[1]||'').trim()&&!String(r[1]).startsWith('Эсминцы |')){const n=keyOf(r[1]);add('faces',n,'лицо корабля, строка '+(k+1));add('barrages',n,'гифка барража, строка '+(k+1),'gif')}});
+    if(s.name==='Барражи')rows.forEach((r,k)=>{if(k>1&&String(r[1]||'').trim()&&!String(r[1]).startsWith('Эсминцы |')){const n=keyOf(r[1]);add('faces',n,'лицо корабля, строка '+(k+1));!String(r[6]||'').trim()&&add('barrages','nogif','заглушка отсутствующей гифки, строка '+(k+1),'gif')}});
     else if(o.slot)rows.forEach((r,k)=>{if(k>=o.slot.from&&String(r[o.slot.name]||'').trim()&&!String(r[o.slot.col]||'').trim())add(o.f,keyOf(String(r[o.slot.name]).split('\n')[0]),'строка '+(k+1))})}
   return out}
 function slotsText(){
@@ -1074,11 +1288,11 @@ function slotsText(){
   return txt}
 function downloadSlots(){const txt=slotsText();
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));a.download='slots.txt';a.click()}
-$('slotsBtn').onclick=downloadSlots;
+
 
 // ================= СТАРТ =================
 const N=$('nav');
-SHEETS.forEach((s,i)=>{const c=CFG[s.name]||[s.name,'•'],b=document.createElement('button');b.innerHTML='<span>'+c[1]+'</span>'+esc(c[0]);b.onclick=()=>show(i);N.appendChild(b)});
+SHEETS.forEach((s,i)=>{const c=CFG[s.name]||[s.name,'•'],b=document.createElement('button');b.textContent=c[0];b.onclick=()=>show(i);N.appendChild(b)});
 show(+location.hash.slice(1)||0);
 
 </script></body></html>
